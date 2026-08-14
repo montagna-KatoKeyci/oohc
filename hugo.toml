@@ -1,0 +1,11 @@
+baseURL = 'https://montagna-KatoKeyci.github.io/my-mountain-blog/'
+locale = 'ja-jp'
+title = 'My Mountain Blog'
+theme = 'PaperMod'
+
+[params]
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
