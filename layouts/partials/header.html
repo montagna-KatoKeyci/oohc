@@ -50,7 +50,7 @@
         {{- $currentPage := . -}}
         <ul id="menu">
             {{- range site.Menus.main -}}
-            {{- $menu_item_url := (maybeURL .URL | absLangURL) -}}
+            {{- $menu_item_url := (.URL | absLangURL) -}}
             {{- $page_url:= $currentPage.Permalink | absLangURL -}}
             {{- $is_search := eq (site.GetPage .KeyName).Layout "search" -}}
             <li>
