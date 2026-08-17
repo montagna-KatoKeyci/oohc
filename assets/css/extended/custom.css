@@ -1,0 +1,63 @@
+/* 月/太陽アイコンの表示切り替え */
+#sun { display: none; }
+#moon { display: inline-block; }
+.dark #sun { display: inline-block; }
+.dark #moon { display: none; }
+
+/* ヘッダー全体の中央揃え */
+.nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 1行目：メインタイトル ＋ ダークモードボタン */
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.logo-switches {
+    display: flex;
+    align-items: center;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* 2行目：サブタイトル */
+.site-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+/* 3行目：カテゴリーメニュー（横並び＆中央揃え） */
+#menu {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+#menu a {
+    font-size: 1.05rem;
+}
