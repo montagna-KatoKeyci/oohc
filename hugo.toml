@@ -10,23 +10,42 @@ theme = 'PaperMod'
   [params.label]
     text = "山とカンツォーネ<br><span style='font-size: 0.8rem; font-weight: normal; opacity: 0.8;'>奥多摩のオフトレイル・ハイキングときどきカンツォーネ</span>"
 
+  [params.homeInfoParams]
+    Title = "山とカンツオーネについて"
+    Content = "○ 山行記録なぞった結果について責任を負う意思も能力もありません。\n○ 歌手名と曲名をコピペしてAIに貼り付け、「歌詞訳と世界観を」などと打ち込めば曲の全体像がわかります。"
+
 # ヘッダーナビゲーションメニュー
 [[menu.main]]
-  name = 'トップ'
-  url = '/'
-  weight = 10
+name = "トップ"
+url = "/"
+weight = 10
 
 [[menu.main]]
-  name = '山行記録'
-  url = '/posts/'
-  weight = 20
+name = "山行記録"
+url = "/categories/山行記録/"
+weight = 20
 
 [[menu.main]]
-  name = 'カンツォーネ'
-  url = '/canzone/'
-  weight = 30
+name = "カンツォーネ"
+url = "/categories/カンツォーネ/"
+weight = 30
 
 [[menu.main]]
-  name = 'プロフィール'
-  url = '/about/'
-  weight = 40
+name = "プロフィール"
+url = "/profile/"
+weight = 40
+
+[[menu.main]]
+name = "タグ"
+url = "/tags/"
+weight = 50
+
+[[menu.main]]
+name = "アーカイブ"
+url = "/archives/"
+weight = 60
+
+[[menu.main]]
+name = "検索"
+url = "/search/"
+weight = 70

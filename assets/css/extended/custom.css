@@ -29,14 +29,16 @@
     text-align: center;
 }
 
-/* メニュー（PC表示時のデフォルト設定） */
+/* メニュー（7項目・2行折り返し対応） */
 #menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px; /* PCではゆったりとした間隔 */
+    flex-wrap: wrap; /* 2行への折り返しを許可 */
+    gap: 10px 20px;  /* 上下10px、左右20pxの間隔 */
     padding: 0;
-    margin: 10px 0;
+    margin: 10px auto;
+    max-width: 550px; /* 綺麗に2行に分かれるよう幅を最適化 */
     list-style: none;
 }
 
@@ -54,13 +56,14 @@
     text-underline-offset: 4px;
 }
 
-/* スマホ表示向けの調整（メニューの間隔と文字サイズのみ調整） */
+/* スマホ表示向けの調整 */
 @media screen and (max-width: 640px) {
     #menu {
-        gap: 12px; /* スマホではメニュー間隔を12pxに縮小 */
+        gap: 8px 12px; /* スマホでは間隔をさらに凝縮 */
+        max-width: 100%;
     }
     #menu a {
-        font-size: 14px; /* スマホではメニュー文字サイズを少し小ぶりに */
+        font-size: 14px; /* スマホでは文字サイズを少し小ぶりに */
     }
 }
 
