@@ -45,19 +45,21 @@
 #menu li {
     margin: 0;
     white-space: nowrap;
+    display: inline-block;
 }
 
-/* 4番目の要素（プロフィール）の直後に全幅（100%）の改行を強制割り込み */
+/* 4番目の項目（プロフィール）の直後に親Flexコンテナ単位で100%幅の改行を発生させる */
 #menu li:nth-child(4) {
-    display: flex;
-    align-items: center;
+    margin-right: 0;
 }
 
 #menu li:nth-child(4)::after {
     content: "";
-    flex-basis: 100%;
+    display: block;
+    width: 100vw; /* 画面幅いっぱいの透過ブロックで確実に次行へ送る */
     height: 0;
     margin: 0;
+    pointer-events: none;
 }
 
 #menu a {
@@ -69,10 +71,10 @@
     text-underline-offset: 4px;
 }
 
-/* スマホ表示向けの調整（間隔と文字サイズを最適化して4＋3を維持） */
+/* スマホ表示向けの調整（横幅が狭い画面でも4+3が崩れないよう調整） */
 @media screen and (max-width: 640px) {
     #menu {
-        gap: 8px 10px; /* スマホでは間隔をキュッと詰める */
+        gap: 8px 10px; /* スマホでは間隔を詰める */
     }
     #menu a {
         font-size: 13.5px;
