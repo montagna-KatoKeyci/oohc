@@ -1,13 +1,4 @@
-/* --- 月/太陽アイコンの表示切り替え切り替え制御 --- */
-/* ライトモード時：月を表示、太陽を非表示 */
-#sun { display: none; }
-#moon { display: inline-block; }
-
-/* ダークモード時（body/htmlにdarkクラスが付与された時）：太陽を表示、月を非表示 */
-body.dark #sun, html.dark #sun, .dark #sun { display: inline-block; }
-body.dark #moon, html.dark #moon, .dark #moon { display: none; }
-
-/* --- ヘッダー全体の中央揃え --- */
+/* ヘッダー全体の中央揃え */
 .nav {
     flex-direction: column;
     align-items: center;
@@ -55,20 +46,23 @@ body.dark #moon, html.dark #moon, .dark #moon { display: none; }
     line-height: 1.4;
 }
 
-/* 3行目：カテゴリーメニュー（リスト黒丸除去＆配置のみ調整） */
+/* 3行目：カテゴリーメニュー */
 #menu {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 16px;
+    list-style: none;
+    padding: 0;
 }
 
 #menu li {
     display: inline-block;
 }
 
-#menu a {
-    font-size: 1.05rem;
+/* 開いているページ（アクティブ）の文字と下線強調 */
+#menu .active {
+    font-weight: bold;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
 }
