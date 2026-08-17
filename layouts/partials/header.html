@@ -7,7 +7,7 @@
                 {{- $img := resources.Get .Site.Params.label.icon -}}
                 {{- if $img -}}
                     {{- $processableFormats := (slice "jpg" "jpeg" "png" "gif" "webp") -}}
-                    {{- if isIn $processableFormats $img.MediaType.SubType -}}
+                    {{- if in $processableFormats $img.MediaType.SubType -}}
                         {{- $img = $img.Resize (printf "%dx%d" (.Site.Params.label.iconHeight | default "30") (.Site.Params.label.iconWidth | default "30")) -}}
                     {{- end -}}
                     <img src="{{ $img.Permalink }}" alt="" aria-label="logo"
