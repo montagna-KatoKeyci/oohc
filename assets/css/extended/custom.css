@@ -13,13 +13,12 @@
     gap: 8px;
 }
 
-/* ブログタイトルのフォントサイズ（PC・スマホ共通） */
+/* タイトルとサブタイトル */
 .logo a {
     font-size: 32px !important;
     font-weight: bold;
 }
 
-/* サブタイトルの改行・中央揃え・フォントサイズ（PC・スマホ共通） */
 .site-subtitle {
     font-size: 18px !important;
     opacity: 0.85;
@@ -29,54 +28,47 @@
     text-align: center;
 }
 
-/* メニュー（4個＋3個の2行固定表示） */
-#menu {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    flex-wrap: wrap !important;
-    gap: 10px 18px; /* 上下10px、左右18pxの間隔 */
-    padding: 0;
-    margin: 10px auto;
+/* メニュー全体のコンテナ */
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
     width: 100%;
+}
+
+/* 各行（上段・下段）のメニューリスト */
+.menu-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    padding: 0;
+    margin: 0;
     list-style: none;
-}
-
-#menu li {
-    margin: 0;
     white-space: nowrap;
-    display: inline-block;
 }
 
-/* 4番目の項目（プロフィール）の直後に親Flexコンテナ単位で100%幅の改行を発生させる */
-#menu li:nth-child(4) {
-    margin-right: 0;
-}
-
-#menu li:nth-child(4)::after {
-    content: "";
-    display: block;
-    width: 100vw; /* 画面幅いっぱいの透過ブロックで確実に次行へ送る */
-    height: 0;
+.menu-row li {
     margin: 0;
-    pointer-events: none;
 }
 
-#menu a {
+.menu-row a {
     font-size: 16px;
 }
 
-#menu .active {
+.menu-row .active {
     text-decoration: underline;
     text-underline-offset: 4px;
 }
 
-/* スマホ表示向けの調整（横幅が狭い画面でも4+3が崩れないよう調整） */
+/* スマホ表示向けの調整 */
 @media screen and (max-width: 640px) {
-    #menu {
-        gap: 8px 10px; /* スマホでは間隔を詰める */
+    .menu-row {
+        gap: 10px;
     }
-    #menu a {
+    .menu-row a {
         font-size: 13.5px;
     }
 }
@@ -89,7 +81,6 @@
     padding-left: 0 !important;
 }
 
-/* ページ内の各種タグ/カテゴリーリストのリストマーカー非表示 */
 ul.terms-tags li::before {
     content: "" !important;
 }
