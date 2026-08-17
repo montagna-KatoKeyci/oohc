@@ -14,13 +14,13 @@
 }
 
 /* タイトルとサブタイトル */
-.logo a {
-    font-size: 32px !important;
+header .logo a {
+    font-size: 32px;
     font-weight: bold;
 }
 
 .site-subtitle {
-    font-size: 18px !important;
+    font-size: 18px;
     opacity: 0.85;
     line-height: 1.5;
     margin-top: 6px;
@@ -77,10 +77,24 @@
 .terms-tags, 
 .post-content ul.terms-tags,
 .terms-tags li {
-    list-style: none !important;
-    padding-left: 0 !important;
+    list-style: none;
+    padding-left: 0;
 }
 
 ul.terms-tags li::before {
-    content: "" !important;
+    content: "";
+}
+
+/* Home Info のカードタイトルと余白の調整 */
+article.home-info .entry-header h1 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+article.home-info {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-height: auto;
 }
