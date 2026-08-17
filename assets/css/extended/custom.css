@@ -13,13 +13,13 @@
     gap: 8px;
 }
 
-/* ブログタイトルのフォントサイズを拡大 (初期設定約24px -> 32px) */
+/* ブログタイトルのフォントサイズ */
 .logo a {
     font-size: 32px !important;
     font-weight: bold;
 }
 
-/* サブタイトルの改行・中央揃え・フォントサイズ拡大 (初期設定約14px -> 18px) */
+/* サブタイトルの改行・中央揃え・フォントサイズ */
 .site-subtitle {
     font-size: 18px !important;
     opacity: 0.85;
@@ -29,24 +29,48 @@
     text-align: center;
 }
 
-/* メニュー（カテゴリー4個）の中央揃えと間隔の調整 */
+/* メニュー（PC表示時のデフォルト設定） */
 #menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 24px; /* カテゴリー同士の横の間隔を適度に広げる */
+    gap: 24px; /* PCではゆったりとした間隔 */
     padding: 0;
     margin: 10px 0;
     list-style: none;
 }
 
 #menu li {
-    margin: 0; /* テーマデフォルトの余白をリセットしてgapで均等配置 */
+    margin: 0;
+    white-space: nowrap; /* 単語の途中での改行を防止 */
+}
+
+#menu a {
+    font-size: 16px; /* PCでの文字サイズ */
 }
 
 #menu .active {
     text-decoration: underline;
     text-underline-offset: 4px;
+}
+
+/* スマホ表示向けの調整（画面幅が640px以下のとき自動適用） */
+@media screen and (max-width: 640px) {
+    /* タイトルとサブタイトルをスマホ用に少し調整 */
+    .logo a {
+        font-size: 26px !important;
+    }
+    .site-subtitle {
+        font-size: 15px !important;
+    }
+
+    /* メニューの間隔と文字サイズをスマホ用に最適化 */
+    #menu {
+        gap: 12px; /* スマホでは間隔を12pxに縮小 */
+    }
+    #menu a {
+        font-size: 14px; /* スマホでは文字サイズを少し小ぶりに */
+    }
 }
 
 /* カテゴリー・タグ一覧等のリストの黒丸を消去 */
