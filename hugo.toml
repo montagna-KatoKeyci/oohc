@@ -7,10 +7,8 @@ theme = 'PaperMod'
   defaultTheme = 'auto'
   showThemeToggle = true
 
-  # label設定を[params]の中に正しく配置します
   [params.label]
-    text = "山とカンツォーネ<br><span style='font-size: 0.8rem; font-weight: normal; opacity: 0.8;'>奥多摩オフトレイル・ハイキングとカンツォーネ</span>"
-    rawHTML = true
+    text = "山とカンツォーネ"
 
 # ヘッダーナビゲーションメニュー
 [[menu.main]]
