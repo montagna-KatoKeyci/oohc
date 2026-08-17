@@ -29,7 +29,7 @@
     text-align: center;
 }
 
-/* メニュー（4個＋3個の2行固定表示） */
+/* メニュー（4個＋3個の2行固定中央揃え） */
 #menu {
     display: flex;
     justify-content: center;
@@ -39,22 +39,25 @@
     padding: 0;
     margin: 10px auto;
     width: 100%;
-    max-width: 520px; /* 4個＋3個で折れる絶妙な幅に固定 */
+    max-width: 600px;
     list-style: none;
 }
 
 #menu li {
     margin: 0;
-    white-space: nowrap; /* 単語の途中で改行させない */
+    white-space: nowrap;
 }
 
-/* 4番目（プロフィール）の後に強制改行を入れる設定 */
-#menu li:nth-child(4) {
-    margin-right: 100%; /* これにより1行目を4個で終了させて改行させる */
+/* 4番目（プロフィール）の直後に全幅の改行（100%幅の不可視要素）を挟む */
+#menu li:nth-child(4)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0;
 }
 
 #menu a {
-    font-size: 16px; /* PCでの文字サイズ */
+    font-size: 16px;
 }
 
 #menu .active {
@@ -62,14 +65,13 @@
     text-underline-offset: 4px;
 }
 
-/* スマホ表示向けの調整（文字サイズと間隔を少し凝縮して4個＋3個を保持） */
+/* スマホ表示向けの調整 */
 @media screen and (max-width: 640px) {
     #menu {
-        gap: 8px 10px; /* スマホでは間隔をキュッと詰める */
-        max-width: 360px; /* スマホ画面内に綺麗に納める幅 */
+        gap: 8px 12px;
     }
     #menu a {
-        font-size: 13.5px; /* スマホで横並びを崩さない絶妙な文字サイズ */
+        font-size: 14px;
     }
 }
 
