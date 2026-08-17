@@ -98,3 +98,15 @@ article.home-info {
     margin-bottom: 20px;
     min-height: auto;
 }
+/* 記事カード背景色の変更（ナチュラル・生成り系） */
+.post-entry {
+    background: #f4f3ef;
+    border: 1px solid #e2ded4;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    border-radius: 8px; /* 角丸（不要なら削除可） */
+}
+
+/* ホバー（マウスを乗せたとき）の微調整 */
+.post-entry:hover {
+    background: #eae6dc;
+}
