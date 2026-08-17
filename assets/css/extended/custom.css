@@ -1,5 +1,6 @@
-/* ヘッダー全体の中央揃え */
+/* ヘッダー全体の中央配置 */
 .nav {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -7,35 +8,42 @@
 
 .logo {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 8px;
 }
 
-/* 1行目：メインタイトル ＋ ダークモードボタン */
-.title-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.site-title {
-    font-size: 2.2rem;
-    font-weight: bold;
-}
-
-/* 2行目：サブタイトル */
+/* サブタイトルの改行＆中央揃え */
 .site-subtitle {
-    font-size: 1.1rem;
-    opacity: 0.85;
-    text-align: center;
+    font-size: 14px;
+    opacity: 0.8;
     line-height: 1.4;
+    margin-top: 4px;
+    text-align: center;
 }
 
-/* 3行目：カテゴリーメニュー */
+/* メニューの中央揃え */
 #menu {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    margin-top: 16px;
+    padding: 0;
+    list-style: none;
+}
+
+#menu .active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+/* カテゴリー・タグ一覧等のリストの黒丸を消去 */
+.terms-tags, 
+.post-content ul.terms-tags,
+.terms-tags li {
+    list-style: none !important;
+    padding-left: 0 !important;
+}
+
+/* ページ内の各種タグ/カテゴリーリストのリストマーカー非表示 */
+ul.terms-tags li::before {
+    content: "" !important;
 }
