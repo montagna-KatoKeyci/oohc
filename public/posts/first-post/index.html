@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>First Post | My Mountain Blog</title>
+<title>First Post | 山とカンツォーネ</title>
 <meta name="keywords" content="">
-<meta name="description" content="First Post - My Mountain Blog">
+<meta name="description" content="First Post - 山とカンツォーネ">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/my-mountain-blog/posts/first-post/">
 <link crossorigin="anonymous" href="/my-mountain-blog/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
@@ -70,7 +70,7 @@
     <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/my-mountain-blog/" accesskey="h" title="My Mountain Blog (Alt + H)">My Mountain Blog</a>
+            <a href="http://localhost:1313/my-mountain-blog/" accesskey="h" title="山とカンツォーネ&lt;br&gt;&lt;span style=&#39;font-size: 0.8rem; font-weight: normal; opacity: 0.8;&#39;&gt;奥多摩オフトレイル・ハイキングとカンツォーネ&lt;/span&gt; (Alt + H)">山とカンツォーネ&lt;br&gt;&lt;span style=&#39;font-size: 0.8rem; font-weight: normal; opacity: 0.8;&#39;&gt;奥多摩オフトレイル・ハイキングとカンツォーネ&lt;/span&gt;</a>
             <div class="logo-switches">
                 <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -95,6 +95,26 @@
             </div>
         </div>
         <ul id="menu" class="menu">
+            <li>
+                <a href="http://localhost:1313/my-mountain-blog/" title="トップ">
+                    <span>トップ</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/my-mountain-blog/posts/" title="山行記録">
+                    <span>山行記録</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/my-mountain-blog/canzone/" title="カンツォーネ">
+                    <span>カンツォーネ</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/my-mountain-blog/about/" title="プロフィール">
+                    <span>プロフィール</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
@@ -108,7 +128,7 @@
     </h1>
     <div class="post-meta">
 
-<span title='2026-08-14 22:39:36 +0900 JST'>2026年8月14日</span>&nbsp;·&nbsp;<span>0 min</span>
+<span title='2026-08-14 22:39:36 +0900 JST'>2026年8月14日</span>
 
 </div>
   </header> 
@@ -116,13 +136,12 @@
   <footer class="post-footer">
     <ul class="post-tags">
     </ul>
-
   </footer>
 </article>
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/my-mountain-blog/">My Mountain Blog</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/my-mountain-blog/">山とカンツォーネ</a></span> · 
 
     
     
@@ -198,53 +217,6 @@
         }
     })
 
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
 </script>
 </body>
 

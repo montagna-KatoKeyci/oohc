@@ -1,11 +1,34 @@
-baseURL = 'https://montagna-KatoKeyci.github.io/my-mountain-blog/'
-locale = 'ja-jp'
-title = 'My Mountain Blog'
+baseURL = 'https://montagna-KatoKeyci.github.io/oohc/'
+languageCode = 'ja-jp'
+title = '山とカンツォーネ'
 theme = 'PaperMod'
 
 [params]
   defaultTheme = 'auto'
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowCodeCopyButtons = true
+  showThemeToggle = true
+
+  # label設定を[params]の中に正しく配置します
+  [params.label]
+    text = "山とカンツォーネ<br><span style='font-size: 0.8rem; font-weight: normal; opacity: 0.8;'>奥多摩オフトレイル・ハイキングとカンツォーネ</span>"
+    rawHTML = true
+
+# ヘッダーナビゲーションメニュー
+[[menu.main]]
+  name = 'トップ'
+  url = '/'
+  weight = 10
+
+[[menu.main]]
+  name = '山行記録'
+  url = '/posts/'
+  weight = 20
+
+[[menu.main]]
+  name = 'カンツォーネ'
+  url = '/canzone/'
+  weight = 30
+
+[[menu.main]]
+  name = 'プロフィール'
+  url = '/about/'
+  weight = 40
