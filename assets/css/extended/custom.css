@@ -13,13 +13,13 @@
     gap: 8px;
 }
 
-/* ブログタイトルのフォントサイズ */
+/* ブログタイトルのフォントサイズ（PC・スマホ共通） */
 .logo a {
     font-size: 32px !important;
     font-weight: bold;
 }
 
-/* サブタイトルの改行・中央揃え・フォントサイズ */
+/* サブタイトルの改行・中央揃え・フォントサイズ（PC・スマホ共通） */
 .site-subtitle {
     font-size: 18px !important;
     opacity: 0.85;
@@ -54,22 +54,13 @@
     text-underline-offset: 4px;
 }
 
-/* スマホ表示向けの調整（画面幅が640px以下のとき自動適用） */
+/* スマホ表示向けの調整（メニューの間隔と文字サイズのみ調整） */
 @media screen and (max-width: 640px) {
-    /* タイトルとサブタイトルをスマホ用に少し調整 */
-    .logo a {
-        font-size: 26px !important;
-    }
-    .site-subtitle {
-        font-size: 15px !important;
-    }
-
-    /* メニューの間隔と文字サイズをスマホ用に最適化 */
     #menu {
-        gap: 12px; /* スマホでは間隔を12pxに縮小 */
+        gap: 12px; /* スマホではメニュー間隔を12pxに縮小 */
     }
     #menu a {
-        font-size: 14px; /* スマホでは文字サイズを少し小ぶりに */
+        font-size: 14px; /* スマホではメニュー文字サイズを少し小ぶりに */
     }
 }
 
