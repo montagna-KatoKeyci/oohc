@@ -3,6 +3,9 @@ defaultContentLanguage = 'ja'
 title = '山とカンツォーネ'
 theme = 'PaperMod'
 
+# 1ページあたりの記事表示数を10個に設定
+paginate = 10
+
 [params]
   defaultTheme = 'auto'
   showThemeToggle = true

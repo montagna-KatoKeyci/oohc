@@ -2,10 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Categories on 山とカンツォーネ</title>
-    <link>http://localhost:1313/my-mountain-blog/categories/</link>
+    <link>http://localhost:1313/oohc/categories/</link>
     <description>Recent content in Categories on 山とカンツォーネ</description>
     <generator>Hugo</generator>
-    <language>ja-jp</language>
-    <atom:link href="http://localhost:1313/my-mountain-blog/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Mon, 17 Aug 2026 10:03:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/oohc/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>山行記録</title>
+      <link>http://localhost:1313/oohc/categories/%E5%B1%B1%E8%A1%8C%E8%A8%98%E9%8C%B2/</link>
+      <pubDate>Mon, 17 Aug 2026 10:03:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/categories/%E5%B1%B1%E8%A1%8C%E8%A8%98%E9%8C%B2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>カンツォーネ</title>
+      <link>http://localhost:1313/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/</link>
+      <pubDate>Mon, 17 Aug 2026 10:02:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
