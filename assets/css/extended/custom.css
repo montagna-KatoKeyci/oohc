@@ -13,21 +13,35 @@
     gap: 8px;
 }
 
-/* サブタイトルの改行＆中央揃え */
+/* ブログタイトルのフォントサイズを拡大 (初期設定約24px -> 32px) */
+.logo a {
+    font-size: 32px !important;
+    font-weight: bold;
+}
+
+/* サブタイトルの改行・中央揃え・フォントサイズ拡大 (初期設定約14px -> 18px) */
 .site-subtitle {
-    font-size: 14px;
-    opacity: 0.8;
-    line-height: 1.4;
-    margin-top: 4px;
+    font-size: 18px !important;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-top: 6px;
+    margin-bottom: 12px;
     text-align: center;
 }
 
-/* メニューの中央揃え */
+/* メニュー（カテゴリー4個）の中央揃えと間隔の調整 */
 #menu {
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 24px; /* カテゴリー同士の横の間隔を適度に広げる */
     padding: 0;
+    margin: 10px 0;
     list-style: none;
+}
+
+#menu li {
+    margin: 0; /* テーマデフォルトの余白をリセットしてgapで均等配置 */
 }
 
 #menu .active {
