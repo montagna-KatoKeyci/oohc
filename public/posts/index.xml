@@ -42,5 +42,12 @@
       <description>&lt;p&gt;テスト&lt;/p&gt;
 &lt;p&gt;テスト。奥多摩のオフトレイル・ハイキングの記録を掲載していきます。テキストの量が増えたときにカードの高さがどのように変化するかを確認するためのテスト文章です。文字数が多くなると自動的に折り返されてカードの縦幅が広がっていきます。&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/oohc/posts/zakkan/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/posts/zakkan/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
