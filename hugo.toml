@@ -1,3 +1,8 @@
+baseURL = "https://<ユーザー名>.github.io/oohc/"
+languageCode = "ja-jp"
+title = "山とカンツォーネ"
+theme = "PaperMod"
+
 # ヘッダーナビゲーションメニュー
 [[menu.main]]
 name = "トップ"
