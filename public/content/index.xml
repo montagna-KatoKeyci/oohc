@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Contents on 山とカンツォーネ</title>
+    <link>http://localhost:1313/oohc/content/</link>
+    <description>Recent content in Contents on 山とカンツォーネ</description>
+    <generator>Hugo</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 18 Aug 2026 17:20:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/oohc/content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>最初の雑感記事</title>
+      <link>http://localhost:1313/oohc/content/zakkan/</link>
+      <pubDate>Tue, 18 Aug 2026 17:20:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/content/zakkan/</guid>
+      <description>&lt;p&gt;ここに雑感記事の本文が入ります。テスト用の文章です。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
