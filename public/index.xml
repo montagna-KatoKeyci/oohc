@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>山とカンツォーネ</title>
+    <link>http://localhost:1313/oohc/</link>
+    <description>Recent content on 山とカンツォーネ</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 18 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/oohc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>プロフィール</title>
+      <link>http://localhost:1313/oohc/profile/</link>
+      <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/profile/</guid>
+      <description>&lt;p&gt;オフトレイル歩きのデイ・ハイカー、1961年生まれ。犬と暮らす間に長いブランクが生じました。トレランシューズですが走りません（走れません）。&lt;/p&gt;
+&lt;p&gt;スタイル：公共交通機関を利用した日帰りのみ。&lt;/p&gt;
+&lt;p&gt;信条：マリアさま頼みのイチかバチか。&lt;/p&gt;
+&lt;p&gt;得意：道迷いと忘れ物。入山口で愚図る。&lt;/p&gt;
+&lt;p&gt;タブー（やらないこと）：ストックを持つ、ロープを使う、山頂で麺類をズルズルすする、汚い格好のまま電車に乗る。&lt;/p&gt;
+&lt;p&gt;ex-：もとバックパッカー55ヶ国/1年4ヶ月、もと白い犬の飼主、もとバーテンダー、ル・クレジオとカズオ・イシグロのノーベル文学賞的中も宝くじ当たったことなし。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>テスト記事4</title>
+      <link>http://localhost:1313/oohc/posts/test4/</link>
+      <pubDate>Mon, 17 Aug 2026 10:03:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/posts/test4/</guid>
+      <description>&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト。奥多摩のオフトレイル・ハイキングの記録を掲載していきます。テキストの量が増えたときにカードの高さがどのように変化するかを確認するためのテスト文章です。文字数が多くなると自動的に折り返されてカードの縦幅が広がっていきます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>テスト記事3</title>
+      <link>http://localhost:1313/oohc/posts/test3/</link>
+      <pubDate>Mon, 17 Aug 2026 10:02:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/posts/test3/</guid>
+      <description>&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト。お気に入りのイタリア歌曲を紹介していきます。テキストの量が増えたときにカードの高さがどのように変化するかを確認するためのテスト文章です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>テスト記事2</title>
+      <link>http://localhost:1313/oohc/posts/test2/</link>
+      <pubDate>Mon, 17 Aug 2026 10:01:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/posts/test2/</guid>
+      <description>&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト。奥多摩のオフトレイル・ハイキングの記録を掲載していきます。テキストの量が増えたときにカードの高さがどのように変化するかを確認するためのテスト文章です。文字数が多くなると自動的に折り返されてカードの縦幅が広がっていきます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>テスト記事1</title>
+      <link>http://localhost:1313/oohc/posts/test1/</link>
+      <pubDate>Mon, 17 Aug 2026 10:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/posts/test1/</guid>
+      <description>&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト。奥多摩のオフトレイル・ハイキングの記録を掲載していきます。テキストの量が増えたときにカードの高さがどのように変化するかを確認するためのテスト文章です。文字数が多くなると自動的に折り返されてカードの縦幅が広がっていきます。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
