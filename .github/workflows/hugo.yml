@@ -48,3 +48,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+# 外部リンクを自動的に新しいタブ（_blank）で開く設定
+markup:
+  goldmark:
+    renderHooks:
+      link:
+        enableDefault: true
