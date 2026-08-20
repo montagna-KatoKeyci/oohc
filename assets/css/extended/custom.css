@@ -110,3 +110,23 @@ article.home-info {
 .post-entry:hover {
     background: #eae6dc;
 }
+/* 太陽・月アイコンの切り替え制御 */
+#theme-toggle #sun {
+    display: none;
+}
+body.dark #theme-toggle #sun {
+    display: inline-block;
+}
+body.dark #theme-toggle #moon {
+    display: none;
+}
+
+/* ダークモード時の記事カード背景色 */
+body.dark .post-entry {
+    background: #2e2e33;
+    border-color: #333333;
+}
+
+body.dark .post-entry:hover {
+    background: #37373c;
+}
