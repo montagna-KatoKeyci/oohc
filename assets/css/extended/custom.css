@@ -154,3 +154,7 @@ article.home-info {
 [data-theme="dark"] .post-entry:hover {
     background: #37373c;
 }
+/* Enterで作る通常の段落（空行）に適切な余白をつける */
+.post-content p {
+    margin-bottom: 1.2em;
+}
