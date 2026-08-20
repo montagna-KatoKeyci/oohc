@@ -19,7 +19,7 @@ header .logo a {
     font-weight: bold;
 }
 
-/* サブタイトル＋区切り線①（カード幅と同等） */
+/* サブタイトル＋区切り線①（カード幅と同等に調整） */
 .site-subtitle {
     font-size: 18px;
     opacity: 0.85;
@@ -29,12 +29,12 @@ header .logo a {
     padding-bottom: 10px;
     text-align: center;
     width: 100%;
-    max-width: calc(var(--main-width) + var(--gap) * 2);
+    max-width: var(--main-width);
     border-bottom: 1px solid #e2ded4;
     box-sizing: border-box;
 }
 
-/* メニュー全体のコンテナ＋区切り線②（カード幅と同等） */
+/* メニュー全体のコンテナ＋区切り線②（カード幅と同等に調整） */
 .menu-container {
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@ header .logo a {
     margin-bottom: 10px;
     padding-bottom: 10px;
     width: 100%;
-    max-width: calc(var(--main-width) + var(--gap) * 2);
+    max-width: var(--main-width);
     border-bottom: 1px solid #e2ded4;
     box-sizing: border-box;
 }
@@ -108,6 +108,13 @@ article.home-info {
     margin-top: 10px;
     margin-bottom: 20px;
     min-height: auto;
+}
+
+/* 記事本文・固定ページ内のリンク装飾（アンダーライン表示） */
+.post-content a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    word-break: break-all;
 }
 
 /* 記事カード背景色（デイモード：まぶしさを抑えた極浅いグレー） */
