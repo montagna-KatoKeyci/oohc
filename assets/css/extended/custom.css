@@ -114,19 +114,19 @@ article.home-info {
 #theme-toggle #sun {
     display: none;
 }
-body.dark #theme-toggle #sun {
+[data-theme="dark"] #theme-toggle #sun {
     display: inline-block;
 }
-body.dark #theme-toggle #moon {
+[data-theme="dark"] #theme-toggle #moon {
     display: none;
 }
 
 /* ダークモード時の記事カード背景色 */
-body.dark .post-entry {
+[data-theme="dark"] .post-entry {
     background: #2e2e33;
     border-color: #333333;
 }
 
-body.dark .post-entry:hover {
+[data-theme="dark"] .post-entry:hover {
     background: #37373c;
 }
