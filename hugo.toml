@@ -55,4 +55,4 @@ weight = 80
     [markup.goldmark.renderer]
       hardLineBreaks = false
     [markup.goldmark.renderHooks.link]
-      enableDefault = true
+      useEmbedded = "fallback"
