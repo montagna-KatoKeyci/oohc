@@ -115,6 +115,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }).addTo(map);
 
   // GPXファイルの読み込み（static/gpx/ 配下を参照）
-  elevationControl.load("/gpx/{{ $gpxFile }}");
+  {{ $gpxPath := printf "gpx/%s" $gpxFile }}
+  elevationControl.load('{{ $gpxPath | relURL }}');
 });
 </script>
