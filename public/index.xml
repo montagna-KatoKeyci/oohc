@@ -117,6 +117,7 @@ ex-：もとバックパッカー55ヶ国/1年4ヶ月、もと白い犬の飼主
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;コースマップ&#34;&gt;コースマップ&lt;/h3&gt;
+&lt;h2 id=&#34;hahahugoshortcode6s0hbhb&#34;&gt;
 
 
 
@@ -125,7 +126,6 @@ ex-：もとバックパッカー55ヶ国/1年4ヶ月、もと白い犬の飼主
 
 
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34; /&gt;
-
 &lt;style&gt;
   .gpx-container {
     width: 100%;
@@ -133,124 +133,63 @@ ex-：もとバックパッカー55ヶ国/1年4ヶ月、もと白い犬の飼主
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    font-family: sans-serif;
   }
+  .gpx-map { height: 380px; width: 100%; }
+  
+   
   .gpx-summary {
-    background-color: #f8f9fa;
-    padding: 12px 16px;
-    border-bottom: 1px solid #e9ecef;
-    font-size: 0.9rem;
-    color: #333;
     display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;  
+    justify-content: space-between;
     align-items: center;
+    background: #f8f9fa;
+    padding: 8px 10px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.8rem;  
+    color: #333;
+    overflow-x: auto;  
+    white-space: nowrap;
   }
   .gpx-summary-item {
-    display: flex;
-    flex-direction: column;
+    margin: 0 4px;
   }
-  .gpx-summary-label {
-    font-size: 0.75rem;
-    color: #666;
+  .gpx-summary-item strong {
+    color: #007bff;
+    font-size: 0.95rem;
+    margin-left: 2px;
   }
-  .gpx-summary-val {
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  .gpx-map {
-    height: 420px;
+
+  .gpx-chart-wrapper {
+    height: 180px;
     width: 100%;
-    z-index: 1;
+    padding: 10px;
+    background: #fafafa;
+    box-sizing: border-box;
   }
-  body.dark .gpx-container { border-color: #444; background-color: #1a1a1a; }
-  body.dark .gpx-summary { background-color: #2a2a2a; border-bottom-color: #444; color: #eee; }
-  body.dark .gpx-summary-label { color: #aaa; }
 &lt;/style&gt;
+
 
 &lt;div class=&#34;gpx-container&#34;&gt;
-  
-  &lt;div id=&#34;summary-a94201a3&#34; class=&#34;gpx-summary&#34;&gt;
-    &lt;span&gt;データ解析中...&lt;/span&gt;
-  &lt;/div&gt;
-  
   &lt;div id=&#34;map-a94201a3&#34; class=&#34;gpx-map&#34;&gt;&lt;/div&gt;
-&lt;/div&gt;
-
-
-&lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js&#34;&gt;&lt;/script&gt;
-
-&lt;script&gt;
-window.addEventListener(&#39;load&#39;, function() {
-  var targetUrl = &#39;\/oohc\/gpx\/20260509_20260509.gpx&#39;;
-  var map = L.map(&#39;map-a94201a3&#39;);
-
-  L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
-    attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
-    maxZoom: 18
-  }).addTo(map);
-
-  new L.GPX(targetUrl, {
-    async: true,
-    polyline_options: { color: &#39;#ff3300&#39;, weight: 4, opacity: 0.8 },
-    marker_options: {
-      startIconUrl: &#39;https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png&#39;,
-      endIconUrl: &#39;https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png&#39;,
-      shadowUrl: &#39;https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png&#39;,
-      wptIconUrls: { &#39;&#39;: null },
-      
-      pointMatchers: []
-    }
-  }).on(&#39;loaded&#39;, function(e) {
-    var gpx = e.target;
-    map.fitBounds(gpx.getBounds());
-
-    var distKm = (gpx.get_distance() / 1000).toFixed(2);
-    var eleGain = Math.round(gpx.get_elevation_gain());
-    var eleLoss = Math.round(gpx.get_elevation_loss());
-    var eleMax = Math.round(gpx.get_elevation_max());
-    var eleMin = Math.round(gpx.get_elevation_min());
-
-    document.getElementById(&#39;summary-a94201a3&#39;).innerHTML = 
-      &#39;&lt;div class=&#34;gpx-summary-item&#34;&gt;&lt;span class=&#34;gpx-summary-label&#34;&gt;総距離&lt;/span&gt;&lt;span class=&#34;gpx-summary-val&#34;&gt;&#39; + distKm + &#39; km&lt;/span&gt;&lt;/div&gt;&#39; +
-      &#39;&lt;div class=&#34;gpx-summary-item&#34;&gt;&lt;span class=&#34;gpx-summary-label&#34;&gt;累積標高（上り）&lt;/span&gt;&lt;span class=&#34;gpx-summary-val&#34;&gt;+&#39; + eleGain + &#39; m&lt;/span&gt;&lt;/div&gt;&#39; +
-      &#39;&lt;div class=&#34;gpx-summary-item&#34;&gt;&lt;span class=&#34;gpx-summary-label&#34;&gt;累積標高（下り）&lt;/span&gt;&lt;span class=&#34;gpx-summary-val&#34;&gt;-&#39; + eleLoss + &#39; m&lt;/span&gt;&lt;/div&gt;&#39; +
-      &#39;&lt;div class=&#34;gpx-summary-item&#34;&gt;&lt;span class=&#34;gpx-summary-label&#34;&gt;最高/最低標高&lt;/span&gt;&lt;span class=&#34;gpx-summary-val&#34;&gt;&#39; + eleMax + &#39;m / &#39; + eleMin + &#39;m&lt;/span&gt;&lt;/div&gt;&#39;;
-  }).addTo(map);
-});
-&lt;/script&gt;
-&lt;h2 id=&#34;hahahugoshortcode26s1hbhb&#34;&gt;
-
-
-
-
-&lt;style&gt;
-  .gpx-chart-card {
-    width: 100%;
-    margin: 1.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #fafafa;
-    padding: 12px;
-    box-sizing: border-box;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  }
-  .gpx-chart-wrapper {
-    height: 200px;
-    width: 100%;
-    position: relative;
-  }
-  body.dark .gpx-chart-card { border-color: #444; background-color: #222; }
-&lt;/style&gt;
-
-&lt;div class=&#34;gpx-chart-card&#34;&gt;
+  &lt;div id=&#34;summary-a94201a3&#34; class=&#34;gpx-summary&#34;&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;総距離:&lt;strong id=&#34;sum-dist-a94201a3&#34;&gt;-&lt;/strong&gt; km&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高上り:&lt;strong id=&#34;sum-up-a94201a3&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高下り:&lt;strong id=&#34;sum-down-a94201a3&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最高標高:&lt;strong id=&#34;sum-max-a94201a3&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最低標高:&lt;strong id=&#34;sum-min-a94201a3&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+  &lt;/div&gt;
   &lt;div class=&#34;gpx-chart-wrapper&#34;&gt;
     &lt;canvas id=&#34;chart-a94201a3&#34;&gt;&lt;/canvas&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
+
+&lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdn.jsdelivr.net/npm/chart.js&#34;&gt;&lt;/script&gt;
 
 &lt;script&gt;
@@ -258,105 +197,162 @@ window.addEventListener(&#39;load&#39;, function() {
   var gpxUrl = &#39;\/oohc\/gpx\/20260509_20260509.gpx&#39;;
 
   
-  function getDistanceKm(lat1, lon1, lat2, lon2) {
-    var R = 6371; 
-    var dLat = (lat2 - lat1) * Math.PI / 180;
-    var dLon = (lon2 - lon1) * Math.PI / 180;
-    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-            Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-            Math.sin(dLon/2) * Math.sin(dLon/2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-    return R * c;
+  var map = L.map(&#39;map-a94201a3&#39;).setView([0, 0], 10);
+  L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
+    attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
+    maxZoom: 18
+  }).addTo(map);
+
+  var hoverMarker = null;
+  var trackPoints = []; 
+
+  
+  var ctx = document.getElementById(&#39;chart-a94201a3&#39;).getContext(&#39;2d&#39;);
+  var chart = new Chart(ctx, {
+    type: &#39;line&#39;,
+    data: {
+      labels: [],
+      datasets: [{
+        label: &#39;標高 (m)&#39;,
+        data: [],
+        borderColor: &#39;#007bff&#39;,
+        backgroundColor: &#39;rgba(0, 123, 255, 0.1)&#39;,
+        fill: true,
+        borderWidth: 1.5,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        tension: 0.1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: &#39;index&#39;, intersect: false },
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { display: true, title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } } },
+        y: { display: true, title: { display: true, text: &#39;標高 (m)&#39;, font: { size: 10 } } }
+      },
+      
+      onHover: function(event, activeElements) {
+        if (activeElements &amp;&amp; activeElements.length &gt; 0) {
+          var index = activeElements[0].index;
+          updateHoverMarker(index);
+        }
+      }
+    }
+  });
+
+  
+  function updateHoverMarker(index) {
+    var pt = trackPoints[index];
+    if (pt) {
+      if (!hoverMarker) {
+        hoverMarker = L.circleMarker([pt.lat, pt.lng], {
+          radius: 8,
+          fillColor: &#39;#00ffff&#39;,
+          color: &#39;#ffffff&#39;,
+          weight: 3,
+          opacity: 1,
+          fillOpacity: 1
+        }).addTo(map);
+      } else {
+        hoverMarker.setLatLng([pt.lat, pt.lng]);
+      }
+    }
   }
 
   
-  fetch(gpxUrl)
-    .then(function(response) { return response.text(); })
-    .then(function(xmlText) {
-      var parser = new DOMParser();
-      var xmlDoc = parser.parseFromString(xmlText, &#34;text/xml&#34;);
-      var trkpts = xmlDoc.getElementsByTagName(&#34;trkpt&#34;);
+  function extractTrackData(layer) {
+    var pts = [];
+    var polylines = [];
 
-      var labels = [];
-      var eleValues = [];
-      var totalDist = 0;
-
-      var prevLat = null;
-      var prevLon = null;
-
-      for (var i = 0; i &lt; trkpts.length; i++) {
-        var pt = trkpts[i];
-        var lat = parseFloat(pt.getAttribute(&#34;lat&#34;));
-        var lon = parseFloat(pt.getAttribute(&#34;lon&#34;));
-        var eleNode = pt.getElementsByTagName(&#34;ele&#34;)[0];
-        
-        if (eleNode) {
-          var ele = parseFloat(eleNode.textContent);
-
-          if (prevLat !== null &amp;&amp; prevLon !== null) {
-            totalDist += getDistanceKm(prevLat, prevLon, lat, lon);
-          }
-
-          labels.push(totalDist.toFixed(2));
-          eleValues.push(Math.round(ele));
-
-          prevLat = lat;
-          prevLon = lon;
-        }
-      }
-
-      
-      var ctx = document.getElementById(&#39;chart-a94201a3&#39;).getContext(&#39;2d&#39;);
-      new Chart(ctx, {
-        type: &#39;line&#39;,
-        data: {
-          labels: labels,
-          datasets: [{
-            label: &#39;標高 (m)&#39;,
-            data: eleValues,
-            borderColor: &#39;#e03131&#39;,
-            backgroundColor: &#39;rgba(224, 49, 49, 0.15)&#39;,
-            fill: true,
-            borderWidth: 2,
-            pointRadius: 0,
-            pointHoverRadius: 5,
-            tension: 0.1
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          plugins: {
-            legend: { display: false },
-            tooltip: {
-              mode: &#39;index&#39;,
-              intersect: false,
-              callbacks: {
-                title: function(items) { return &#39;距離: &#39; + items[0].label + &#39; km&#39;; },
-                label: function(item) { return &#39;標高: &#39; + item.raw + &#39; m&#39;; }
-              }
-            }
-          },
-          scales: {
-            x: {
-              display: true,
-              title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } },
-              ticks: { maxTicksLimit: 10, font: { size: 10 } },
-              grid: { color: &#39;rgba(0, 0, 0, 0.05)&#39; }
-            },
-            y: {
-              display: true,
-              title: { display: true, text: &#39;標高 (m)&#39;, font: { size: 10 } },
-              ticks: { font: { size: 10 } },
-              grid: { color: &#39;rgba(0, 0, 0, 0.05)&#39; }
-            }
-          }
+    if (typeof layer.getLatLngs === &#39;function&#39;) {
+      var latlngs = layer.getLatLngs();
+      var flat = Array.isArray(latlngs[0]) ? latlngs.flat(Infinity) : latlngs;
+      flat.forEach(function(p) {
+        if (p &amp;&amp; typeof p.lat === &#39;number&#39;) {
+          pts.push({ lat: p.lat, lng: p.lng });
         }
       });
-    })
-    .catch(function(err) {
-      console.error(&#34;GPX Parsing Error:&#34;, err);
+      if (layer instanceof L.Polyline) {
+        polylines.push(layer);
+      }
+    } else if (typeof layer.eachLayer === &#39;function&#39;) {
+      layer.eachLayer(function(child) {
+        var res = extractTrackData(child);
+        pts = pts.concat(res.pts);
+        polylines = polylines.concat(res.polylines);
+      });
+    }
+    return { pts: pts, polylines: polylines };
+  }
+
+  
+  new L.GPX(gpxUrl, {
+    async: true,
+    polyline_options: { color: &#39;#ff3300&#39;, weight: 5, opacity: 0.8 },
+    marker_options: { startIconUrl: null, endIconUrl: null, wptIconUrls: null }
+  }).on(&#39;loaded&#39;, function(e) {
+    var gpx = e.target;
+    map.fitBounds(gpx.getBounds());
+
+    
+    var distKm = (gpx.get_distance() / 1000).toFixed(2);
+    var maxEle = Math.round(gpx.get_elevation_max());
+    var minEle = Math.round(gpx.get_elevation_min());
+    var gainEle = Math.round(gpx.get_elevation_gain());
+    var lossEle = Math.round(gpx.get_elevation_loss());
+
+    document.getElementById(&#39;sum-dist-a94201a3&#39;).innerText = distKm;
+    document.getElementById(&#39;sum-up-a94201a3&#39;).innerText = gainEle;
+    document.getElementById(&#39;sum-down-a94201a3&#39;).innerText = lossEle;
+    document.getElementById(&#39;sum-max-a94201a3&#39;).innerText = maxEle;
+    document.getElementById(&#39;sum-min-a94201a3&#39;).innerText = minEle;
+
+    
+    var eleData = gpx.get_elevation_data();
+    var labels = [];
+    var elevations = [];
+
+    var extracted = extractTrackData(gpx);
+    trackPoints = extracted.pts;
+
+    eleData.forEach(function(item) {
+      labels.push((item[0] / 1000).toFixed(2));
+      elevations.push(Math.round(item[1]));
     });
+
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = elevations;
+    chart.update();
+
+    
+    extracted.polylines.forEach(function(polyline) {
+      polyline.on(&#39;mousemove&#39;, function(ev) {
+        if (!trackPoints.length) return;
+
+        var mouseLatLng = ev.latlng;
+        var closestIndex = 0;
+        var minDist = Infinity;
+
+        for (var i = 0; i &lt; trackPoints.length; i++) {
+          var d = mouseLatLng.distanceTo(L.latLng(trackPoints[i].lat, trackPoints[i].lng));
+          if (d &lt; minDist) {
+            minDist = d;
+            closestIndex = i;
+          }
+        }
+
+        updateHoverMarker(closestIndex);
+
+        chart.setActiveElements([{ datasetIndex: 0, index: closestIndex }]);
+        chart.tooltip.setActiveElements([{ datasetIndex: 0, index: closestIndex }], { x: 0, y: 0 });
+        chart.update();
+      });
+    });
+
+  }).addTo(map);
 });
 &lt;/script&gt;&lt;/h2&gt;
 &lt;h3 id=&#34;本文&#34;&gt;本文&lt;/h3&gt;
