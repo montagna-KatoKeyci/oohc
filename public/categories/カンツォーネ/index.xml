@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>カンツォーネ on 山とカンツォーネ</title>
-    <link>https://montagna-katokeyci.github.io/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/</link>
+    <link>http://localhost:1313/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/</link>
     <description>Recent content in カンツォーネ on 山とカンツォーネ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Mon, 17 Aug 2026 10:02:00 +0900</lastBuildDate>
-    <atom:link href="https://montagna-katokeyci.github.io/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>テスト記事3</title>
-      <link>https://montagna-katokeyci.github.io/oohc/posts/test3/</link>
+      <link>http://localhost:1313/oohc/posts/test3/</link>
       <pubDate>Mon, 17 Aug 2026 10:02:00 +0900</pubDate>
-      <guid>https://montagna-katokeyci.github.io/oohc/posts/test3/</guid>
+      <guid>http://localhost:1313/oohc/posts/test3/</guid>
       <description>&lt;p&gt;テスト&lt;/p&gt;
 &lt;p&gt;テスト&lt;/p&gt;
 &lt;p&gt;テスト。お気に入りのイタリア歌曲を紹介していきます。テキストの量が増えたときにカードの高さがどのように変化するかを確認するためのテスト文章です。&lt;/p&gt;</description>

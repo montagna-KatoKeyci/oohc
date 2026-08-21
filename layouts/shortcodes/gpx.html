@@ -2,119 +2,103 @@
 {{ $uniqueId := substr (md5 $gpxFile) 0 8 }}
 {{ $mapId := printf "map-%s" $uniqueId }}
 {{ $summaryId := printf "summary-%s" $uniqueId }}
-{{ $elevationId := printf "elevation-%s" $uniqueId }}
+{{ $gpxPath := printf "gpx/%s" $gpxFile | relURL }}
 
-<!-- CSSライブラリの読み込み -->
+<!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-<link rel="stylesheet" href="https://unpkg.com/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.css" />
-
-<!-- JSライブラリの読み込み -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/d3@7"></script>
-<script src="https://unpkg.com/leaflet-elevation@2.5.1/dist/leaflet-elevation.min.js"></script>
 
 <style>
-  .gpx-wrapper {
+  .gpx-container {
     width: 100%;
     margin: 1.5rem 0;
     border: 1px solid #ccc;
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   }
-
-  /* 1. 最上段：数値データ表示エリア */
-  .gpx-summary-bar {
-    background-color: #f4f6f8;
+  .gpx-summary {
+    background-color: #f8f9fa;
     padding: 12px 16px;
-    border-bottom: 1px solid #e0e0e0;
-    font-size: 0.95rem;
-    font-weight: bold;
+    border-bottom: 1px solid #e9ecef;
+    font-size: 0.9rem;
     color: #333;
-  }
-  .gpx-summary-bar .elevation-summary {
     display: flex;
+    gap: 18px;
     flex-wrap: wrap;
-    gap: 15px;
+    align-items: center;
   }
-
-  /* 2. 中段：Leaflet地図エリア */
-  .gpx-map-area {
-    height: 450px;
+  .gpx-summary-item {
+    display: flex;
+    flex-direction: column;
+  }
+  .gpx-summary-label {
+    font-size: 0.75rem;
+    color: #666;
+  }
+  .gpx-summary-val {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  .gpx-map {
+    height: 420px;
     width: 100%;
     z-index: 1;
   }
-
-  /* 3. 最下段：標高グラフエリア */
-  .gpx-elevation-chart-area {
-    height: 180px;
-    width: 100%;
-    background-color: #fafafa;
-    border-top: 1px solid #e0e0e0;
-  }
-
-  /* ダークモード対応 */
-  body.dark .gpx-wrapper {
-    border-color: #444;
-    background-color: #1a1a1a;
-  }
-  body.dark .gpx-summary-bar {
-    background-color: #2a2a2a;
-    border-bottom-color: #444;
-    color: #eee;
-  }
-  body.dark .gpx-elevation-chart-area {
-    background-color: #222;
-    border-top-color: #444;
-  }
+  body.dark .gpx-container { border-color: #444; background-color: #1a1a1a; }
+  body.dark .gpx-summary { background-color: #2a2a2a; border-bottom-color: #444; color: #eee; }
+  body.dark .gpx-summary-label { color: #aaa; }
 </style>
 
-<div class="gpx-wrapper">
-  <!-- 1. 最上段：数値データ枠（GPX解析後に自動挿入） -->
-  <div id="{{ $summaryId }}" class="gpx-summary-bar"></div>
-
-  <!-- 2. 中段：Leaflet 地図（GPSログ入り） -->
-  <div id="{{ $mapId }}" class="gpx-map-area"></div>
-
-  <!-- 3. 最下段：標高グラフ -->
-  <div id="{{ $elevationId }}" class="gpx-elevation-chart-area"></div>
+<div class="gpx-container">
+  <!-- ①数値データ -->
+  <div id="{{ $summaryId }}" class="gpx-summary">
+    <span>データ解析中...</span>
+  </div>
+  <!-- ②地理院地図＋GPXログ -->
+  <div id="{{ $mapId }}" class="gpx-map"></div>
 </div>
 
+<!-- JavaScript ライブラリ -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  // 国土地理院タイル（標準地図）の設定
-  var stdTile = L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
-    attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">地理院タイル</a>',
+window.addEventListener('load', function() {
+  var targetUrl = '{{ $gpxPath }}';
+  var map = L.map('{{ $mapId }}');
+
+  L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+    attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">国土地理院</a>',
     maxZoom: 18
-  });
-
-  // マップ初期化
-  var map = L.map('{{ $mapId }}', {
-    layers: [stdTile]
-  });
-
-  // 標高・統計コントロール設定
-  var elevationControl = L.control.elevation({
-    theme: "purple-theme",
-    detached: true,
-    elevationDiv: "#{{ $elevationId }}",   // 最下段に標高グラフを出力
-    summaryDiv: "#{{ $summaryId }}",       // 最上段に数値データを出力
-    followMarker: true,
-    zFollow: 15,
-    summary: 'inline',
-    distance: true,       // 総距離
-    ascent: true,         // 累積標高差（上り）
-    descent: true,        // 累積標高差（下り）
-    elevation: false,     // サマリーエリアの単体標高表示は非表示
-    slope: false,
-    speed: false,
-    time: false,
-    legend: false,
-    autofitBounds: true,
-    collapse: false
   }).addTo(map);
 
-  // GPXファイルの読み込み（baseURLを明示的に指定）
-  elevationControl.load('{{ site.BaseURL }}gpx/{{ $gpxFile }}');
+  new L.GPX(targetUrl, {
+    async: true,
+    polyline_options: { color: '#ff3300', weight: 4, opacity: 0.8 },
+    marker_options: {
+      startIconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+      endIconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+      shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+      wptIconUrls: { '': null },
+      // 最高/最低標高ピン（Max/Min）の自動生成ルールを無効化
+      pointMatchers: []
+    }
+  }).on('loaded', function(e) {
+    var gpx = e.target;
+    map.fitBounds(gpx.getBounds());
+
+    var distKm = (gpx.get_distance() / 1000).toFixed(2);
+    var eleGain = Math.round(gpx.get_elevation_gain());
+    var eleLoss = Math.round(gpx.get_elevation_loss());
+    var eleMax = Math.round(gpx.get_elevation_max());
+    var eleMin = Math.round(gpx.get_elevation_min());
+
+    document.getElementById('{{ $summaryId }}').innerHTML = 
+      '<div class="gpx-summary-item"><span class="gpx-summary-label">総距離</span><span class="gpx-summary-val">' + distKm + ' km</span></div>' +
+      '<div class="gpx-summary-item"><span class="gpx-summary-label">累積標高（上り）</span><span class="gpx-summary-val">+' + eleGain + ' m</span></div>' +
+      '<div class="gpx-summary-item"><span class="gpx-summary-label">累積標高（下り）</span><span class="gpx-summary-val">-' + eleLoss + ' m</span></div>' +
+      '<div class="gpx-summary-item"><span class="gpx-summary-label">最高/最低標高</span><span class="gpx-summary-val">' + eleMax + 'm / ' + eleMin + 'm</span></div>';
+  }).addTo(map);
 });
 </script>

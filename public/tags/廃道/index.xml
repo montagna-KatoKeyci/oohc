@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>廃道 on 山とカンツォーネ</title>
-    <link>https://montagna-katokeyci.github.io/oohc/tags/%E5%BB%83%E9%81%93/</link>
+    <link>http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/</link>
     <description>Recent content in 廃道 on 山とカンツォーネ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
     <lastBuildDate>Sat, 09 May 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://montagna-katokeyci.github.io/oohc/tags/%E5%BB%83%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>三ノ木戸から石尾根北面への道</title>
-      <link>https://montagna-katokeyci.github.io/oohc/posts/2026-05-09-sanukido/</link>
+      <link>http://localhost:1313/oohc/posts/2026-05-09-sanukido/</link>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-      <guid>https://montagna-katokeyci.github.io/oohc/posts/2026-05-09-sanukido/</guid>
+      <guid>http://localhost:1313/oohc/posts/2026-05-09-sanukido/</guid>
       <description>&lt;table&gt;
 	&lt;thead&gt;
 			&lt;tr&gt;
@@ -179,7 +179,7 @@ document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
   }).addTo(map);
 
   
-  elevationControl.load(&#34;/gpx/20260509_20260509.gpx&#34;);
+  elevationControl.load(&#39;/gpx/20260509_20260509.gpx&#39;);
 });
 &lt;/script&gt;
 &lt;hr&gt;
