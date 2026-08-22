@@ -216,3 +216,19 @@ main .post-single {
     border: none;
     box-shadow: none;
 }
+/* ==========================================
+   スマホ表示時の本文文字サイズ調整（1行あたりの文字数増加）
+   ========================================== */
+@media screen and (max-width: 640px) {
+    /* 記事本文の文字サイズと行間 */
+    .post-content {
+        font-size: 15px;
+        line-height: 1.75;
+        letter-spacing: 0.01em; /* 文字間隔をわずかに詰めて収まりを良くする */
+    }
+
+    /* 段落下の余白もバランスに合わせて調整 */
+    .post-content p {
+        margin-bottom: 1.0em;
+    }
+}
