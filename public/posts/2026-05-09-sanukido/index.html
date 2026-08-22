@@ -261,7 +261,7 @@
 </ul>
 <hr>
 <h3 id="コースマップ">コースマップ<a hidden class="anchor" aria-hidden="true" href="#コースマップ">#</a></h3>
-<h2 id="hahahugoshortcode75s0hbhb">
+<h2 id="hahahugoshortcode6s0hbhb">
 
 
 
@@ -286,16 +286,16 @@
    
   .gpx-summary {
     display: flex;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     background: #f8f9fa;
     padding: 8px 10px;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
-    font-size: 0.8rem;  
+    font-size: 0.8rem;
     color: #333;
-    overflow-x: auto;  
+    overflow-x: auto;
     white-space: nowrap;
   }
   .gpx-summary-item {
@@ -313,6 +313,17 @@
     padding: 10px;
     background: #fafafa;
     box-sizing: border-box;
+  }
+
+   
+  .start-marker-icon, .goal-marker-icon {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 18px;
   }
 </style>
 
@@ -462,8 +473,33 @@ window.addEventListener('load', function() {
     var extracted = extractTrackData(gpx);
     trackPoints = extracted.pts;
 
-    eleData.forEach(function(item) {
+    
+    if (trackPoints.length > 0) {
+      var startPt = trackPoints[0];
+      var endPt = trackPoints[trackPoints.length - 1];
+
       
+      L.circleMarker([startPt.lat, startPt.lng], {
+        radius: 9,
+        fillColor: '#28a745',
+        color: '#ffffff',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip('スタート', { permanent: false, direction: 'top' });
+
+      
+      L.circleMarker([endPt.lat, endPt.lng], {
+        radius: 9,
+        fillColor: '#dc3545',
+        color: '#ffffff',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip('ゴール', { permanent: false, direction: 'top' });
+    }
+
+    eleData.forEach(function(item) {
       var dist = typeof item[0] === 'number' ? item[0] : parseFloat(item[0]);
       labels.push(dist.toFixed(2));
       elevations.push(Math.round(item[1]));

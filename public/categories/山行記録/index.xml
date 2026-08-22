@@ -87,7 +87,7 @@
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;コースマップ&#34;&gt;コースマップ&lt;/h3&gt;
-&lt;h2 id=&#34;hahahugoshortcode75s0hbhb&#34;&gt;
+&lt;h2 id=&#34;hahahugoshortcode6s0hbhb&#34;&gt;
 
 
 
@@ -112,16 +112,16 @@
    
   .gpx-summary {
     display: flex;
-    flex-wrap: nowrap;  
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     background: #f8f9fa;
     padding: 8px 10px;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
-    font-size: 0.8rem;  
+    font-size: 0.8rem;
     color: #333;
-    overflow-x: auto;  
+    overflow-x: auto;
     white-space: nowrap;
   }
   .gpx-summary-item {
@@ -139,6 +139,17 @@
     padding: 10px;
     background: #fafafa;
     box-sizing: border-box;
+  }
+
+   
+  .start-marker-icon, .goal-marker-icon {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 18px;
   }
 &lt;/style&gt;
 
@@ -288,8 +299,33 @@ window.addEventListener(&#39;load&#39;, function() {
     var extracted = extractTrackData(gpx);
     trackPoints = extracted.pts;
 
-    eleData.forEach(function(item) {
+    
+    if (trackPoints.length &gt; 0) {
+      var startPt = trackPoints[0];
+      var endPt = trackPoints[trackPoints.length - 1];
+
       
+      L.circleMarker([startPt.lat, startPt.lng], {
+        radius: 9,
+        fillColor: &#39;#28a745&#39;,
+        color: &#39;#ffffff&#39;,
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip(&#39;スタート&#39;, { permanent: false, direction: &#39;top&#39; });
+
+      
+      L.circleMarker([endPt.lat, endPt.lng], {
+        radius: 9,
+        fillColor: &#39;#dc3545&#39;,
+        color: &#39;#ffffff&#39;,
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip(&#39;ゴール&#39;, { permanent: false, direction: &#39;top&#39; });
+    }
+
+    eleData.forEach(function(item) {
       var dist = typeof item[0] === &#39;number&#39; ? item[0] : parseFloat(item[0]);
       labels.push(dist.toFixed(2));
       elevations.push(Math.round(item[1]));
