@@ -16,13 +16,6 @@
       <description></description>
     </item>
     <item>
-      <title>奥多摩</title>
-      <link>http://localhost:1313/oohc/tags/%E5%A5%A5%E5%A4%9A%E6%91%A9/</link>
-      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/oohc/tags/%E5%A5%A5%E5%A4%9A%E6%91%A9/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>家入沢</title>
       <link>http://localhost:1313/oohc/tags/%E5%AE%B6%E5%85%A5%E6%B2%A2/</link>
       <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
@@ -30,16 +23,37 @@
       <description></description>
     </item>
     <item>
+      <title>廃径</title>
+      <link>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>石尾根北面の廃径</title>
+      <link>http://localhost:1313/oohc/tags/%E7%9F%B3%E5%B0%BE%E6%A0%B9%E5%8C%97%E9%9D%A2%E3%81%AE%E5%BB%83%E5%BE%84/</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/tags/%E7%9F%B3%E5%B0%BE%E6%A0%B9%E5%8C%97%E9%9D%A2%E3%81%AE%E5%BB%83%E5%BE%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>奥多摩</title>
+      <link>http://localhost:1313/oohc/tags/%E5%A5%A5%E5%A4%9A%E6%91%A9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/tags/%E5%A5%A5%E5%A4%9A%E6%91%A9/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>廃道</title>
       <link>http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/</link>
-      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/</guid>
       <description></description>
     </item>
     <item>
       <title>石尾根</title>
       <link>http://localhost:1313/oohc/tags/%E7%9F%B3%E5%B0%BE%E6%A0%B9/</link>
-      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/tags/%E7%9F%B3%E5%B0%BE%E6%A0%B9/</guid>
       <description></description>
     </item>

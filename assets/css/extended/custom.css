@@ -49,7 +49,7 @@ header .logo a {
     font-weight: bold;
 }
 
-/* サブタイトル＋区切り線①（カード幅と同等に調整） */
+/* サブタイトル＋区切り線①（幅調整） */
 .site-subtitle {
     font-size: 18px;
     opacity: 0.85;
@@ -64,7 +64,7 @@ header .logo a {
     box-sizing: border-box;
 }
 
-/* メニュー全体のコンテナ＋区切り線②（カード幅と同等に調整） */
+/* メニュー全体のコンテナ＋区切り線②（幅調整） */
 .menu-container {
     display: flex;
     flex-direction: column;
@@ -147,7 +147,7 @@ article.home-info {
     word-break: break-all;
 }
 
-/* 記事カード背景色と影の調整（デイモード） */
+/* 記事カード背景色と影の調整（トップ・一覧ページのカードのみ） */
 .post-entry {
     background: #fcfcfc;
     border: 1px solid #e2ded4;
@@ -172,7 +172,7 @@ article.home-info {
     display: none;
 }
 
-/* ダークモード時のデザイン対応（カード色・影・区切り線） */
+/* ダークモード時のデザイン対応 */
 [data-theme="dark"] .site-subtitle,
 [data-theme="dark"] .menu-container {
     border-bottom-color: #3b3b3e;
@@ -200,4 +200,19 @@ article.home-info {
     font-size: 1.6rem;
     font-weight: 600;
     margin-bottom: 12px;
+}
+
+/* ==========================================
+   サイト全体の下地色（ヘッダー・余白）の設定
+   ========================================== */
+/* 1. 全体下地色（--theme）をグレーがかった落ち着いた色（#f5f5f5）に設定 */
+:root {
+    --theme: #f5f5f5;
+}
+
+/* 2. プロフィール等の個別ページ本文域（.post-single）は枠線を付けず背景透過（下地色をそのまま見せる） */
+main .post-single {
+    background: transparent;
+    border: none;
+    box-shadow: none;
 }

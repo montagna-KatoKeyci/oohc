@@ -3,6 +3,21 @@ languageCode = "ja-jp"
 title = "山とカンツォーネ"
 theme = "PaperMod"
 
+# 1. 検索用データ（index.json）を自動生成するための出力設定
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[params]
+  # 2. 検索対象に本文（content）を追加し、詳細検索を有効化
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
 [params.homeInfoParams]
 Title = "山とカンツォーネについて"
 Content = """
