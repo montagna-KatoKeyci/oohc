@@ -1,0 +1,34 @@
+{{ $src1 := .Get "src1" }}
+{{ $cap1 := .Get "cap1" }}
+{{ $src2 := .Get "src2" }}
+{{ $cap2 := .Get "cap2" }}
+
+<div class="photo-grid">
+  {{/* 1枚目の写真処理 */}}
+  {{ $img1 := resources.Get (printf "images/%s" $src1) }}
+  <figure class="post-photo">
+    {{ if $img1 }}
+      {{ $r1 := $img1.Resize "960x q80" }}
+      <div class="img-wrapper">
+        <img src="{{ $r1.RelPermalink }}" alt="{{ $cap1 }}" loading="lazy">
+      </div>
+    {{ else }}
+      <p style="color:red;">画像なし: {{ $src1 }}</p>
+    {{ end }}
+    {{ if $cap1 }}<figcaption>{{ $cap1 }}</figcaption>{{ end }}
+  </figure>
+
+  {{/* 2枚目の写真処理 */}}
+  {{ $img2 := resources.Get (printf "images/%s" $src2) }}
+  <figure class="post-photo">
+    {{ if $img2 }}
+      {{ $r2 := $img2.Resize "960x q80" }}
+      <div class="img-wrapper">
+        <img src="{{ $r2.RelPermalink }}" alt="{{ $cap2 }}" loading="lazy">
+      </div>
+    {{ else }}
+      <p style="color:red;">画像なし: {{ $src2 }}</p>
+    {{ end }}
+    {{ if $cap2 }}<figcaption>{{ $cap2 }}</figcaption>{{ end }}
+  </figure>
+</div>

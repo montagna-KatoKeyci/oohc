@@ -260,3 +260,80 @@ main .post-single {
         margin-bottom: 1.5rem;
     }
 }
+/* ==========================================
+   山行記録向け 写真・キャプションの体裁（画面内に納める設定）
+   ========================================== */
+.post-photo {
+    margin: 2rem auto;        /* 上下余白と中央寄せ */
+    max-width: 560px;         /* 横幅を少しコンパクトに制限 */
+    width: 100%;
+}
+
+.post-photo img {
+    max-width: 100%;
+    max-height: 65vh;         /* ★画面高さの65%までに制限（画面内に必ず収まる） */
+    width: auto;              /* 縦横比を崩さない */
+    height: auto;             /* 縦横比を崩さない */
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: block;
+    margin: 0 auto;           /* 画像自体も中央寄せ */
+}
+
+.post-photo figcaption {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+    text-align: center;
+}
+/* ==========================================
+   2枚並列（グリッド）配置のスタイル（縦横揃え対応）
+   ========================================== */
+.photo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 2rem 0;
+}
+
+/* PC表示（641px以上）で2列並列にする */
+@media screen and (min-width: 641px) {
+    .photo-grid {
+        flex-direction: row;
+        align-items: stretch; /* 2つの枠の高さを揃える */
+    }
+    
+    .photo-grid .post-photo {
+        flex: 1;
+        margin: 0;
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 写真部分の枠（高さ固定・縦横位置の自動調整） */
+    .photo-grid .img-wrapper {
+        height: 280px; /* PCでの高さ統一基準 */
+        width: 100%;
+        overflow: hidden;
+        border-radius: 6px;
+        background-color: #f0f0f0;
+    }
+
+    .photo-grid .img-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 枠に合わせて自動トリミングして高さをピタッと揃える */
+        object-position: center;
+        border-radius: 6px;
+    }
+
+    /* キャプションの高さを揃えて見た目を綺麗に保持 */
+    .photo-grid figcaption {
+        margin-top: 8px;
+        font-size: 0.85rem;
+        color: #666;
+        text-align: left;
+        line-height: 1.4;
+    }
+}

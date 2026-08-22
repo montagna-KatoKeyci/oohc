@@ -1,0 +1,19 @@
+{{ $src := .Get "src" }}
+{{ $caption := .Get "caption" }}
+{{ $size := default "1200" (.Get "size") }}
+{{ $alt := default $caption (.Get "alt") }}
+
+{{ $image := resources.Get (printf "images/%s" $src) }}
+{{ if $image }}
+  {{/* 指定されたサイズ（1200や960）に自動変換（横幅指定 + 画質80%） */}}
+  {{ $resizeOpt := printf "%sx q80" $size }}
+  {{ $resized := $image.Resize $resizeOpt }}
+  <figure class="post-photo">
+    <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}" loading="lazy">
+    {{ if $caption }}
+      <figcaption>{{ $caption }}（指定幅: {{ $size }}px / 実際の横幅: {{ $resized.Width }}px）</figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  <p style="color:red;">画像が見つかりません: assets/images/{{ $src }}</p>
+{{ end }}

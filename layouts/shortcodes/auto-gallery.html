@@ -1,0 +1,22 @@
+{{ $folder := .Get "dir" }}
+{{ $pattern := printf "images/%s/*.jpg" $folder }}
+{{ $photos := resources.Match $pattern }}
+
+{{ range $i, $photo := $photos }}
+  {{ if eq (mod $i 2) 0 }}
+    {{ $p1 := $photo }}
+    {{ $p2 := index $photos (add $i 1) }}
+    <div class="photo-grid">
+      <figure class="post-photo">
+        {{ $r1 := $p1.Resize "960x q80" }}
+        <div class="img-wrapper"><img src="{{ $r1.RelPermalink }}" loading="lazy"></div>
+      </figure>
+      {{ if $p2 }}
+      <figure class="post-photo">
+        {{ $r2 := $p2.Resize "960x q80" }}
+        <div class="img-wrapper"><img src="{{ $r2.RelPermalink }}" loading="lazy"></div>
+      </figure>
+      {{ end }}
+    </div>
+  {{ end }}
+{{ end }}
