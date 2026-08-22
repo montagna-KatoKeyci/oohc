@@ -6,6 +6,7 @@
     <description>Recent content on 山とカンツォーネ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
+    <lastBuildDate>Tue, 18 Aug 2026 19:00:00 +0900</lastBuildDate>
     <atom:link href="http://localhost:1313/oohc/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>雑感のテスト記事</title>
@@ -319,7 +320,9 @@ window.addEventListener(&#39;load&#39;, function() {
     trackPoints = extracted.pts;
 
     eleData.forEach(function(item) {
-      labels.push((item[0] / 1000).toFixed(2));
+      
+      var dist = typeof item[0] === &#39;number&#39; ? item[0] : parseFloat(item[0]);
+      labels.push(dist.toFixed(2));
       elevations.push(Math.round(item[1]));
     });
 

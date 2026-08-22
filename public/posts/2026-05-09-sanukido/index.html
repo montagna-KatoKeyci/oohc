@@ -463,7 +463,9 @@ window.addEventListener('load', function() {
     trackPoints = extracted.pts;
 
     eleData.forEach(function(item) {
-      labels.push((item[0] / 1000).toFixed(2));
+      
+      var dist = typeof item[0] === 'number' ? item[0] : parseFloat(item[0]);
+      labels.push(dist.toFixed(2));
       elevations.push(Math.round(item[1]));
     });
 
