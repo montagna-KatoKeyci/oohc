@@ -402,3 +402,20 @@ h3[id*="テーマ・目的"] {
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
 }
+/* ==========================================
+   タグ一覧の左側に「この日記に含まれるタグ」を表示
+   ========================================== */
+.post-tags::before {
+    content: "この日記に含まれるタグ：";
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #555;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 2; /* タグボタンの高さと揃える */
+}
+
+/* ダークモード時の文字色調整 */
+[data-theme="dark"] .post-tags::before {
+    color: #cccccc;
+}
