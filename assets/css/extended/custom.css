@@ -337,3 +337,94 @@ main .post-single {
         line-height: 1.4;
     }
 }
+/* ==========================================
+   山行記録データ表（テーブル）の洗練デザイン
+   ========================================== */
+/* 表全体の設定（本文より少し文字を抑える） */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    font-size: 0.95rem; /* 本文より少しだけ小さく */
+}
+
+/* 1行目（「項目」「内容」の見出し行）を完全に非表示にする */
+.post-content thead {
+    display: none;
+}
+
+/* 各行（セル）の余白と下線 */
+.post-content td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee; /* 薄く控えめな横線 */
+    vertical-align: top;           /* 内容が複数行になった際に上揃えにする */
+}
+
+/* 左側の列（「記録日」などの項目名）の幅を固定し、文字を少し強調 */
+.post-content td:first-child {
+    width: 25%;         /* PCでの左側の幅（約1/4に固定） */
+    font-weight: 500;   /* 少しだけ太字に（強すぎない太さ） */
+    color: #555;        /* 真っ黒を避けて上品なグレーに */
+}
+
+/* スマホ表示時の調整（左側の幅を少し広げてバランスをとる） */
+@media screen and (max-width: 640px) {
+    .post-content td:first-child {
+        width: 32%;
+    }
+}
+/* ==========================================
+   ご依頼のカスタム調整（第4弾・完成版）
+   ========================================== */
+
+/* ① 項目と内容の隙間を完全になくし、上下余白をほんの少し縮める */
+.post-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.0rem 0;
+    font-size: 1rem;
+    color: inherit;
+}
+.post-content td {
+    padding: 2px 8px;
+    border: none; /* 線を完全に消す場合 */
+    vertical-align: top;
+}
+.post-content td:first-child {
+    width: 1%;          
+    white-space: nowrap;
+    font-weight: 500;   
+    color: #555;        
+    padding-right: 6px; /* 右側の余白を極限までカットして内容に寄せる */
+    text-align: right;  /* 項目名を右寄せにしてコロンを美しく並べる */
+}
+.post-content td:first-child::after {
+    content: "：";
+}
+
+/* ⑤ コースタイムのフォントサイズ・濃さを本文と同一にする */
+.post-content ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: inherit;
+}
+
+/* ④ 「テーマ・目的」のセクションタイトルを非表示にする */
+#テーマ目的,
+h3[id*="テーマ・目的"] {
+    display: none;
+}
+
+/* 各セクション見出しの上部余白 */
+.post-content h3 {
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
+}
+
+/* 小見出し（####）と次の本文の行間 */
+.post-content h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
