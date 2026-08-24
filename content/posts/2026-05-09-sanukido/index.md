@@ -61,4 +61,4 @@ draft: false
 
 ### 写真ギャラリー
 
-{{< auto-gallery dir="20260509" >}}
+{{< auto-gallery dir="images" >}}

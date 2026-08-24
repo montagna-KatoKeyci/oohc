@@ -1,22 +1,45 @@
 {{ $folder := .Get "dir" }}
-{{ $pattern := printf "images/%s/*.jpg" $folder }}
-{{ $photos := resources.Match $pattern }}
+{{ $pattern := printf "%s/*.jpg" $folder }}
+{{ $photos := .Page.Resources.Match $pattern }}
 
 {{ range $i, $photo := $photos }}
   {{ if eq (mod $i 2) 0 }}
     {{ $p1 := $photo }}
     {{ $p2 := index $photos (add $i 1) }}
     <div class="photo-grid">
+      
+      {{/* 1枚目の処理 */}}
       <figure class="post-photo">
         {{ $r1 := $p1.Resize "960x q80" }}
         <div class="img-wrapper"><img src="{{ $r1.RelPermalink }}" loading="lazy"></div>
+        
+        {{/* キャプション（同名の .txt ファイルを自動読み込み） */}}
+        {{ $base1 := path.BaseName $p1.Name }}
+        {{ $txtPath1 := printf "%s/%s.txt" $folder $base1 }}
+        {{ $txtRes1 := $.Page.Resources.Get $txtPath1 }}
+        {{ if $txtRes1 }}
+          <figcaption>{{ $txtRes1.Content | markdownify }}</figcaption>
+        {{ end }}
       </figure>
+
+      {{/* 2枚目の処理 */}}
       {{ if $p2 }}
-      <figure class="post-photo">
-        {{ $r2 := $p2.Resize "960x q80" }}
-        <div class="img-wrapper"><img src="{{ $r2.RelPermalink }}" loading="lazy"></div>
-      </figure>
+        <figure class="post-photo">
+          {{ $r2 := $p2.Resize "960x q80" }}
+          <div class="img-wrapper"><img src="{{ $r2.RelPermalink }}" loading="lazy"></div>
+          
+          {{/* キャプション（同名の .txt ファイルを自動読み込み） */}}
+          {{ $base2 := path.BaseName $p2.Name }}
+          {{ $txtPath2 := printf "%s/%s.txt" $folder $base2 }}
+          {{ $txtRes2 := $.Page.Resources.Get $txtPath2 }}
+          {{ if $txtRes2 }}
+            <figcaption>{{ $txtRes2.Content | markdownify }}</figcaption>
+          {{ end }}
+        </figure>
+      {{ else }}
+        <div class="photo-grid-empty" style="flex: 1; visibility: hidden;"></div>
       {{ end }}
+
     </div>
   {{ end }}
 {{ end }}
