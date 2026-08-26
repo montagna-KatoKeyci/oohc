@@ -420,17 +420,15 @@ h3[id*="テーマ・目的"] {
     color: #cccccc;
 }
 
-/* キャプションのリスト（ol / li）のぶら下げインデントを綺麗に揃える */
+/* キャプションのリスト（ol / li）のぶら下げインデント設定（数字を消さない版） */
 .post-photo figcaption ol {
-    list-style-type: none;        /* デフォルトの数字マーカーを消す */
-    padding-left: 0 !important;   /* 余計な余白を完全にゼロにする */
+    list-style-position: inside;  /* 数字をテキストと一緒に内側に収める */
+    padding-left: 0;
     margin: 0;
     text-align: left;
 }
 
 .post-photo figcaption li {
     text-align: left;
-    padding-left: 1.8em;          /* 数字用のスペースを左側に確保 */
-    text-indent: -1.8em;          /* 1行目を左に突き出してぶら下げインデントを作る */
     margin: 0;
 }
