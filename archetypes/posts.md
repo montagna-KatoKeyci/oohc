@@ -40,6 +40,4 @@ tags = []
 
 ---
 
-### 写真ギャラリー
-
 {{< auto-gallery dir="{{ .Date.Format "20060102" }}" >}}

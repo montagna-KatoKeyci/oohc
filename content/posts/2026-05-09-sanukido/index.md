@@ -59,6 +59,4 @@ draft: false
 
 ---
 
-### 写真ギャラリー
-
 {{< auto-gallery dir="images" >}}

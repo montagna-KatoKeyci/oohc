@@ -419,3 +419,15 @@ h3[id*="テーマ・目的"] {
 [data-theme="dark"] .post-tags::before {
     color: #cccccc;
 }
+
+/* キャプションのリストを常に左寄せにし、数字の幅を確保して綺麗なぶら下げインデントにする */
+.post-photo figcaption ol {
+    list-style-position: outside;
+    padding-left: 1.5em;
+    margin: 0;
+    text-align: left;
+}
+
+.post-photo figcaption li {
+    text-align: left;
+}

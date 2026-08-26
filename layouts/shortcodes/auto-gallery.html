@@ -1,3 +1,6 @@
+{{/* ギャラリーの直前に自動で見出しを挿入する */}}
+<h3 id="photo-gallery-title">写真（クリックで拡大します）＋詳細記録</h3>
+
 {{ $folder := .Get "dir" }}
 {{ $pattern := printf "%s/*.jpg" $folder }}
 {{ $photos := .Page.Resources.Match $pattern }}
