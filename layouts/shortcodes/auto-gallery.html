@@ -21,7 +21,9 @@
         {{ $txtPath1 := printf "%s/%s.txt" $folder $base1 }}
         {{ $txtRes1 := $.Page.Resources.Get $txtPath1 }}
         {{ if $txtRes1 }}
-          <figcaption>{{ $txtRes1.Content | markdownify }}</figcaption>
+          <figcaption>
+            <span class="photo-meta">（{{ with $p1.Exif }}{{ .Date.Format "15:04" }}{{ else }}--:--{{ end }}・写真{{ add $i 1 }}）</span>{{ $txtRes1.Content | markdownify }}
+          </figcaption>
         {{ end }}
       </figure>
 
@@ -36,7 +38,9 @@
           {{ $txtPath2 := printf "%s/%s.txt" $folder $base2 }}
           {{ $txtRes2 := $.Page.Resources.Get $txtPath2 }}
           {{ if $txtRes2 }}
-            <figcaption>{{ $txtRes2.Content | markdownify }}</figcaption>
+            <figcaption>
+              <span class="photo-meta">（{{ with $p2.Exif }}{{ .Date.Format "15:04" }}{{ else }}--:--{{ end }}・写真{{ add $i 2 }}）</span>{{ $txtRes2.Content | markdownify }}
+            </figcaption>
           {{ end }}
         </figure>
       {{ else }}

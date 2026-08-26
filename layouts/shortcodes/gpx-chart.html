@@ -1,138 +1,276 @@
 {{ $gpxFile := .Get 0 }}
+
 {{ $uniqueId := substr (md5 $gpxFile) 0 8 }}
+
 {{ $chartId := printf "chart-%s" $uniqueId }}
+
 {{ $gpxPath := printf "gpx/%s" $gpxFile | relURL }}
 
+
+
 <style>
+
   .gpx-chart-card {
+
     width: 100%;
+
     margin: 1.5rem 0;
+
     border: 1px solid #ccc;
+
     border-radius: 8px;
+
     background-color: #fafafa;
+
     padding: 12px;
+
     box-sizing: border-box;
+
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+
   }
+
   .gpx-chart-wrapper {
+
     height: 200px;
+
     width: 100%;
+
     position: relative;
+
   }
+
   body.dark .gpx-chart-card { border-color: #444; background-color: #222; }
+
 </style>
 
+
+
 <div class="gpx-chart-card">
+
   <div class="gpx-chart-wrapper">
+
     <canvas id="{{ $chartId }}"></canvas>
+
   </div>
+
 </div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+
+
 <script>
+
 window.addEventListener('load', function() {
+
   var gpxUrl = '{{ $gpxPath }}';
 
+
+
   // 緯度経度から距離(km)を計算するハバーサイン公式
+
   function getDistanceKm(lat1, lon1, lat2, lon2) {
+
     var R = 6371; // 地球の半径 km
+
     var dLat = (lat2 - lat1) * Math.PI / 180;
+
     var dLon = (lon2 - lon1) * Math.PI / 180;
+
     var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+
             Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+
             Math.sin(dLon/2) * Math.sin(dLon/2);
+
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+
     return R * c;
+
   }
 
+
+
   // GPXファイルを直接Fetchして解析
+
   fetch(gpxUrl)
+
     .then(function(response) { return response.text(); })
+
     .then(function(xmlText) {
+
       var parser = new DOMParser();
+
       var xmlDoc = parser.parseFromString(xmlText, "text/xml");
+
       var trkpts = xmlDoc.getElementsByTagName("trkpt");
 
+
+
       var labels = [];
+
       var eleValues = [];
+
       var totalDist = 0;
 
+
+
       var prevLat = null;
+
       var prevLon = null;
 
+
+
       for (var i = 0; i < trkpts.length; i++) {
+
         var pt = trkpts[i];
+
         var lat = parseFloat(pt.getAttribute("lat"));
+
         var lon = parseFloat(pt.getAttribute("lon"));
+
         var eleNode = pt.getElementsByTagName("ele")[0];
-        
+
+       
+
         if (eleNode) {
+
           var ele = parseFloat(eleNode.textContent);
 
+
+
           if (prevLat !== null && prevLon !== null) {
+
             totalDist += getDistanceKm(prevLat, prevLon, lat, lon);
+
           }
+
+
 
           labels.push(totalDist.toFixed(2));
+
           eleValues.push(Math.round(ele));
 
+
+
           prevLat = lat;
+
           prevLon = lon;
+
         }
+
       }
 
+
+
       // Chart.js 描画
+
       var ctx = document.getElementById('{{ $chartId }}').getContext('2d');
+
       new Chart(ctx, {
+
         type: 'line',
+
         data: {
+
           labels: labels,
+
           datasets: [{
+
             label: '標高 (m)',
+
             data: eleValues,
+
             borderColor: '#e03131',
+
             backgroundColor: 'rgba(224, 49, 49, 0.15)',
+
             fill: true,
+
             borderWidth: 2,
+
             pointRadius: 0,
+
             pointHoverRadius: 5,
+
             tension: 0.1
+
           }]
+
         },
+
         options: {
+
           responsive: true,
+
           maintainAspectRatio: false,
+
           plugins: {
+
             legend: { display: false },
+
             tooltip: {
+
               mode: 'index',
+
               intersect: false,
+
               callbacks: {
+
                 title: function(items) { return '距離: ' + items[0].label + ' km'; },
+
                 label: function(item) { return '標高: ' + item.raw + ' m'; }
+
               }
+
             }
+
           },
+
           scales: {
+
             x: {
+
               display: true,
+
               title: { display: true, text: '距離 (km)', font: { size: 10 } },
+
               ticks: { maxTicksLimit: 10, font: { size: 10 } },
+
               grid: { color: 'rgba(0, 0, 0, 0.05)' }
+
             },
+
             y: {
+
               display: true,
+
               title: { display: true, text: '標高 (m)', font: { size: 10 } },
+
               ticks: { font: { size: 10 } },
+
               grid: { color: 'rgba(0, 0, 0, 0.05)' }
+
             }
+
           }
+
         }
+
       });
+
     })
+
     .catch(function(err) {
+
       console.error("GPX Parsing Error:", err);
+
     });
+
 });
-</script>
+
+</script>  
+
