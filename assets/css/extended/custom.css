@@ -439,3 +439,10 @@ h3[id*="テーマ・目的"] {
     font-weight: normal;    /* もし太字をスッキリさせたい場合（お好みで調整可） */
     margin: 0;        /* 左右に少しだけ隙間を空ける */
 }
+
+/* スマホ画面（幅640px以下）のときは「クリックで拡大します」を非表示にする */
+@media screen and (max-width: 640px) {
+    .gallery-subtext {
+        display: none;
+    }
+}
