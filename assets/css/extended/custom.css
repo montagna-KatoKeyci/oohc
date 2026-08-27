@@ -473,66 +473,66 @@ h3[id*="テーマ・目的"] {
 }
 
 /* ==========================================
-   アーカイブ・一覧ページの極限コンパクト化（均一・隙間なし版）
+   アーカイブページのちょうど良いコンパクト化
    ========================================== */
 
-/* 年ブロックの余白を最小限に */
-.archive-year {
-    margin-bottom: 0.5rem;
+/* 1 & 2. 年・月・投稿グループの余白ゼロ */
+.archive-year,
+.archive-month,
+.archive-posts {
+    margin: 0;
+    padding: 0;
 }
 
+/* 年の見出し */
 .archive-year-header {
     font-size: 1.1rem;
+    margin-top: 1.2rem;
     margin-bottom: 0.2rem;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 1px;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 2px;
 }
 
-/* ★ここが犯人：月が変わるときの余白を完全にゼロにする */
-.archive-month {
-    margin-bottom: 0;
+/* 月の見出し */
+.archive-month-header {
+    margin: 0.4rem 0 0 0;
+    font-size: 0.95rem;
 }
 
-/* 各記事のエントリ：行間を極限まで詰める */
+/* 3 & 4. 1行化 ＆ 行間をスッキリ整える（詰めすぎない） */
 .archive-entry {
     display: flex;
-    flex-direction: row-reverse; 
+    flex-direction: row-reverse;
     justify-content: flex-end;
     align-items: center;
     gap: 12px;
-    margin-bottom: 1px; /* 記事と記事の間は 1px だけ */
-    padding: 0;
+    margin: 0;
+    padding: 2px 0;              /* ほんの少し上下に息継ぎのパディングを入れる */
+    line-height: 1.3;            /* 自然な行の高さに戻す */
 }
 
 /* 日付部分 */
 .archive-meta {
-    flex-shrink: 0;
     font-size: 0.85rem;
-    color: #666;
+    color: var(--secondary);
     white-space: nowrap;
-}
-
-/* タイトル部分 */
-.archive-title {
-    flex-grow: 1;
-    min-width: 0; 
-    font-size: 0.95rem;
     margin: 0;
 }
 
-.archive-title a {
+/* 5. 記事タイトル（フォントサイズを標準に戻し、1行省略を維持） */
+.archive-entry-title {
+    font-size: 0.95rem;          /* 標準の大きさに戻す */
+    font-weight: normal;
+    margin: 0;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.archive-entry-title a {
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     text-decoration: underline;
     text-underline-offset: 2px;
-}
-
-/* ダークモード時の文字色調整 */
-[data-theme="dark"] .archive-meta {
-    color: #aaaaaa;
-}
-[data-theme="dark"] .archive-year-header {
-    border-bottom-color: #444;
 }
