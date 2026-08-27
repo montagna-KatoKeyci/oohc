@@ -473,35 +473,37 @@ h3[id*="テーマ・目的"] {
 }
 
 /* ==========================================
-   アーカイブ・一覧ページの間延び解消と1行化
+   アーカイブ・一覧ページの間延び解消と1行化（極限まで詰める版）
    ========================================== */
 
-/* アーカイブの年ごとのブロック全体の余白を詰める */
+/* 年・月の余白を極限まで詰める */
 .archive-year {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.0rem;
 }
 
 .archive-year-header {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 }
 
 .archive-month {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
 }
 
-/* 各記事のエントリを1行の横並びにする（日付 → タイトル） */
+/* 各記事のエントリ：row-reverseで「日付 → タイトル」の順に並べ替える */
 .archive-entry {
     display: flex;
+    flex-direction: row-reverse; 
+    justify-content: flex-end;
     align-items: center;
     gap: 12px;
-    margin-bottom: 4px; /* 行間を極限まで詰める */
-    padding: 2px 0;
+    margin-bottom: 2px; /* 行間をほぼゼロに近づける */
+    padding: 1px 0;
 }
 
-/* 日付部分：絶対に縮まず、そのまま表示する */
+/* 日付部分：左側に配置され、絶対に潰れない */
 .archive-meta {
     flex-shrink: 0;
     font-size: 0.85rem;
@@ -509,10 +511,10 @@ h3[id*="テーマ・目的"] {
     white-space: nowrap;
 }
 
-/* タイトル部分：余ったスペースを使い、長ければ「……」で省略する */
+/* タイトル部分：右側の残りのスペースを使い、長ければ「……」で省略 */
 .archive-title {
     flex-grow: 1;
-    min-width: 0; /* これによりタイトル側だけがギュッと縮んで省略される */
+    min-width: 0; 
     font-size: 0.95rem;
     margin: 0;
 }
@@ -526,7 +528,7 @@ h3[id*="テーマ・目的"] {
     text-underline-offset: 2px;
 }
 
-/* ダークモード時の日付文字色調整 */
+/* ダークモード時の文字色調整 */
 [data-theme="dark"] .archive-meta {
     color: #aaaaaa;
 }
