@@ -492,7 +492,7 @@ h3[id*="テーマ・目的"] {
     margin-bottom: 0.8rem;
 }
 
-/* 各記事のエントリを1行の横並びにする */
+/* 各記事のエントリを1行の横並びにする（日付 → タイトル） */
 .archive-entry {
     display: flex;
     align-items: center;
@@ -501,28 +501,27 @@ h3[id*="テーマ・目的"] {
     padding: 2px 0;
 }
 
-/* 日付部分 */
+/* 日付部分：絶対に縮まず、そのまま表示する */
 .archive-meta {
     flex-shrink: 0;
     font-size: 0.85rem;
     color: #666;
-    width: 95px; /* 日付の幅を揃えて綺麗に見せる */
+    white-space: nowrap;
 }
 
-/* タイトル部分（1行に収め、溢れたら「……」で省略） */
+/* タイトル部分：余ったスペースを使い、長ければ「……」で省略する */
 .archive-title {
     flex-grow: 1;
-    min-width: 0; /* フレックスボックス内で省略を効かせるためのおまじない */
+    min-width: 0; /* これによりタイトル側だけがギュッと縮んで省略される */
     font-size: 0.95rem;
     margin: 0;
-    line-height: 1.4;
 }
 
 .archive-title a {
     display: block;
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
     text-decoration: underline;
     text-underline-offset: 2px;
 }
