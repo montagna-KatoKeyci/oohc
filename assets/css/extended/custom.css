@@ -446,3 +446,18 @@ h3[id*="テーマ・目的"] {
         display: none;
     }
 }
+
+/* ==========================================
+   ダークモード時の文字色調整（まとめ）
+   ========================================== */
+
+/* ① カテゴリー文言の文字色調整 */
+[data-theme="dark"] .post-categories span {
+    color: #cccccc;
+}
+
+/* ② 写真キャプションの文字色調整 */
+[data-theme="dark"] .post-photo figcaption,
+[data-theme="dark"] .photo-grid figcaption {
+    color: #b0b0b0;
+}
