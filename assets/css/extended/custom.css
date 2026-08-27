@@ -451,8 +451,18 @@ h3[id*="テーマ・目的"] {
    ダークモード時の文字色調整（まとめ）
    ========================================== */
 
-/* ① カテゴリー文言の文字色調整 */
-[data-theme="dark"] .post-categories span {
+/* ① カテゴリーの「この日記のカテゴリー：」部分の表示と文字色調整 */
+.post-categories::before {
+    content: "この日記のカテゴリー：";
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #555;
+    margin-right: 4px;
+    display: inline-block;
+    line-height: 2;
+}
+
+[data-theme="dark"] .post-categories::before {
     color: #cccccc;
 }
 

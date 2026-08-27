@@ -37,7 +37,6 @@
     {{- /* 記事のカテゴリー表示 */ -}}
     {{- if .Params.categories }}
     <div class="post-categories" style="margin-bottom: 8px;">
-      <span style="font-weight: 500; font-size: 0.95rem; color: #555; margin-right: 4px;">この日記のカテゴリー：</span>
       {{- range ($.GetTerms "categories") }}
       <a href="{{ .Permalink }}" style="text-decoration: underline; text-underline-offset: 3px;">{{ .LinkTitle }}</a>
       {{- end -}}
