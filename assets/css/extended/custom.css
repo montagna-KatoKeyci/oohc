@@ -471,3 +471,66 @@ h3[id*="テーマ・目的"] {
 [data-theme="dark"] .photo-grid figcaption {
     color: #b0b0b0;
 }
+
+/* ==========================================
+   アーカイブ・一覧ページの間延び解消と1行化
+   ========================================== */
+
+/* アーカイブの年ごとのブロック全体の余白を詰める */
+.archive-year {
+    margin-bottom: 1.5rem;
+}
+
+.archive-year-header {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 4px;
+}
+
+.archive-month {
+    margin-bottom: 0.8rem;
+}
+
+/* 各記事のエントリを1行の横並びにする */
+.archive-entry {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 4px; /* 行間を極限まで詰める */
+    padding: 2px 0;
+}
+
+/* 日付部分 */
+.archive-meta {
+    flex-shrink: 0;
+    font-size: 0.85rem;
+    color: #666;
+    width: 95px; /* 日付の幅を揃えて綺麗に見せる */
+}
+
+/* タイトル部分（1行に収め、溢れたら「……」で省略） */
+.archive-title {
+    flex-grow: 1;
+    min-width: 0; /* フレックスボックス内で省略を効かせるためのおまじない */
+    font-size: 0.95rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.archive-title a {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* ダークモード時の日付文字色調整 */
+[data-theme="dark"] .archive-meta {
+    color: #aaaaaa;
+}
+[data-theme="dark"] .archive-year-header {
+    border-bottom-color: #444;
+}
