@@ -473,37 +473,38 @@ h3[id*="テーマ・目的"] {
 }
 
 /* ==========================================
-   アーカイブ・一覧ページの間延び解消と1行化（極限まで詰める版）
+   アーカイブ・一覧ページの極限コンパクト化（均一・隙間なし版）
    ========================================== */
 
-/* 年・月の余白を極限まで詰める */
+/* 年ブロックの余白を最小限に */
 .archive-year {
-    margin-bottom: 1.0rem;
+    margin-bottom: 0.5rem;
 }
 
 .archive-year-header {
     font-size: 1.1rem;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2rem;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 2px;
+    padding-bottom: 1px;
 }
 
+/* ★ここが犯人：月が変わるときの余白を完全にゼロにする */
 .archive-month {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0;
 }
 
-/* 各記事のエントリ：row-reverseで「日付 → タイトル」の順に並べ替える */
+/* 各記事のエントリ：行間を極限まで詰める */
 .archive-entry {
     display: flex;
     flex-direction: row-reverse; 
     justify-content: flex-end;
     align-items: center;
     gap: 12px;
-    margin-bottom: 2px; /* 行間をほぼゼロに近づける */
-    padding: 1px 0;
+    margin-bottom: 1px; /* 記事と記事の間は 1px だけ */
+    padding: 0;
 }
 
-/* 日付部分：左側に配置され、絶対に潰れない */
+/* 日付部分 */
 .archive-meta {
     flex-shrink: 0;
     font-size: 0.85rem;
@@ -511,7 +512,7 @@ h3[id*="テーマ・目的"] {
     white-space: nowrap;
 }
 
-/* タイトル部分：右側の残りのスペースを使い、長ければ「……」で省略 */
+/* タイトル部分 */
 .archive-title {
     flex-grow: 1;
     min-width: 0; 
