@@ -33,6 +33,9 @@
     {{- else }}{{ .Content }}{{ end }}
   </div>
 
+  <!-- ギャラリーとフッターの間の自動区切り線 -->
+  <hr class="gallery-divider">
+
   <footer class="post-footer">
     {{- /* 記事のカテゴリー表示 */ -}}
     {{- if .Params.categories }}

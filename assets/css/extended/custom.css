@@ -536,3 +536,17 @@ h3[id*="テーマ・目的"] {
     text-decoration: underline;
     text-underline-offset: 2px;
 }
+
+/* Markdownが生成する横線（---）およびテンプレート自動挿入の横線のスタイル統一 */
+.post-content hr,
+hr.gallery-divider {
+    border: none;
+    border-top: 1.5px solid #a8a296;
+    margin: 2rem 0;
+}
+
+/* ダークモード時の横線の色調整 */
+[data-theme="dark"] .post-content hr,
+[data-theme="dark"] hr.gallery-divider {
+    border-top-color: #3b3b3e;
+}
