@@ -550,3 +550,46 @@ hr.gallery-divider {
 [data-theme="dark"] hr.gallery-divider {
     border-top-color: #3b3b3e;
 }
+
+/* 個別記事のタグを、下地から浮かび上がる濃いカードにする */
+.post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 1.5rem;
+    list-style: none;
+    padding-left: 0;
+}
+
+.post-tags li {
+    margin: 0;
+}
+
+.post-tags a {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #e8e4dc; /* 下地より一歩濃い落ち着いたグレー（カードと明確にわかる色） */
+    border: 1px solid #b8b2a6; /* はっきりした枠線 */
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #2e2e2e; /* 文字を濃くして視認性を上げる */
+    text-decoration: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.post-tags a:hover {
+    background: #d8d4cc;
+    border-color: #888276;
+}
+
+/* ダークモード時のカード色・枠線・文字色の調整 */
+[data-theme="dark"] .post-tags a {
+    background: #3e3e44;
+    border-color: #55555c;
+    color: #eaeaea;
+}
+
+[data-theme="dark"] .post-tags a:hover {
+    background: #4e4e54;
+    border-color: #77777f;
+}
