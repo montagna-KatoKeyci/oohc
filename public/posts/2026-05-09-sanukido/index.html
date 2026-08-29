@@ -76,39 +76,16 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-
   
-
     総距離:- km
-
     累積標高上り:- m
-
     累積標高下り:- m
-
     最高標高:- m
-
     最低標高:- m
-
   
-
   
-
     
-
   
 
 
@@ -116,16 +93,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-  
 
 
 
@@ -329,551 +296,311 @@
 
 
 
-
-
-
-
-
-
-
-
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-
 <style>
-
   .gpx-container {
-
     width: 100%;
-
     margin: 1.5rem 0;
-
     border: 1px solid #ccc;
-
     border-radius: 8px;
-
     overflow: hidden;
-
     background: #fff;
-
     box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-
     font-family: sans-serif;
-
   }
-
   .gpx-map { height: 380px; width: 100%; }
-
- 
-
+  
    
-
   .gpx-summary {
-
     display: flex;
-
     flex-wrap: nowrap;
-
     justify-content: space-between;
-
     align-items: center;
-
     background: #f8f9fa;
-
     padding: 8px 10px;
-
     border-top: 1px solid #e0e0e0;
-
     border-bottom: 1px solid #e0e0e0;
-
     font-size: 0.8rem;
-
     color: #333;
-
     overflow-x: auto;
-
     white-space: nowrap;
-
   }
-
   .gpx-summary-item {
-
     margin: 0 4px;
-
   }
-
   .gpx-summary-item strong {
-
     color: #007bff;
-
     font-size: 0.95rem;
-
     margin-left: 2px;
-
   }
-
-
 
   .gpx-chart-wrapper {
-
     height: 180px;
-
     width: 100%;
-
     padding: 10px;
-
     background: #fafafa;
-
     box-sizing: border-box;
-
   }
-
-
 
    
-
   .start-marker-icon, .goal-marker-icon {
-
     background: none;
-
     border: none;
-
     font-weight: bold;
-
     font-size: 11px;
-
     color: #ffffff;
-
     text-align: center;
-
     line-height: 18px;
-
   }
-
 </style>
 
 
-
-
-
 <div class="gpx-container">
-
   <div id="map-a94201a3" class="gpx-map"></div>
-
   <div id="summary-a94201a3" class="gpx-summary">
-
     <div class="gpx-summary-item">総距離:<strong id="sum-dist-a94201a3">-</strong> km</div>
-
     <div class="gpx-summary-item">累積標高上り:<strong id="sum-up-a94201a3">-</strong> m</div>
-
     <div class="gpx-summary-item">累積標高下り:<strong id="sum-down-a94201a3">-</strong> m</div>
-
     <div class="gpx-summary-item">最高標高:<strong id="sum-max-a94201a3">-</strong> m</div>
-
     <div class="gpx-summary-item">最低標高:<strong id="sum-min-a94201a3">-</strong> m</div>
-
   </div>
-
   <div class="gpx-chart-wrapper">
-
     <canvas id="chart-a94201a3"></canvas>
-
   </div>
-
 </div>
 
 
-
-
-
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
-
 <script>
-
 window.addEventListener('load', function() {
-
   var gpxUrl = '\/oohc\/gpx\/20260509_20260509.gpx';
 
-
-
   
-
   var map = L.map('map-a94201a3').setView([0, 0], 10);
-
   L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
-
     attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">国土地理院</a>',
-
     maxZoom: 18
-
   }).addTo(map);
 
-
-
   var hoverMarker = null;
-
   var trackPoints = [];
-
-
+  var timeLabels = []; 
 
   
-
   var ctx = document.getElementById('chart-a94201a3').getContext('2d');
-
   var chart = new Chart(ctx, {
-
     type: 'line',
-
     data: {
-
       labels: [],
-
       datasets: [{
-
         label: '標高 (m)',
-
         data: [],
-
         borderColor: '#007bff',
-
         backgroundColor: 'rgba(0, 123, 255, 0.1)',
-
         fill: true,
-
         borderWidth: 1.5,
-
         pointRadius: 0,
-
         pointHoverRadius: 6,
-
         tension: 0.1
-
       }]
-
     },
-
     options: {
-
       responsive: true,
-
       maintainAspectRatio: false,
-
       interaction: { mode: 'index', intersect: false },
-
-      plugins: { legend: { display: false } },
-
-      scales: {
-
-        x: { display: true, title: { display: true, text: '距離 (km)', font: { size: 10 } } },
-
-        y: { display: true, title: { display: true, text: '標高 (m)', font: { size: 10 } } }
-
-      },
-
-      
-
-      onHover: function(event, activeElements) {
-
-        if (activeElements && activeElements.length > 0) {
-
-          var index = activeElements[0].index;
-
-          updateHoverMarker(index);
-
+      plugins: {
+        legend: { display: false },
+        
+        tooltip: {
+          callbacks: {
+            title: function(items) {
+              var index = items[0].dataIndex;
+              var timeStr = timeLabels[index] || '';
+              return timeStr ? '時刻: ' + timeStr : '';
+            },
+            label: function(item) {
+              return '標高: ' + item.raw + ' m';
+            }
+          }
         }
-
+      },
+      scales: {
+        x: { display: true, title: { display: true, text: '距離 (km)', font: { size: 10 } } },
+        y: { display: true, title: { display: true, text: '標高 (m)', font: { size: 10 } } }
+      },
+      
+      onHover: function(event, activeElements) {
+        if (activeElements && activeElements.length > 0) {
+          var index = activeElements[0].index;
+          updateHoverMarker(index);
+        }
       }
-
     }
-
   });
 
-
-
   
-
   function updateHoverMarker(index) {
-
     var pt = trackPoints[index];
-
     if (pt) {
-
       if (!hoverMarker) {
-
         hoverMarker = L.circleMarker([pt.lat, pt.lng], {
-
           radius: 8,
-
           fillColor: '#00ffff',
-
           color: '#ffffff',
-
           weight: 3,
-
           opacity: 1,
-
           fillOpacity: 1
-
         }).addTo(map);
-
       } else {
-
         hoverMarker.setLatLng([pt.lat, pt.lng]);
-
       }
-
     }
-
   }
 
-
-
   
-
   function extractTrackData(layer) {
-
     var pts = [];
-
     var polylines = [];
 
-
-
     if (typeof layer.getLatLngs === 'function') {
-
       var latlngs = layer.getLatLngs();
-
       var flat = Array.isArray(latlngs[0]) ? latlngs.flat(Infinity) : latlngs;
-
       flat.forEach(function(p) {
-
         if (p && typeof p.lat === 'number') {
-
           pts.push({ lat: p.lat, lng: p.lng });
-
         }
-
       });
-
       if (layer instanceof L.Polyline) {
-
         polylines.push(layer);
-
       }
-
     } else if (typeof layer.eachLayer === 'function') {
-
       layer.eachLayer(function(child) {
-
         var res = extractTrackData(child);
-
         pts = pts.concat(res.pts);
-
         polylines = polylines.concat(res.polylines);
-
       });
-
     }
-
     return { pts: pts, polylines: polylines };
-
   }
 
-
-
   
-
-  new L.GPX(gpxUrl, {
-
-    async: true,
-
-    polyline_options: { color: '#ff3300', weight: 5, opacity: 0.8 },
-
-    marker_options: { startIconUrl: null, endIconUrl: null, wptIconUrls: null }
-
-  }).on('loaded', function(e) {
-
-    var gpx = e.target;
-
-    map.fitBounds(gpx.getBounds());
-
-
-
-    
-
-    var distKm = (gpx.get_distance() / 1000).toFixed(2);
-
-    var maxEle = Math.round(gpx.get_elevation_max());
-
-    var minEle = Math.round(gpx.get_elevation_min());
-
-    var gainEle = Math.round(gpx.get_elevation_gain());
-
-    var lossEle = Math.round(gpx.get_elevation_loss());
-
-
-
-    document.getElementById('sum-dist-a94201a3').innerText = distKm;
-
-    document.getElementById('sum-up-a94201a3').innerText = gainEle;
-
-    document.getElementById('sum-down-a94201a3').innerText = lossEle;
-
-    document.getElementById('sum-max-a94201a3').innerText = maxEle;
-
-    document.getElementById('sum-min-a94201a3').innerText = minEle;
-
-
-
-    
-
-    var eleData = gpx.get_elevation_data();
-
-    var labels = [];
-
-    var elevations = [];
-
-
-
-    var extracted = extractTrackData(gpx);
-
-    trackPoints = extracted.pts;
-
-
-
-    
-
-    if (trackPoints.length > 0) {
-
-      var startPt = trackPoints[0];
-
-      var endPt = trackPoints[trackPoints.length - 1];
-
-
-
-      
-
-      L.circleMarker([startPt.lat, startPt.lng], {
-
-        radius: 9,
-
-        fillColor: '#28a745',
-
-        color: '#ffffff',
-
-        weight: 2,
-
-        opacity: 1,
-
-        fillOpacity: 0.9
-
-      }).addTo(map).bindTooltip('スタート', { permanent: false, direction: 'top' });
-
-
-
-      
-
-      L.circleMarker([endPt.lat, endPt.lng], {
-
-        radius: 9,
-
-        fillColor: '#dc3545',
-
-        color: '#ffffff',
-
-        weight: 2,
-
-        opacity: 1,
-
-        fillOpacity: 0.9
-
-      }).addTo(map).bindTooltip('ゴール', { permanent: false, direction: 'top' });
-
-    }
-
-
-
-    eleData.forEach(function(item) {
-
-      var dist = typeof item[0] === 'number' ? item[0] : parseFloat(item[0]);
-
-      labels.push(dist.toFixed(2));
-
-      elevations.push(Math.round(item[1]));
-
+  fetch(gpxUrl)
+    .then(function(response) { return response.text(); })
+    .then(function(xmlText) {
+      var parser = new DOMParser();
+      var xmlDoc = parser.parseFromString(xmlText, "text/xml");
+      var trkpts = xmlDoc.getElementsByTagName("trkpt");
+
+      for (var i = 0; i < trkpts.length; i++) {
+        var timeNode = trkpts[i].getElementsByTagName("time")[0];
+        if (timeNode) {
+          var dateObj = new Date(timeNode.textContent);
+          var timeStr = dateObj.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
+          timeLabels.push(timeStr);
+        } else {
+          timeLabels.push('');
+        }
+      }
+    })
+    .catch(function(err) {
+      console.error("GPX Time Parsing Error:", err);
     });
 
-
-
-    chart.data.labels = labels;
-
-    chart.data.datasets[0].data = elevations;
-
-    chart.update();
-
-
+  
+  new L.GPX(gpxUrl, {
+    async: true,
+    polyline_options: { color: '#ff3300', weight: 5, opacity: 0.8 },
+    marker_options: { startIconUrl: null, endIconUrl: null, wptIconUrls: null }
+  }).on('loaded', function(e) {
+    var gpx = e.target;
+    map.fitBounds(gpx.getBounds());
 
     
+    var distKm = (gpx.get_distance() / 1000).toFixed(2);
+    var maxEle = Math.round(gpx.get_elevation_max());
+    var minEle = Math.round(gpx.get_elevation_min());
+    var gainEle = Math.round(gpx.get_elevation_gain());
+    var lossEle = Math.round(gpx.get_elevation_loss());
 
+    document.getElementById('sum-dist-a94201a3').innerText = distKm;
+    document.getElementById('sum-up-a94201a3').innerText = gainEle;
+    document.getElementById('sum-down-a94201a3').innerText = lossEle;
+    document.getElementById('sum-max-a94201a3').innerText = maxEle;
+    document.getElementById('sum-min-a94201a3').innerText = minEle;
+
+    
+    var eleData = gpx.get_elevation_data();
+    var distLabels = [];
+    var elevations = [];
+
+    var extracted = extractTrackData(gpx);
+    trackPoints = extracted.pts;
+
+    
+    if (trackPoints.length > 0) {
+      var startPt = trackPoints[0];
+      var endPt = trackPoints[trackPoints.length - 1];
+
+      L.circleMarker([startPt.lat, startPt.lng], {
+        radius: 9,
+        fillColor: '#28a745',
+        color: '#ffffff',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip('スタート', { permanent: false, direction: 'top' });
+
+      L.circleMarker([endPt.lat, endPt.lng], {
+        radius: 9,
+        fillColor: '#dc3545',
+        color: '#ffffff',
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip('ゴール', { permanent: false, direction: 'top' });
+    }
+
+    eleData.forEach(function(item) {
+      var dist = typeof item[0] === 'number' ? item[0] : parseFloat(item[0]);
+      distLabels.push(dist.toFixed(2));
+      elevations.push(Math.round(item[1]));
+    });
+
+    chart.data.labels = distLabels;
+    chart.data.datasets[0].data = elevations;
+    chart.update();
+
+    
     extracted.polylines.forEach(function(polyline) {
-
       polyline.on('mousemove', function(ev) {
-
         if (!trackPoints.length) return;
 
-
-
         var mouseLatLng = ev.latlng;
-
         var closestIndex = 0;
-
         var minDist = Infinity;
 
-
-
         for (var i = 0; i < trackPoints.length; i++) {
-
           var d = mouseLatLng.distanceTo(L.latLng(trackPoints[i].lat, trackPoints[i].lng));
-
           if (d < minDist) {
-
             minDist = d;
-
             closestIndex = i;
-
           }
-
         }
-
-
 
         updateHoverMarker(closestIndex);
 
-
-
         chart.setActiveElements([{ datasetIndex: 0, index: closestIndex }]);
-
         chart.tooltip.setActiveElements([{ datasetIndex: 0, index: closestIndex }], { x: 0, y: 0 });
-
         chart.update();
-
       });
-
     });
 
-
-
   }).addTo(map);
-
 });
-
-</script>  
-
-
+</script>
 <hr>
 <h3 id="山行記録">山行記録<a hidden class="anchor" aria-hidden="true" href="#山行記録">#</a></h3>
 <h4 id="三ノ木戸から石尾根北面への道">三ノ木戸から石尾根北面への道<a hidden class="anchor" aria-hidden="true" href="#三ノ木戸から石尾根北面への道">#</a></h4>
