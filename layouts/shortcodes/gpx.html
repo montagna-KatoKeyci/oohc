@@ -1,9 +1,14 @@
+{{ $page := .Page }}
 {{ $gpxFile := default "20260509_20260509.gpx" (.Get 0) }}
+
+{{/* ページバンドル（記事と同じフォルダ）または static/gpx からパスを取得 */}}
+{{ $gpxRes := $page.Resources.GetMatch $gpxFile }}
+{{ $gpxPath := cond (ne $gpxRes nil) $gpxRes.RelPermalink (printf "gpx/%s" $gpxFile | relURL) }}
+
 {{ $uniqueId := substr (md5 $gpxFile) 0 8 }}
 {{ $mapId := printf "map-%s" $uniqueId }}
 {{ $chartId := printf "chart-%s" $uniqueId }}
 {{ $summaryId := printf "summary-%s" $uniqueId }}
-{{ $gpxPath := printf "gpx/%s" $gpxFile | relURL }}
 
 <!-- CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
