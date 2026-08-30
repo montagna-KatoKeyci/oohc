@@ -6,7 +6,7 @@
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url('/fonts/noto-sans-jp-regular.woff2') format('woff2');
+    src: url('/oohc/fonts/noto-sans-jp-regular.woff2') format('woff2');
 }
 
 @font-face {
@@ -14,7 +14,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url('/fonts/noto-sans-jp-700.woff2') format('woff2');
+    src: url('/oohc/fonts/noto-sans-jp-700.woff2') format('woff2');
 }
 
 /* ==========================================
@@ -246,7 +246,7 @@ main .post-single {
     #menu a, 
     .menu a {
         font-size: 0.9rem;      
-        font-weight: 500;       
+        font-weight: 500;      
         padding: 5px 10px;      
     }
 }
@@ -256,8 +256,8 @@ main .post-single {
    ========================================== */
 @media screen and (min-width: 641px) {
     .post-content {
-        color: #3b3b3b;         
-        font-weight: 400;       
+        color: #3b3b3b;        
+        font-weight: 400;      
         line-height: 1.85;      
         letter-spacing: 0.02em;  
     }
@@ -272,26 +272,26 @@ main .post-single {
    ========================================== */
 .post-photo {
     margin: 1rem auto;        
-    max-width: 560px;         
+    max-width: 560px;        
     width: 100%;
 }
 
 .post-photo img {
     max-width: 100%;
-    max-height: 65vh;         
-    width: auto;              
-    height: auto;             
+    max-height: 65vh;        
+    width: auto;            
+    height: auto;            
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: block;
-    margin: 0 auto;           
+    margin: 0 auto;          
 }
 
 .post-photo figcaption {
     font-size: 0.85rem;
     color: #666;
     margin-top: 8px;
-    text-align: left; /* ←ここを center から left に変更しました */
+    text-align: left;
 }
 
 /* ==========================================
@@ -350,9 +350,6 @@ main .post-single {
     display: none;
 }
 
-/* ==========================================
-   ご依頼のカスタム調整（完成版）
-   ========================================== */
 .post-content table {
     width: 100%;
     border-collapse: collapse;
@@ -402,6 +399,7 @@ h3[id*="テーマ・目的"] {
     margin-top: 1.5rem;
     margin-bottom: 0.8rem;
 }
+
 /* ==========================================
    タグ一覧の左側に「この日記に含まれるタグ」を表示
    ========================================== */
@@ -412,17 +410,15 @@ h3[id*="テーマ・目的"] {
     color: #555;
     margin-right: 4px;
     display: inline-block;
-    line-height: 2; /* タグボタンの高さと揃える */
+    line-height: 2; 
 }
 
-/* ダークモード時の文字色調整 */
 [data-theme="dark"] .post-tags::before {
     color: #cccccc;
 }
 
-/* キャプションのリスト（ol / li）のぶら下げインデント設定（数字を消さない版） */
 .post-photo figcaption ol {
-    list-style-position: inside;  /* 数字をテキストと一緒に内側に収める */
+    list-style-position: inside;  
     padding-left: 0;
     margin: 0;
     text-align: left;
@@ -433,14 +429,12 @@ h3[id*="テーマ・目的"] {
     margin: 0;
 }
 
-/* 写真ギャラリー見出し内の「クリックで拡大します」の文字サイズを小さくする */
 .gallery-subtext {
-    font-size: 0.8em;       /* 見出し全体の文字サイズに対してひとまわり小さくする */
-    font-weight: normal;    /* もし太字をスッキリさせたい場合（お好みで調整可） */
-    margin: 0;        /* 左右に少しだけ隙間を空ける */
+    font-size: 0.8em;       
+    font-weight: normal;    
+    margin: 0;      
 }
 
-/* スマホ画面（幅640px以下）のときは「クリックで拡大します」を非表示にする */
 @media screen and (max-width: 640px) {
     .gallery-subtext {
         display: none;
@@ -450,8 +444,6 @@ h3[id*="テーマ・目的"] {
 /* ==========================================
    ダークモード時の文字色調整（まとめ）
    ========================================== */
-
-/* ① カテゴリーの「この日記のカテゴリー：」部分の表示と文字色調整 */
 .post-categories::before {
     content: "この日記のカテゴリー：";
     font-weight: 500;
@@ -466,7 +458,6 @@ h3[id*="テーマ・目的"] {
     color: #cccccc;
 }
 
-/* ② 写真キャプションの文字色調整 */
 [data-theme="dark"] .post-photo figcaption,
 [data-theme="dark"] .photo-grid figcaption {
     color: #b0b0b0;
@@ -475,8 +466,6 @@ h3[id*="テーマ・目的"] {
 /* ==========================================
    アーカイブページのちょうど良いコンパクト化
    ========================================== */
-
-/* 1 & 2. 年・月・投稿グループの余白ゼロ */
 .archive-year,
 .archive-month,
 .archive-posts {
@@ -484,7 +473,6 @@ h3[id*="テーマ・目的"] {
     padding: 0;
 }
 
-/* 年の見出し */
 .archive-year-header {
     font-size: 1.1rem;
     margin-top: 1.2rem;
@@ -493,13 +481,11 @@ h3[id*="テーマ・目的"] {
     padding-bottom: 2px;
 }
 
-/* 月の見出し */
 .archive-month-header {
     margin: 0.4rem 0 0 0;
     font-size: 0.95rem;
 }
 
-/* 3 & 4. 1行化 ＆ 行間をスッキリ整える（詰めすぎない） */
 .archive-entry {
     display: flex;
     flex-direction: row-reverse;
@@ -507,11 +493,10 @@ h3[id*="テーマ・目的"] {
     align-items: center;
     gap: 12px;
     margin: 0;
-    padding: 2px 0;              /* ほんの少し上下に息継ぎのパディングを入れる */
-    line-height: 1.3;            /* 自然な行の高さに戻す */
+    padding: 2px 0;             
+    line-height: 1.3;           
 }
 
-/* 日付部分 */
 .archive-meta {
     font-size: 0.85rem;
     color: var(--secondary);
@@ -519,9 +504,8 @@ h3[id*="テーマ・目的"] {
     margin: 0;
 }
 
-/* 5. 記事タイトル（フォントサイズを標準に戻し、1行省略を維持） */
 .archive-entry-title {
-    font-size: 0.95rem;          /* 標準の大きさに戻す */
+    font-size: 0.95rem;          
     font-weight: normal;
     margin: 0;
     flex-grow: 1;
@@ -537,7 +521,6 @@ h3[id*="テーマ・目的"] {
     text-underline-offset: 2px;
 }
 
-/* Markdownが生成する横線（---）およびテンプレート自動挿入の横線のスタイル統一 */
 .post-content hr,
 hr.gallery-divider {
     border: none;
@@ -545,13 +528,11 @@ hr.gallery-divider {
     margin: 2rem 0;
 }
 
-/* ダークモード時の横線の色調整 */
 [data-theme="dark"] .post-content hr,
 [data-theme="dark"] hr.gallery-divider {
     border-top-color: #3b3b3e;
 }
 
-/* 個別記事のタグを、下地から浮かび上がる濃いカードにする */
 .post-tags {
     display: flex;
     flex-wrap: wrap;
@@ -568,11 +549,11 @@ hr.gallery-divider {
 .post-tags a {
     display: inline-block;
     padding: 4px 12px;
-    background: #e8e4dc; /* 下地より一歩濃い落ち着いたグレー（カードと明確にわかる色） */
-    border: 1px solid #b8b2a6; /* はっきりした枠線 */
+    background: #e8e4dc; 
+    border: 1px solid #b8b2a6; 
     border-radius: 4px;
     font-size: 0.9rem;
-    color: #2e2e2e; /* 文字を濃くして視認性を上げる */
+    color: #2e2e2e; 
     text-decoration: none;
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
@@ -582,7 +563,6 @@ hr.gallery-divider {
     border-color: #888276;
 }
 
-/* ダークモード時のカード色・枠線・文字色の調整 */
 [data-theme="dark"] .post-tags a {
     background: #3e3e44;
     border-color: #55555c;
