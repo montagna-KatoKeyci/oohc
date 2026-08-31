@@ -63,8 +63,6 @@ draft: false
 
 ####  <!-- 山行記録内サブタイトル--> 
 
-#### 関連する筆者の山行記録
-
 ---
 
 {{< auto-gallery dir="images" >}}
