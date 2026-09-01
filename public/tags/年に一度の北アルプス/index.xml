@@ -383,7 +383,11 @@ window.addEventListener(&#39;load&#39;, function() {
 
   }).addTo(map);
 });
-&lt;/script&gt;</description>
+&lt;/script&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;山行記録&#34;&gt;山行記録&lt;/h3&gt;
+&lt;h4 id=&#34;2026年の困難&#34;&gt; 2026年の困難&lt;/h4&gt;
+&lt;p&gt;すべてこれから記入します。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
