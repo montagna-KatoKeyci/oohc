@@ -573,3 +573,12 @@ hr.gallery-divider {
     background: #4e4e54;
     border-color: #77777f;
 }
+
+/* タグのカードと文字を全体的に一段階小さくする */
+.terms-tags li a {
+    font-size: 0.95rem; /* 文字サイズを少し小さく */
+    padding: 2px 7px;   /* 余白を詰める */
+}
+.terms-tags li a sup {
+    font-size: 0.75rem;  /* 記事数の数字も小さく */
+}

@@ -1,0 +1,20 @@
+{{- define "main" -}}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+</header>
+
+<ul class="terms-tags">
+    {{- /* 記事数が多い順（降順） */ -}}
+    {{- range .Data.Terms.ByCount -}}
+    {{- $name := .Name }}
+    {{- $count := .Count }}
+    {{- with site.GetPage (printf "/tags/%s" $name) -}}
+    <li>
+        <a href="{{ .Permalink }}">
+            {{ $name }} <sup><strong>{{ $count }}</strong></sup>
+        </a>
+    </li>
+    {{- end -}}
+    {{- end -}}
+</ul>
+{{- end -}}
