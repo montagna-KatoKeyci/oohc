@@ -13,8 +13,380 @@
       <link>http://localhost:1313/oohc/posts/2026-09-05/</link>
       <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/posts/2026-09-05/</guid>
-      <description>&lt;p&gt;不老林道終点＝オキノ十二天からはじまった廃径をたどる山行も最終回。ヒカゲザス尾根を越えるあたりから「もしかして……」と意識していた鞘口のクビレにたどり着いた。まさか全行程をたどれるとは思いもよらなかった。鞘口のクビレからは巳ノ戸林道～ヤケト尾根上段径路と続くので、氷川から唐松谷の前窪出合いまで繋がる壮大なルートが出来あがる。&lt;br&gt;
-帰りの青梅線車中でハイボールが美味かった。&lt;/p&gt;</description>
+      <description>&lt;p&gt;不老林道終点＝オキノ十二天からはじまった廃径をたどる探索行も最終回。ヒカゲザス尾根を越えるあたりから「もしかして……」と意識していた鞘口のクビレにたどり着いた。まさか全行程をたどれるとは思いもよらなかった。鞘口のクビレからは巳ノ戸林道～ヤケト尾根上段径路と続くので、氷川から唐松谷の前窪出合いに至る、山腹を繋ぐ壮大なルートが完成する。&lt;br&gt;
+帰りの青梅線車中でハイボールが美味かった。&lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+	&lt;thead&gt;
+			&lt;tr&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;項目&lt;/th&gt;
+					&lt;th style=&#34;text-align: left&#34;&gt;内容&lt;/th&gt;
+			&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;記録日&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;2026年9月5日（土）&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;天候&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;長雨の合間。小雨のち曇り・ガス&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;パーティ&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;単独&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;アクセス&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;西東京バスで東日原バス停&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;東日原バス停、ネズミサス尾根、カラ沢の頭、石尾根、城山、コマ尾根、コマ尾根co1260m付近、金左小屋窪、鷹ノ巣谷中尾根、小六谷、カイキ尾根、稲村岩尾根、巳ノ戸沢、鞘口のクビレ、鷹ノ巣尾根、八丁山、巳ノ戸尾根、東日原バス停&lt;/td&gt;
+			&lt;/tr&gt;
+	&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;コースタイム&#34;&gt;コースタイム&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;08:22～東日原バス停スタート&lt;/li&gt;
+&lt;li&gt;10:15～カラ沢の頭～10:42&lt;/li&gt;
+&lt;li&gt;10:48～城山からコマ尾根の下降開始&lt;/li&gt;
+&lt;li&gt;11:26～前回到達地点、コマ尾根co1260m～11:57&lt;/li&gt;
+&lt;li&gt;12:45ごろ～金左小屋窪、二又のすぐ上&lt;/li&gt;
+&lt;li&gt;13:12～鷹ノ巣谷中尾根～13:35&lt;/li&gt;
+&lt;li&gt;14:35～小六谷～14:45&lt;/li&gt;
+&lt;li&gt;15:21～カイキ尾根&lt;/li&gt;
+&lt;li&gt;15:27～稲村岩尾根&lt;/li&gt;
+&lt;li&gt;15:56～巳ノ戸沢&lt;/li&gt;
+&lt;li&gt;16:15～鞘口のクビレ～16:30&lt;/li&gt;
+&lt;li&gt;17:07～八丁山&lt;/li&gt;
+&lt;li&gt;18:20～中日原バス停フィニッシュ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;コースマップ&#34;&gt;コースマップ&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&#34; /&gt;
+&lt;style&gt;
+  .gpx-container {
+    width: 100%;
+    margin: 1.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    font-family: sans-serif;
+  }
+  .gpx-map { height: 380px; width: 100%; }
+  
+   
+  .gpx-summary {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    padding: 8px 10px;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 0.8rem;
+    color: #333;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .gpx-summary-item {
+    margin: 0 4px;
+  }
+  .gpx-summary-item strong {
+    color: #007bff;
+    font-size: 0.95rem;
+    margin-left: 2px;
+  }
+
+  .gpx-chart-wrapper {
+    height: 180px;
+    width: 100%;
+    padding: 10px;
+    background: #fafafa;
+    box-sizing: border-box;
+  }
+
+   
+  .start-marker-icon, .goal-marker-icon {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 18px;
+  }
+&lt;/style&gt;
+
+
+&lt;div class=&#34;gpx-container&#34;&gt;
+  &lt;div id=&#34;map-0cbb3b49&#34; class=&#34;gpx-map&#34;&gt;&lt;/div&gt;
+  &lt;div id=&#34;summary-0cbb3b49&#34; class=&#34;gpx-summary&#34;&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;総距離:&lt;strong id=&#34;sum-dist-0cbb3b49&#34;&gt;-&lt;/strong&gt; km&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高上り:&lt;strong id=&#34;sum-up-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高下り:&lt;strong id=&#34;sum-down-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最高標高:&lt;strong id=&#34;sum-max-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最低標高:&lt;strong id=&#34;sum-min-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&#34;gpx-chart-wrapper&#34;&gt;
+    &lt;canvas id=&#34;chart-0cbb3b49&#34;&gt;&lt;/canvas&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;script src=&#34;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdn.jsdelivr.net/npm/chart.js&#34;&gt;&lt;/script&gt;
+
+&lt;script&gt;
+window.addEventListener(&#39;load&#39;, function() {
+  var gpxUrl = &#39;\/oohc\/posts\/2026-09-05\/20260905_20260905.gpx&#39;;
+
+  
+  var map = L.map(&#39;map-0cbb3b49&#39;).setView([0, 0], 10);
+  L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
+    attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
+    maxZoom: 18
+  }).addTo(map);
+
+  var hoverMarker = null;
+  var trackPoints = [];
+  var timeLabels = []; 
+
+  
+  var ctx = document.getElementById(&#39;chart-0cbb3b49&#39;).getContext(&#39;2d&#39;);
+  var chart = new Chart(ctx, {
+    type: &#39;line&#39;,
+    data: {
+      labels: [],
+      datasets: [{
+        label: &#39;標高 (m)&#39;,
+        data: [],
+        borderColor: &#39;#007bff&#39;,
+        backgroundColor: &#39;rgba(0, 123, 255, 0.1)&#39;,
+        fill: true,
+        borderWidth: 1.5,
+        pointRadius: 0,
+        pointHoverRadius: 6,
+        tension: 0.1
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: &#39;index&#39;, intersect: false },
+      plugins: {
+        legend: { display: false },
+        
+        tooltip: {
+          callbacks: {
+            title: function(items) {
+              var index = items[0].dataIndex;
+              var timeStr = timeLabels[index] || &#39;&#39;;
+              return timeStr ? &#39;時刻: &#39; + timeStr : &#39;&#39;;
+            },
+            label: function(item) {
+              return &#39;標高: &#39; + item.raw + &#39; m&#39;;
+            }
+          }
+        }
+      },
+      scales: {
+        x: { display: true, title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } } },
+        y: { display: true, title: { display: true, text: &#39;標高 (m)&#39;, font: { size: 10 } } }
+      },
+      
+      onHover: function(event, activeElements) {
+        if (activeElements &amp;&amp; activeElements.length &gt; 0) {
+          var index = activeElements[0].index;
+          updateHoverMarker(index);
+        }
+      }
+    }
+  });
+
+  
+  function updateHoverMarker(index) {
+    var pt = trackPoints[index];
+    if (pt) {
+      if (!hoverMarker) {
+        hoverMarker = L.circleMarker([pt.lat, pt.lng], {
+          radius: 8,
+          fillColor: &#39;#00ffff&#39;,
+          color: &#39;#ffffff&#39;,
+          weight: 3,
+          opacity: 1,
+          fillOpacity: 1
+        }).addTo(map);
+      } else {
+        hoverMarker.setLatLng([pt.lat, pt.lng]);
+      }
+    }
+  }
+
+  
+  function extractTrackData(layer) {
+    var pts = [];
+    var polylines = [];
+
+    if (typeof layer.getLatLngs === &#39;function&#39;) {
+      var latlngs = layer.getLatLngs();
+      var flat = Array.isArray(latlngs[0]) ? latlngs.flat(Infinity) : latlngs;
+      flat.forEach(function(p) {
+        if (p &amp;&amp; typeof p.lat === &#39;number&#39;) {
+          pts.push({ lat: p.lat, lng: p.lng });
+        }
+      });
+      if (layer instanceof L.Polyline) {
+        polylines.push(layer);
+      }
+    } else if (typeof layer.eachLayer === &#39;function&#39;) {
+      layer.eachLayer(function(child) {
+        var res = extractTrackData(child);
+        pts = pts.concat(res.pts);
+        polylines = polylines.concat(res.polylines);
+      });
+    }
+    return { pts: pts, polylines: polylines };
+  }
+
+  
+  fetch(gpxUrl)
+    .then(function(response) { return response.text(); })
+    .then(function(xmlText) {
+      var parser = new DOMParser();
+      var xmlDoc = parser.parseFromString(xmlText, &#34;text/xml&#34;);
+      var trkpts = xmlDoc.getElementsByTagName(&#34;trkpt&#34;);
+
+      for (var i = 0; i &lt; trkpts.length; i++) {
+        var timeNode = trkpts[i].getElementsByTagName(&#34;time&#34;)[0];
+        if (timeNode) {
+          var dateObj = new Date(timeNode.textContent);
+          var timeStr = dateObj.toLocaleTimeString([], { hour: &#39;2-digit&#39;, minute: &#39;2-digit&#39;, hour12: false });
+          timeLabels.push(timeStr);
+        } else {
+          timeLabels.push(&#39;&#39;);
+        }
+      }
+    })
+    .catch(function(err) {
+      console.error(&#34;GPX Time Parsing Error:&#34;, err);
+    });
+
+  
+  new L.GPX(gpxUrl, {
+    async: true,
+    polyline_options: { color: &#39;#ff3300&#39;, weight: 5, opacity: 0.8 },
+    marker_options: { startIconUrl: null, endIconUrl: null, wptIconUrls: null }
+  }).on(&#39;loaded&#39;, function(e) {
+    var gpx = e.target;
+    map.fitBounds(gpx.getBounds());
+
+    
+    var distKm = (gpx.get_distance() / 1000).toFixed(2);
+    var maxEle = Math.round(gpx.get_elevation_max());
+    var minEle = Math.round(gpx.get_elevation_min());
+    var gainEle = Math.round(gpx.get_elevation_gain());
+    var lossEle = Math.round(gpx.get_elevation_loss());
+
+    document.getElementById(&#39;sum-dist-0cbb3b49&#39;).innerText = distKm;
+    document.getElementById(&#39;sum-up-0cbb3b49&#39;).innerText = gainEle;
+    document.getElementById(&#39;sum-down-0cbb3b49&#39;).innerText = lossEle;
+    document.getElementById(&#39;sum-max-0cbb3b49&#39;).innerText = maxEle;
+    document.getElementById(&#39;sum-min-0cbb3b49&#39;).innerText = minEle;
+
+    
+    var eleData = gpx.get_elevation_data();
+    var distLabels = [];
+    var elevations = [];
+
+    var extracted = extractTrackData(gpx);
+    trackPoints = extracted.pts;
+
+    
+    if (trackPoints.length &gt; 0) {
+      var startPt = trackPoints[0];
+      var endPt = trackPoints[trackPoints.length - 1];
+
+      L.circleMarker([startPt.lat, startPt.lng], {
+        radius: 9,
+        fillColor: &#39;#28a745&#39;,
+        color: &#39;#ffffff&#39;,
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip(&#39;スタート&#39;, { permanent: false, direction: &#39;top&#39; });
+
+      L.circleMarker([endPt.lat, endPt.lng], {
+        radius: 9,
+        fillColor: &#39;#dc3545&#39;,
+        color: &#39;#ffffff&#39;,
+        weight: 2,
+        opacity: 1,
+        fillOpacity: 0.9
+      }).addTo(map).bindTooltip(&#39;ゴール&#39;, { permanent: false, direction: &#39;top&#39; });
+    }
+
+    eleData.forEach(function(item) {
+      var dist = typeof item[0] === &#39;number&#39; ? item[0] : parseFloat(item[0]);
+      distLabels.push(dist.toFixed(2));
+      elevations.push(Math.round(item[1]));
+    });
+
+    chart.data.labels = distLabels;
+    chart.data.datasets[0].data = elevations;
+    chart.update();
+
+    
+    extracted.polylines.forEach(function(polyline) {
+      polyline.on(&#39;mousemove&#39;, function(ev) {
+        if (!trackPoints.length) return;
+
+        var mouseLatLng = ev.latlng;
+        var closestIndex = 0;
+        var minDist = Infinity;
+
+        for (var i = 0; i &lt; trackPoints.length; i++) {
+          var d = mouseLatLng.distanceTo(L.latLng(trackPoints[i].lat, trackPoints[i].lng));
+          if (d &lt; minDist) {
+            minDist = d;
+            closestIndex = i;
+          }
+        }
+
+        updateHoverMarker(closestIndex);
+
+        chart.setActiveElements([{ datasetIndex: 0, index: closestIndex }]);
+        chart.tooltip.setActiveElements([{ datasetIndex: 0, index: closestIndex }], { x: 0, y: 0 });
+        chart.update();
+      });
+    });
+
+  }).addTo(map);
+});
+&lt;/script&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;山行記録&#34;&gt;山行記録&lt;/h3&gt;
+&lt;h4 id=&#34;最終回日原川下流右岸中段道コマ尾根から鞘口のクビレまで&#34;&gt;（最終回）日原川下流右岸中段道、コマ尾根から鞘口のクビレまで&lt;/h4&gt;
+&lt;p&gt;すべてこれから記入します。&lt;/p&gt;</description>
     </item>
     <item>
       <title>雑感のテスト記事</title>
@@ -822,7 +1194,7 @@ window.addEventListener(&#39;load&#39;, function() {
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;アクセス&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;JR青梅線 奥多摩駅&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;JR青梅線で奥多摩駅&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
