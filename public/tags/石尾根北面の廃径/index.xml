@@ -167,6 +167,12 @@ window.addEventListener(&#39;load&#39;, function() {
     maxZoom: 18
   }).addTo(map);
 
+  
+  L.control.scale({
+    imperial: false,
+    position: &#39;bottomleft&#39;
+  }).addTo(map);
+
   var hoverMarker = null;
   var trackPoints = [];
   var timeLabels = []; 
@@ -385,8 +391,8 @@ window.addEventListener(&#39;load&#39;, function() {
 &lt;/script&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;山行記録&#34;&gt;山行記録&lt;/h3&gt;
-&lt;h4 id=&#34;最終回日原川下流右岸中段道コマ尾根から鞘口のクビレまで&#34;&gt;（最終回）日原川下流右岸中段道、コマ尾根から鞘口のクビレまで&lt;/h4&gt;
-&lt;p&gt;すべてこれから記入します。&lt;/p&gt;</description>
+&lt;h4 id=&#34;最終回日原川下流右岸中段道コマ尾根から鞘口のクビレまで&#34;&gt;（最終回）日原川下流右岸中段道～コマ尾根から鞘口のクビレまで&lt;/h4&gt;
+&lt;p&gt;とくに緩斜面で、枝分かれしたり上下に並行したりする獣の踏み跡に惑わされ、道跡を追うのに時間をかけるのは廃道歩きの常ではある。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Part 2 : 日原川下流右岸中段道</title>
@@ -544,6 +550,12 @@ window.addEventListener(&#39;load&#39;, function() {
   L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
     attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
     maxZoom: 18
+  }).addTo(map);
+
+  
+  L.control.scale({
+    imperial: false,
+    position: &#39;bottomleft&#39;
   }).addTo(map);
 
   var hoverMarker = null;
@@ -930,6 +942,12 @@ window.addEventListener(&#39;load&#39;, function() {
   L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
     attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
     maxZoom: 18
+  }).addTo(map);
+
+  
+  L.control.scale({
+    imperial: false,
+    position: &#39;bottomleft&#39;
   }).addTo(map);
 
   var hoverMarker = null;

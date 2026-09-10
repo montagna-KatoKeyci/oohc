@@ -100,6 +100,12 @@ window.addEventListener('load', function() {
     maxZoom: 18
   }).addTo(map);
 
+  // 縮尺スケールの追加（拡大・縮小に連動）
+  L.control.scale({
+    imperial: false,
+    position: 'bottomleft'
+  }).addTo(map);
+
   var hoverMarker = null;
   var trackPoints = [];
   var timeLabels = []; // 各ポイントの時刻を格納する配列

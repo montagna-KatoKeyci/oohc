@@ -167,6 +167,12 @@ window.addEventListener(&#39;load&#39;, function() {
     maxZoom: 18
   }).addTo(map);
 
+  
+  L.control.scale({
+    imperial: false,
+    position: &#39;bottomleft&#39;
+  }).addTo(map);
+
   var hoverMarker = null;
   var trackPoints = [];
   var timeLabels = []; 
