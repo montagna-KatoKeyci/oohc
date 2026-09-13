@@ -1,13 +1,14 @@
 /* ==========================================
-   ローカルフォント定義削除・システムフォント化
+   Google Fonts (Noto Sans JP) + システムフォントフォールバック
    ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
 
 /* ==========================================
    フォント・基本テキスト設定（山行記録向け長文最適化）
    ========================================== */
 body,
 .post-content {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+    font-family: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
     font-weight: 400;
     line-height: 1.85;
     letter-spacing: 0.03em;
