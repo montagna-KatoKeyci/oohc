@@ -14,17 +14,6 @@
 <vaccuracy>8.206789</vaccuracy>
 <internetconnect>2</internetconnect>
 </trkpt>
-<trkpt lat="35.842287" lon="139.044507">
-<ele>643.000000</ele>
-<time>2026-09-04T23:21:11Z</time>
-<speed>2.590000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>0.000000</gpsHeading>
-<haccuracy>9.065000</haccuracy>
-<vaccuracy>9.065000</vaccuracy>
-<internetconnect>2</internetconnect>
-</trkpt>
 <trkpt lat="35.841785" lon="139.044536">
 <ele>631.666667</ele>
 <time>2026-09-04T23:22:11Z</time>
@@ -1015,17 +1004,6 @@
 <vaccuracy>4.193000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.824369" lon="139.033103">
-<ele>1490.333333</ele>
-<time>2026-09-05T01:18:51Z</time>
-<speed>0.387781</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>172.419159</gpsHeading>
-<haccuracy>3.000000</haccuracy>
-<vaccuracy>3.000000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.824436" lon="139.033040">
 <ele>1490.666667</ele>
 <time>2026-09-05T01:20:52Z</time>
@@ -1035,61 +1013,6 @@
 <gpsHeading>322.716339</gpsHeading>
 <haccuracy>4.131000</haccuracy>
 <vaccuracy>4.131000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.824437" lon="139.033079">
-<ele>1491.000000</ele>
-<time>2026-09-05T01:23:14Z</time>
-<speed>0.007995</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>88.373886</gpsHeading>
-<haccuracy>4.205000</haccuracy>
-<vaccuracy>4.205000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.824414" lon="139.033075">
-<ele>1491.000000</ele>
-<time>2026-09-05T01:26:09Z</time>
-<speed>0.165410</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>188.779449</gpsHeading>
-<haccuracy>5.107000</haccuracy>
-<vaccuracy>5.107000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.824421" lon="139.033067">
-<ele>1491.000000</ele>
-<time>2026-09-05T01:33:54Z</time>
-<speed>0.006734</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>317.860504</gpsHeading>
-<haccuracy>4.010000</haccuracy>
-<vaccuracy>4.010000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.824429" lon="139.033060">
-<ele>1491.000000</ele>
-<time>2026-09-05T01:36:13Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>325.462341</gpsHeading>
-<haccuracy>9.935000</haccuracy>
-<vaccuracy>9.935000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.824433" lon="139.033049">
-<ele>1491.000000</ele>
-<time>2026-09-05T01:39:21Z</time>
-<speed>0.160000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>291.250427</gpsHeading>
-<haccuracy>9.935000</haccuracy>
-<vaccuracy>9.935000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.824403" lon="139.033027">
@@ -1224,17 +1147,6 @@
 <vaccuracy>3.790000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.825089" lon="139.029471">
-<ele>1472.000000</ele>
-<time>2026-09-05T01:55:15Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>338.423615</gpsHeading>
-<haccuracy>6.265000</haccuracy>
-<vaccuracy>6.265000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.825382" lon="139.029476">
 <ele>1458.333333</ele>
 <time>2026-09-05T01:56:59Z</time>
@@ -1277,17 +1189,6 @@
 <gpsHeading>5.809491</gpsHeading>
 <haccuracy>6.073000</haccuracy>
 <vaccuracy>6.073000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.826113" lon="139.029483">
-<ele>1398.333333</ele>
-<time>2026-09-05T02:05:54Z</time>
-<speed>0.250000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>216.506302</gpsHeading>
-<haccuracy>10.625000</haccuracy>
-<vaccuracy>10.625000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.826179" lon="139.029229">
@@ -1411,17 +1312,6 @@
 <vaccuracy>4.798000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.827867" lon="139.029362">
-<ele>1254.333333</ele>
-<time>2026-09-05T02:30:44Z</time>
-<speed>0.467962</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>343.434723</gpsHeading>
-<haccuracy>5.236000</haccuracy>
-<vaccuracy>5.236000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.827792" lon="139.029340">
 <ele>1255.666667</ele>
 <time>2026-09-05T02:32:48Z</time>
@@ -1444,17 +1334,6 @@
 <vaccuracy>3.000000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.827731" lon="139.029365">
-<ele>1259.000000</ele>
-<time>2026-09-05T02:39:25Z</time>
-<speed>0.053760</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>56.890366</gpsHeading>
-<haccuracy>3.000000</haccuracy>
-<vaccuracy>3.000000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.827764" lon="139.029412">
 <ele>1258.000000</ele>
 <time>2026-09-05T02:41:30Z</time>
@@ -1464,39 +1343,6 @@
 <gpsHeading>48.961533</gpsHeading>
 <haccuracy>5.146000</haccuracy>
 <vaccuracy>5.146000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.827753" lon="139.029400">
-<ele>1258.000000</ele>
-<time>2026-09-05T02:43:32Z</time>
-<speed>0.166430</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>222.251205</gpsHeading>
-<haccuracy>5.059000</haccuracy>
-<vaccuracy>5.059000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.827750" lon="139.029377">
-<ele>1259.000000</ele>
-<time>2026-09-05T02:51:42Z</time>
-<speed>0.072389</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>261.345764</gpsHeading>
-<haccuracy>3.000000</haccuracy>
-<vaccuracy>3.000000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.827720" lon="139.029345">
-<ele>1260.000000</ele>
-<time>2026-09-05T02:53:52Z</time>
-<speed>0.140420</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>219.486557</gpsHeading>
-<haccuracy>3.000000</haccuracy>
-<vaccuracy>3.000000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.827744" lon="139.029336">
@@ -1596,17 +1442,6 @@
 <gpsHeading>218.797180</gpsHeading>
 <haccuracy>3.937000</haccuracy>
 <vaccuracy>3.937000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.827019" lon="139.027356">
-<ele>1307.666667</ele>
-<time>2026-09-05T03:12:40Z</time>
-<speed>0.101829</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>119.313026</gpsHeading>
-<haccuracy>6.504000</haccuracy>
-<vaccuracy>6.504000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.827095" lon="139.027367">
@@ -1840,17 +1675,6 @@
 <vaccuracy>5.492000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.827319" lon="139.023898">
-<ele>1275.000000</ele>
-<time>2026-09-05T03:49:15Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>63.206089</gpsHeading>
-<haccuracy>7.793000</haccuracy>
-<vaccuracy>7.793000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.827455" lon="139.023564">
 <ele>1271.000000</ele>
 <time>2026-09-05T03:50:21Z</time>
@@ -2005,17 +1829,6 @@
 <vaccuracy>3.533000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.830421" lon="139.025122">
-<ele>1261.333333</ele>
-<time>2026-09-05T04:18:53Z</time>
-<speed>0.111731</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>45.382492</gpsHeading>
-<haccuracy>3.000000</haccuracy>
-<vaccuracy>3.000000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.830424" lon="139.025224">
 <ele>1261.333333</ele>
 <time>2026-09-05T04:20:58Z</time>
@@ -2027,28 +1840,6 @@
 <vaccuracy>5.523000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.830444" lon="139.025171">
-<ele>1259.666667</ele>
-<time>2026-09-05T04:23:12Z</time>
-<speed>0.123140</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>294.432037</gpsHeading>
-<haccuracy>3.028000</haccuracy>
-<vaccuracy>3.028000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.830477" lon="139.025193">
-<ele>1261.333333</ele>
-<time>2026-09-05T04:25:32Z</time>
-<speed>0.092306</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>27.419617</gpsHeading>
-<haccuracy>3.068000</haccuracy>
-<vaccuracy>3.068000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.830471" lon="139.025185">
 <ele>1261.333333</ele>
 <time>2026-09-05T04:31:42Z</time>
@@ -2058,17 +1849,6 @@
 <gpsHeading>222.603485</gpsHeading>
 <haccuracy>3.000000</haccuracy>
 <vaccuracy>3.000000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.830440" lon="139.025136">
-<ele>1264.333333</ele>
-<time>2026-09-05T04:33:48Z</time>
-<speed>0.113216</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>232.723267</gpsHeading>
-<haccuracy>4.375000</haccuracy>
-<vaccuracy>4.375000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.830692" lon="139.024923">
@@ -2214,17 +1994,6 @@
 <vaccuracy>4.507000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.830915" lon="139.022887">
-<ele>1296.666667</ele>
-<time>2026-09-05T05:02:58Z</time>
-<speed>0.038187</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>206.715897</gpsHeading>
-<haccuracy>4.915000</haccuracy>
-<vaccuracy>4.915000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.830780" lon="139.022680">
 <ele>1304.000000</ele>
 <time>2026-09-05T05:05:01Z</time>
@@ -2335,17 +2104,6 @@
 <vaccuracy>5.639000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.830931" lon="139.021085">
-<ele>1284.333333</ele>
-<time>2026-09-05T05:23:38Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>306.710571</gpsHeading>
-<haccuracy>10.480000</haccuracy>
-<vaccuracy>10.480000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.831165" lon="139.020882">
 <ele>1281.000000</ele>
 <time>2026-09-05T05:25:12Z</time>
@@ -2355,17 +2113,6 @@
 <gpsHeading>324.965607</gpsHeading>
 <haccuracy>10.053000</haccuracy>
 <vaccuracy>10.053000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.831096" lon="139.020817">
-<ele>1275.333333</ele>
-<time>2026-09-05T05:27:13Z</time>
-<speed>0.410000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>217.335648</gpsHeading>
-<haccuracy>6.089000</haccuracy>
-<vaccuracy>6.089000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.831142" lon="139.020742">
@@ -2388,17 +2135,6 @@
 <gpsHeading>265.432587</gpsHeading>
 <haccuracy>6.913000</haccuracy>
 <vaccuracy>6.913000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.831077" lon="139.020549">
-<ele>1275.666667</ele>
-<time>2026-09-05T05:33:55Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>227.031189</gpsHeading>
-<haccuracy>10.871000</haccuracy>
-<vaccuracy>10.871000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.831123" lon="139.020512">
@@ -2509,17 +2245,6 @@
 <gpsHeading>47.760315</gpsHeading>
 <haccuracy>10.103000</haccuracy>
 <vaccuracy>10.103000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.832571" lon="139.021774">
-<ele>1277.000000</ele>
-<time>2026-09-05T05:54:37Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>2.468566</gpsHeading>
-<haccuracy>10.458000</haccuracy>
-<vaccuracy>10.458000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.832600" lon="139.021735">
@@ -2885,17 +2610,6 @@
 <vaccuracy>10.338000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.837111" lon="139.018692">
-<ele>1289.864502</ele>
-<time>2026-09-05T06:57:31Z</time>
-<speed>0.000000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>0.000000</gpsHeading>
-<haccuracy>10.130034</haccuracy>
-<vaccuracy>10.130034</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.837133" lon="139.018524">
 <ele>1284.864502</ele>
 <time>2026-09-05T06:57:58Z</time>
@@ -2916,17 +2630,6 @@
 <gpsHeading>343.382111</gpsHeading>
 <haccuracy>10.905000</haccuracy>
 <vaccuracy>10.905000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.837371" lon="139.018508">
-<ele>1260.333333</ele>
-<time>2026-09-05T07:01:12Z</time>
-<speed>0.410000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>116.329498</gpsHeading>
-<haccuracy>10.801000</haccuracy>
-<vaccuracy>10.801000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.837625" lon="139.018280">
@@ -3050,50 +2753,6 @@
 <vaccuracy>3.000000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
-<trkpt lat="35.839322" lon="139.016156">
-<ele>1298.000000</ele>
-<time>2026-09-05T07:19:46Z</time>
-<speed>0.117606</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>313.271088</gpsHeading>
-<haccuracy>3.569000</haccuracy>
-<vaccuracy>3.569000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.839315" lon="139.016154">
-<ele>1298.666667</ele>
-<time>2026-09-05T07:22:29Z</time>
-<speed>0.223835</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>188.604919</gpsHeading>
-<haccuracy>4.829000</haccuracy>
-<vaccuracy>4.829000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.839322" lon="139.016155">
-<ele>1298.666667</ele>
-<time>2026-09-05T07:24:35Z</time>
-<speed>0.164206</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>6.692070</gpsHeading>
-<haccuracy>5.447000</haccuracy>
-<vaccuracy>5.447000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.839323" lon="139.016152">
-<ele>1299.000000</ele>
-<time>2026-09-05T07:26:38Z</time>
-<speed>0.064985</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>283.428192</gpsHeading>
-<haccuracy>4.600000</haccuracy>
-<vaccuracy>4.600000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
 <trkpt lat="35.839347" lon="139.016159">
 <ele>1299.000000</ele>
 <time>2026-09-05T07:28:43Z</time>
@@ -3103,17 +2762,6 @@
 <gpsHeading>13.249634</gpsHeading>
 <haccuracy>4.449000</haccuracy>
 <vaccuracy>4.449000</vaccuracy>
-<internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.839322" lon="139.016167">
-<ele>1302.000000</ele>
-<time>2026-09-05T07:30:49Z</time>
-<speed>0.127383</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>165.914200</gpsHeading>
-<haccuracy>4.113000</haccuracy>
-<vaccuracy>4.113000</vaccuracy>
 <internetconnect>0</internetconnect>
 </trkpt>
 <trkpt lat="35.839592" lon="139.016020">
@@ -3225,17 +2873,6 @@
 <haccuracy>11.113000</haccuracy>
 <vaccuracy>11.113000</vaccuracy>
 <internetconnect>0</internetconnect>
-</trkpt>
-<trkpt lat="35.841189" lon="139.018142">
-<ele>1267.333333</ele>
-<time>2026-09-05T07:47:14Z</time>
-<speed>0.440000</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>44.361095</gpsHeading>
-<haccuracy>10.822000</haccuracy>
-<vaccuracy>10.822000</vaccuracy>
-<internetconnect>2</internetconnect>
 </trkpt>
 <trkpt lat="35.841495" lon="139.018155">
 <ele>1276.333333</ele>
@@ -3697,17 +3334,6 @@
 <gpsHeading>107.603569</gpsHeading>
 <haccuracy>4.656000</haccuracy>
 <vaccuracy>4.656000</vaccuracy>
-<internetconnect>2</internetconnect>
-</trkpt>
-<trkpt lat="35.845033" lon="139.029009">
-<ele>972.333333</ele>
-<time>2026-09-05T08:37:14Z</time>
-<speed>0.230713</speed>
-<trueHeading>0.000000</trueHeading>
-<magneticHeading>0.000000</magneticHeading>
-<gpsHeading>301.522736</gpsHeading>
-<haccuracy>5.790000</haccuracy>
-<vaccuracy>5.790000</vaccuracy>
 <internetconnect>2</internetconnect>
 </trkpt>
 <trkpt lat="35.845021" lon="139.029037">

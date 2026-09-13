@@ -138,16 +138,16 @@
 
 
 &lt;div class=&#34;gpx-container&#34;&gt;
-  &lt;div id=&#34;map-0cbb3b49&#34; class=&#34;gpx-map&#34;&gt;&lt;/div&gt;
-  &lt;div id=&#34;summary-0cbb3b49&#34; class=&#34;gpx-summary&#34;&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;総距離:&lt;strong id=&#34;sum-dist-0cbb3b49&#34;&gt;-&lt;/strong&gt; km&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高上り:&lt;strong id=&#34;sum-up-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高下り:&lt;strong id=&#34;sum-down-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;最高標高:&lt;strong id=&#34;sum-max-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;最低標高:&lt;strong id=&#34;sum-min-0cbb3b49&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+  &lt;div id=&#34;map-364703c4&#34; class=&#34;gpx-map&#34;&gt;&lt;/div&gt;
+  &lt;div id=&#34;summary-364703c4&#34; class=&#34;gpx-summary&#34;&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;総距離:&lt;strong id=&#34;sum-dist-364703c4&#34;&gt;-&lt;/strong&gt; km&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高上り:&lt;strong id=&#34;sum-up-364703c4&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高下り:&lt;strong id=&#34;sum-down-364703c4&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最高標高:&lt;strong id=&#34;sum-max-364703c4&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最低標高:&lt;strong id=&#34;sum-min-364703c4&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&#34;gpx-chart-wrapper&#34;&gt;
-    &lt;canvas id=&#34;chart-0cbb3b49&#34;&gt;&lt;/canvas&gt;
+    &lt;canvas id=&#34;chart-364703c4&#34;&gt;&lt;/canvas&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -158,10 +158,10 @@
 
 &lt;script&gt;
 window.addEventListener(&#39;load&#39;, function() {
-  var gpxUrl = &#39;\/oohc\/posts\/2026-09-05\/20260905_20260905.gpx&#39;;
+  var gpxUrl = &#39;\/oohc\/posts\/2026-09-05\/20260905_20260905_ed.gpx&#39;;
 
   
-  var map = L.map(&#39;map-0cbb3b49&#39;).setView([0, 0], 10);
+  var map = L.map(&#39;map-364703c4&#39;).setView([0, 0], 10);
   L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
     attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
     maxZoom: 18
@@ -178,7 +178,7 @@ window.addEventListener(&#39;load&#39;, function() {
   var timeLabels = []; 
 
   
-  var ctx = document.getElementById(&#39;chart-0cbb3b49&#39;).getContext(&#39;2d&#39;);
+  var ctx = document.getElementById(&#39;chart-364703c4&#39;).getContext(&#39;2d&#39;);
   var chart = new Chart(ctx, {
     type: &#39;line&#39;,
     data: {
@@ -313,11 +313,11 @@ window.addEventListener(&#39;load&#39;, function() {
     var gainEle = Math.round(gpx.get_elevation_gain());
     var lossEle = Math.round(gpx.get_elevation_loss());
 
-    document.getElementById(&#39;sum-dist-0cbb3b49&#39;).innerText = distKm;
-    document.getElementById(&#39;sum-up-0cbb3b49&#39;).innerText = gainEle;
-    document.getElementById(&#39;sum-down-0cbb3b49&#39;).innerText = lossEle;
-    document.getElementById(&#39;sum-max-0cbb3b49&#39;).innerText = maxEle;
-    document.getElementById(&#39;sum-min-0cbb3b49&#39;).innerText = minEle;
+    document.getElementById(&#39;sum-dist-364703c4&#39;).innerText = distKm;
+    document.getElementById(&#39;sum-up-364703c4&#39;).innerText = gainEle;
+    document.getElementById(&#39;sum-down-364703c4&#39;).innerText = lossEle;
+    document.getElementById(&#39;sum-max-364703c4&#39;).innerText = maxEle;
+    document.getElementById(&#39;sum-min-364703c4&#39;).innerText = minEle;
 
     
     var eleData = gpx.get_elevation_data();
@@ -392,7 +392,7 @@ window.addEventListener(&#39;load&#39;, function() {
 &lt;hr&gt;
 &lt;h3 id=&#34;山行記録&#34;&gt;山行記録&lt;/h3&gt;
 &lt;h4 id=&#34;最終回日原川下流右岸中段道コマ尾根から鞘口のクビレまで&#34;&gt;（最終回）日原川下流右岸中段道～コマ尾根から鞘口のクビレまで&lt;/h4&gt;
-&lt;p&gt;とくに緩斜面で、枝分かれしたり上下に並行したりする獣の踏み跡に惑わされ、道跡を追うのに時間をかけるのは廃道歩きの常ではある。&lt;/p&gt;</description>
+&lt;p&gt;とくに緩斜面で、枝分かれしたり上下に並行したりする獣の踏み跡に惑わされ、あるいは浅く崩落した斜面で踏み跡を失い、追うのに時間がかかるのは廃道歩きの常ではある。その中で、今回のパートは道跡を追いやすかった。6回の探索行中ではもっとも距離を稼いでいる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ジャンダルム周回 ver.2026（西穂高岳～奥穂高岳）</title>
