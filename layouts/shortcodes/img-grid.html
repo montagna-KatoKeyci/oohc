@@ -4,13 +4,12 @@
 {{ $cap2 := .Get "cap2" }}
 
 <div class="photo-grid">
-  {{/* 1枚目の写真処理 */}}
+  {{/* 1枚目の写真処理（再圧縮せずそのまま出力） */}}
   {{ $img1 := resources.Get (printf "images/%s" $src1) }}
   <figure class="post-photo">
     {{ if $img1 }}
-      {{ $r1 := $img1.Resize "960x q80" }}
       <div class="img-wrapper">
-        <img src="{{ $r1.RelPermalink }}" alt="{{ $cap1 }}" loading="lazy">
+        <img src="{{ $img1.RelPermalink }}" width="{{ $img1.Width }}" height="{{ $img1.Height }}" alt="{{ $cap1 }}" loading="lazy">
       </div>
     {{ else }}
       <p style="color:red;">画像なし: {{ $src1 }}</p>
@@ -18,13 +17,12 @@
     {{ if $cap1 }}<figcaption>{{ $cap1 }}</figcaption>{{ end }}
   </figure>
 
-  {{/* 2枚目の写真処理 */}}
+  {{/* 2枚目の写真処理（再圧縮せずそのまま出力） */}}
   {{ $img2 := resources.Get (printf "images/%s" $src2) }}
   <figure class="post-photo">
     {{ if $img2 }}
-      {{ $r2 := $img2.Resize "960x q80" }}
       <div class="img-wrapper">
-        <img src="{{ $r2.RelPermalink }}" alt="{{ $cap2 }}" loading="lazy">
+        <img src="{{ $img2.RelPermalink }}" width="{{ $img2.Width }}" height="{{ $img2.Height }}" alt="{{ $cap2 }}" loading="lazy">
       </div>
     {{ else }}
       <p style="color:red;">画像なし: {{ $src2 }}</p>
