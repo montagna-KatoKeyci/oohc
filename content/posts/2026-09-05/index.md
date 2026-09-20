@@ -69,6 +69,13 @@ https://www.yamakei-online.com/cl_record/detail.php?id=335031
 Part 1（不老林道始点からヒカゲザス尾根）  
 https://www.yamakei-online.com/cl_record/detail.php?id=334701  
 
+巳ノ戸林道（新道）  
+https://www.yamakei-online.com/cl_record/detail.php?id=307170  
+巳ノ戸林道（旧道）  
+https://www.yamakei-online.com/cl_record/detail.php?id=326430  
+ヤケト尾根上段径路上流の最終回  
+https://www.yamakei-online.com/cl_record/detail.php?id=304862
+
 #### 公開日
 20260920
 
