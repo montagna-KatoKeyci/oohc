@@ -62,7 +62,7 @@ Part 5（カラ沢尾根からコマ尾根）
 https://www.yamakei-online.com/cl_record/detail.php?id=337600  
 Part 4（タル沢尾根からカラ沢尾根）  
 https://www.yamakei-online.com/cl_record/detail.php?id=335807  
-Part 3（山ノ神尾根からカワ沢尾根）  
+Part 3（山ノ神尾根からタル沢尾根）  
 https://www.yamakei-online.com/cl_record/detail.php?id=335316  
 Part 2（ヒカゲザス尾根から山ノ神尾根）  
 https://www.yamakei-online.com/cl_record/detail.php?id=335031  
