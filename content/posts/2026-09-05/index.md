@@ -56,10 +56,21 @@ draft: false
 鞘口のクビレは、巳ノ戸林道の日原方向・おなじく巳ノ戸の大クビレ方向への新道と旧道・鷹ノ巣尾根の八丁山方向とヒルメシクイのタワ方向、以上の5方向に日原川下流右岸中段道を加えた六叉路だった。  
 出だしの日原橋で派手にすっ転ぶ。この7年半、「転んだ」ことはないのだが。濡れた床板より、2週間のブランクと歩行技術の衰えを疑ってかかるべきだろう。十日たつが、何かの拍子にまだ痛む。  
 撤収路の巳ノ戸尾根は八丁山から先、目障りなテープがすっかり片付けられている。尾根から巳ノ戸集落跡に降る斜面にはまだ残る。  
-※以下、現在記入中。
 
+####  関連する筆者の山行記録
+Part 5（カラ沢尾根からコマ尾根）  
+https://www.yamakei-online.com/cl_record/detail.php?id=337600  
+Part 4（タル沢尾根からカラ沢尾根）  
+https://www.yamakei-online.com/cl_record/detail.php?id=335807  
+Part 3（山ノ神尾根からカワ沢尾根）  
+https://www.yamakei-online.com/cl_record/detail.php?id=335316  
+Part 2（ヒカゲザス尾根から山ノ神尾根）  
+https://www.yamakei-online.com/cl_record/detail.php?id=335031  
+Part 1（不老林道始点からヒカゲザス尾根）  
+https://www.yamakei-online.com/cl_record/detail.php?id=334701  
 
-<!--####  関連する筆者の山行記録-->
+#### 公開日
+20260920
 
 ---
 
