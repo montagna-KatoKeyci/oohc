@@ -4,9 +4,7 @@
   <h1>
     {{ .Title }}
     <span style="font-size: 0.6em; font-weight: normal; margin-left: 12px; vertical-align: middle;">
-      {{- $totalCount := len .Site.RegularPages -}}
-      {{- $mountainCount := len (where .Site.RegularPages "Section" "posts") -}}
-      山行記録 {{ $mountainCount }} / トータル {{ $totalCount }}
+      山行記録 {{ len (where (where .Site.RegularPages "Section" "posts") "File.BaseFileName" "index") }} / トータル {{ len (where .Site.RegularPages "Section" "posts") }}
     </span>
     {{- if (.Param "ShowRssButtonInSectionTermList") }}
     {{- $rss := (.OutputFormats.Get "rss") }}
