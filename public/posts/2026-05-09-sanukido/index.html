@@ -433,7 +433,7 @@ window.addEventListener('load', function() {
               var index = items[0].dataIndex;
               var timeStr = timeLabels[index] || '';
               var distStr = items[0].raw.x.toFixed(2) + ' km';
-              return timeStr ? '距離: ' + distStr + ' (時刻: ' + timeStr + ')' : '距離: ' + distStr;
+              return timeStr ? '時刻: ' + timeStr + '（距離: ' + distStr + '）' : '距離: ' + distStr;
             },
             label: function(item) {
               return '標高: ' + item.raw.y + ' m';

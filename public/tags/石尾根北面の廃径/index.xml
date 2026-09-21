@@ -207,7 +207,7 @@ window.addEventListener(&#39;load&#39;, function() {
               var index = items[0].dataIndex;
               var timeStr = timeLabels[index] || &#39;&#39;;
               var distStr = items[0].raw.x.toFixed(2) + &#39; km&#39;;
-              return timeStr ? &#39;距離: &#39; + distStr + &#39; (時刻: &#39; + timeStr + &#39;)&#39; : &#39;距離: &#39; + distStr;
+              return timeStr ? &#39;時刻: &#39; + timeStr + &#39;（距離: &#39; + distStr + &#39;）&#39; : &#39;距離: &#39; + distStr;
             },
             label: function(item) {
               return &#39;標高: &#39; + item.raw.y + &#39; m&#39;;
@@ -626,7 +626,7 @@ window.addEventListener(&#39;load&#39;, function() {
               var index = items[0].dataIndex;
               var timeStr = timeLabels[index] || &#39;&#39;;
               var distStr = items[0].raw.x.toFixed(2) + &#39; km&#39;;
-              return timeStr ? &#39;距離: &#39; + distStr + &#39; (時刻: &#39; + timeStr + &#39;)&#39; : &#39;距離: &#39; + distStr;
+              return timeStr ? &#39;時刻: &#39; + timeStr + &#39;（距離: &#39; + distStr + &#39;）&#39; : &#39;距離: &#39; + distStr;
             },
             label: function(item) {
               return &#39;標高: &#39; + item.raw.y + &#39; m&#39;;
@@ -1050,7 +1050,7 @@ window.addEventListener(&#39;load&#39;, function() {
               var index = items[0].dataIndex;
               var timeStr = timeLabels[index] || &#39;&#39;;
               var distStr = items[0].raw.x.toFixed(2) + &#39; km&#39;;
-              return timeStr ? &#39;距離: &#39; + distStr + &#39; (時刻: &#39; + timeStr + &#39;)&#39; : &#39;距離: &#39; + distStr;
+              return timeStr ? &#39;時刻: &#39; + timeStr + &#39;（距離: &#39; + distStr + &#39;）&#39; : &#39;距離: &#39; + distStr;
             },
             label: function(item) {
               return &#39;標高: &#39; + item.raw.y + &#39; m&#39;;

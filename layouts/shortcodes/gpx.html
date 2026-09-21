@@ -133,14 +133,14 @@ window.addEventListener('load', function() {
       interaction: { mode: 'index', intersect: false },
       plugins: {
         legend: { display: false },
-        // ツールチップの表示内容
+        // ツールチップの表示内容（時刻を先、距離を後ろに変更）
         tooltip: {
           callbacks: {
             title: function(items) {
               var index = items[0].dataIndex;
               var timeStr = timeLabels[index] || '';
               var distStr = items[0].raw.x.toFixed(2) + ' km';
-              return timeStr ? '距離: ' + distStr + ' (時刻: ' + timeStr + ')' : '距離: ' + distStr;
+              return timeStr ? '時刻: ' + timeStr + '（距離: ' + distStr + '）' : '距離: ' + distStr;
             },
             label: function(item) {
               return '標高: ' + item.raw.y + ' m';
@@ -315,7 +315,7 @@ window.addEventListener('load', function() {
     if (distKmNum <= 5) {
       dynamicStepSize = 0.5;   // 5km未満：0.5km刻み
     } else if (distKmNum <= 20) {
-      dynamicStepSize = 1.0;   // 5km〜20km：1.0km刻み（ご希望の1km刻み）
+      dynamicStepSize = 1.0;   // 5km〜20km：1.0km刻み
     } else if (distKmNum <= 40) {
       dynamicStepSize = 5.0;   // 20km〜40km：5.0km刻み
     } else {
