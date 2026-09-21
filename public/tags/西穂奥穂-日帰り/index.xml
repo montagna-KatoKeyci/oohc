@@ -182,7 +182,6 @@ window.addEventListener(&#39;load&#39;, function() {
   var chart = new Chart(ctx, {
     type: &#39;line&#39;,
     data: {
-      labels: [],
       datasets: [{
         label: &#39;標高 (m)&#39;,
         data: [],
@@ -207,17 +206,34 @@ window.addEventListener(&#39;load&#39;, function() {
             title: function(items) {
               var index = items[0].dataIndex;
               var timeStr = timeLabels[index] || &#39;&#39;;
-              return timeStr ? &#39;時刻: &#39; + timeStr : &#39;&#39;;
+              var distStr = items[0].raw.x.toFixed(2) + &#39; km&#39;;
+              return timeStr ? &#39;距離: &#39; + distStr + &#39; (時刻: &#39; + timeStr + &#39;)&#39; : &#39;距離: &#39; + distStr;
             },
             label: function(item) {
-              return &#39;標高: &#39; + item.raw + &#39; m&#39;;
+              return &#39;標高: &#39; + item.raw.y + &#39; m&#39;;
             }
           }
         }
       },
       scales: {
-        x: { display: true, title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } } },
-        y: { display: true, title: { display: true, text: &#39;標高 (m)&#39;, font: { size: 10 } } }
+        x: {
+          type: &#39;linear&#39;, 
+          display: true,
+          title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } },
+          ticks: {
+            font: { size: 10 },
+            callback: function(value) {
+              return value + &#39; km&#39;;
+            }
+          },
+          grid: { color: &#39;rgba(0, 0, 0, 0.05)&#39; }
+        },
+        y: {
+          display: true,
+          title: { display: true, text: &#39;標高 (m)&#39;, font: { size: 10 } },
+          ticks: { font: { size: 10 } },
+          grid: { color: &#39;rgba(0, 0, 0, 0.05)&#39; }
+        }
       },
       
       onHover: function(event, activeElements) {
@@ -307,13 +323,15 @@ window.addEventListener(&#39;load&#39;, function() {
     map.fitBounds(gpx.getBounds());
 
     
-    var distKm = (gpx.get_distance() / 1000).toFixed(2);
+    var totalDistMeters = gpx.get_distance();
+    var distKmNum = totalDistMeters / 1000;
+    var distKmStr = distKmNum.toFixed(2);
     var maxEle = Math.round(gpx.get_elevation_max());
     var minEle = Math.round(gpx.get_elevation_min());
     var gainEle = Math.round(gpx.get_elevation_gain());
     var lossEle = Math.round(gpx.get_elevation_loss());
 
-    document.getElementById(&#39;sum-dist-e738978e&#39;).innerText = distKm;
+    document.getElementById(&#39;sum-dist-e738978e&#39;).innerText = distKmStr;
     document.getElementById(&#39;sum-up-e738978e&#39;).innerText = gainEle;
     document.getElementById(&#39;sum-down-e738978e&#39;).innerText = lossEle;
     document.getElementById(&#39;sum-max-e738978e&#39;).innerText = maxEle;
@@ -321,8 +339,7 @@ window.addEventListener(&#39;load&#39;, function() {
 
     
     var eleData = gpx.get_elevation_data();
-    var distLabels = [];
-    var elevations = [];
+    var chartDataPoints = [];
 
     var extracted = extractTrackData(gpx);
     trackPoints = extracted.pts;
@@ -353,12 +370,27 @@ window.addEventListener(&#39;load&#39;, function() {
 
     eleData.forEach(function(item) {
       var dist = typeof item[0] === &#39;number&#39; ? item[0] : parseFloat(item[0]);
-      distLabels.push(dist.toFixed(2));
-      elevations.push(Math.round(item[1]));
+      var ele = Math.round(item[1]);
+      chartDataPoints.push({
+        x: parseFloat(dist.toFixed(2)),
+        y: ele
+      });
     });
 
-    chart.data.labels = distLabels;
-    chart.data.datasets[0].data = elevations;
+    
+    var dynamicStepSize = 1.0;
+    if (distKmNum &lt;= 5) {
+      dynamicStepSize = 0.5;   
+    } else if (distKmNum &lt;= 20) {
+      dynamicStepSize = 1.0;   
+    } else if (distKmNum &lt;= 40) {
+      dynamicStepSize = 5.0;   
+    } else {
+      dynamicStepSize = 10.0;  
+    }
+
+    chart.options.scales.x.ticks.stepSize = dynamicStepSize;
+    chart.data.datasets[0].data = chartDataPoints;
     chart.update();
 
     
