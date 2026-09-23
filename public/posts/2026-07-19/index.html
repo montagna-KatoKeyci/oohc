@@ -344,16 +344,16 @@
 
 
 <div class="gpx-container">
-  <div id="map-13e4335b" class="gpx-map"></div>
-  <div id="summary-13e4335b" class="gpx-summary">
-    <div class="gpx-summary-item">総距離:<strong id="sum-dist-13e4335b">-</strong> km</div>
-    <div class="gpx-summary-item">累積標高上り:<strong id="sum-up-13e4335b">-</strong> m</div>
-    <div class="gpx-summary-item">累積標高下り:<strong id="sum-down-13e4335b">-</strong> m</div>
-    <div class="gpx-summary-item">最高標高:<strong id="sum-max-13e4335b">-</strong> m</div>
-    <div class="gpx-summary-item">最低標高:<strong id="sum-min-13e4335b">-</strong> m</div>
+  <div id="map-0381d021" class="gpx-map"></div>
+  <div id="summary-0381d021" class="gpx-summary">
+    <div class="gpx-summary-item">総距離:<strong id="sum-dist-0381d021">-</strong> km</div>
+    <div class="gpx-summary-item">累積標高上り:<strong id="sum-up-0381d021">-</strong> m</div>
+    <div class="gpx-summary-item">累積標高下り:<strong id="sum-down-0381d021">-</strong> m</div>
+    <div class="gpx-summary-item">最高標高:<strong id="sum-max-0381d021">-</strong> m</div>
+    <div class="gpx-summary-item">最低標高:<strong id="sum-min-0381d021">-</strong> m</div>
   </div>
   <div class="gpx-chart-wrapper">
-    <canvas id="chart-13e4335b"></canvas>
+    <canvas id="chart-0381d021"></canvas>
   </div>
 </div>
 
@@ -364,10 +364,10 @@
 
 <script>
 window.addEventListener('load', function() {
-  var gpxUrl = '\/oohc\/posts\/2026-07-19\/20260719_20260719_ed.gpx';
+  var gpxUrl = '\/oohc\/posts\/2026-07-19\/20260719_20260719.gpx';
 
   
-  var map = L.map('map-13e4335b').setView([0, 0], 10);
+  var map = L.map('map-0381d021').setView([0, 0], 10);
   L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
     attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank">国土地理院</a>',
     maxZoom: 18
@@ -384,7 +384,7 @@ window.addEventListener('load', function() {
   var timeLabels = []; 
 
   
-  var ctx = document.getElementById('chart-13e4335b').getContext('2d');
+  var ctx = document.getElementById('chart-0381d021').getContext('2d');
   var chart = new Chart(ctx, {
     type: 'line',
     data: {
@@ -537,11 +537,11 @@ window.addEventListener('load', function() {
     var gainEle = Math.round(gpx.get_elevation_gain());
     var lossEle = Math.round(gpx.get_elevation_loss());
 
-    document.getElementById('sum-dist-13e4335b').innerText = distKmStr;
-    document.getElementById('sum-up-13e4335b').innerText = gainEle;
-    document.getElementById('sum-down-13e4335b').innerText = lossEle;
-    document.getElementById('sum-max-13e4335b').innerText = maxEle;
-    document.getElementById('sum-min-13e4335b').innerText = minEle;
+    document.getElementById('sum-dist-0381d021').innerText = distKmStr;
+    document.getElementById('sum-up-0381d021').innerText = gainEle;
+    document.getElementById('sum-down-0381d021').innerText = lossEle;
+    document.getElementById('sum-max-0381d021').innerText = maxEle;
+    document.getElementById('sum-min-0381d021').innerText = minEle;
 
     
     var eleData = gpx.get_elevation_data();
