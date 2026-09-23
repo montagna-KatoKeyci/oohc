@@ -359,10 +359,8 @@ main .post-single {
     text-align: right;  
 }
 
-/* 擬似要素によるコロン付与（Androidでのレイアウト崩れ防止策を追加） */
 .post-content td:first-child::after {
     content: "：";
-    display: inline-block;
 }
 
 .post-content ul {
