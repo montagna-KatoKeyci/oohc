@@ -9,6 +9,13 @@
     <lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/oohc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>廃径</title>
+      <link>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</link>
+      <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>沢筋を歩く</title>
       <link>http://localhost:1313/oohc/tags/%E6%B2%A2%E7%AD%8B%E3%82%92%E6%AD%A9%E3%81%8F/</link>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
@@ -20,13 +27,6 @@
       <link>http://localhost:1313/oohc/tags/%E7%9F%B3%E5%B0%BE%E6%A0%B9%E5%8C%97%E9%9D%A2%E3%81%AE%E5%BB%83%E5%BE%84/</link>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/tags/%E7%9F%B3%E5%B0%BE%E6%A0%B9%E5%8C%97%E9%9D%A2%E3%81%AE%E5%BB%83%E5%BE%84/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>廃径</title>
-      <link>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</link>
-      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</guid>
       <description></description>
     </item>
     <item>
