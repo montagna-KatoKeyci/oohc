@@ -846,13 +846,6 @@ window.addEventListener(&#39;load&#39;, function() {
 稲村岩尾根からは「鷹ノ巣山北面」エリア、広く薄くザレて道跡探しに苦労する。幸い傾斜は緩んでいる。鞘口のクビレに近づき明瞭な踏み跡に戻ることができた。&lt;/p&gt;</description>
     </item>
     <item>
-      <title>雑感のテスト記事</title>
-      <link>http://localhost:1313/oohc/posts/zakkan001/</link>
-      <pubDate>Tue, 18 Aug 2026 19:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/oohc/posts/zakkan001/</guid>
-      <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>プロフィール</title>
       <link>http://localhost:1313/oohc/profile/</link>
       <pubDate>Tue, 18 Aug 2026 00:00:00 +0000</pubDate>
@@ -880,13 +873,6 @@ ex-：もとバックパッカー55ヶ国/1年4ヶ月、もと白い犬の飼主
 累積標高差 上り約788,828m 下り約774,730m&lt;br&gt;
 コースタイム 標準52,270分 自己28,637分 倍率0.55&lt;br&gt;
 （山と渓谷オンラインから、2019年2月～2026年7月）&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>カンツォーネのテスト記事</title>
-      <link>http://localhost:1313/oohc/posts/musica001/</link>
-      <pubDate>Mon, 17 Aug 2026 10:02:00 +0900</pubDate>
-      <guid>http://localhost:1313/oohc/posts/musica001/</guid>
-      <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ジャンダルム周回 ver.2026（西穂高岳～奥穂高岳）</title>
@@ -2566,6 +2552,20 @@ window.addEventListener(&#39;load&#39;, function() {
 &lt;h4 id=&#34;三ノ木戸から石尾根北面への道&#34;&gt;三ノ木戸から石尾根北面への道&lt;/h4&gt;
 &lt;p&gt;この径路は難しい。狩倉山に直接突き上げる窪のトタン場までは薄く、岩記号に接する北の窪の大崩落の上を巻いたあとは岩尾根の崖っぷちをゆく。その先、ヒカゲザス尾根までは比較的明瞭だが、尾根の北面に回りこみ狩鞍沢の炭焼き窯跡まではごく薄い。&lt;br&gt;
 炭焼き窯跡付近が緩斜面で山ノ神尾根へ上がる道跡を探せず、今回の探索では北面にどのように続くのか、そもそも続きがあるのかは不明に終わった。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>雑感のテスト記事</title>
+      <link>http://localhost:1313/oohc/posts/zakkan001/</link>
+      <pubDate>Wed, 01 Apr 2026 19:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/posts/zakkan001/</guid>
+      <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>カンツォーネのテスト記事</title>
+      <link>http://localhost:1313/oohc/posts/musica001/</link>
+      <pubDate>Wed, 01 Apr 2026 10:02:00 +0900</pubDate>
+      <guid>http://localhost:1313/oohc/posts/musica001/</guid>
+      <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
