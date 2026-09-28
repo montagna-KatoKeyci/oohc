@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>トレーニング山行 on 山とカンツォーネ</title>
-    <link>http://localhost:1313/oohc/tags/%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%B1%B1%E8%A1%8C/</link>
-    <description>Recent content in トレーニング山行 on 山とカンツォーネ</description>
+    <title>廃道 on 山とカンツォーネ</title>
+    <link>http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/</link>
+    <description>Recent content in 廃道 on 山とカンツォーネ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sun, 19 Jul 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/oohc/tags/%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%B1%B1%E8%A1%8C/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Aug 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>石尾根から雲取山</title>
-      <link>http://localhost:1313/oohc/posts/2026-07-19/</link>
-      <pubDate>Sun, 19 Jul 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/oohc/posts/2026-07-19/</guid>
-      <description>&lt;p&gt;トレーニング山行。真夏にやるルートではないのだが、「長めに歩いて雲取山に上がる」「足首を横にひねらない一般登山道を歩き、オフトレイルは抜き」の条件に当てはまるルートを、他に探せなかった。&lt;br&gt;
-とにかく汗をかいたが、夏の雲が陽射しを遮る時間が長く、まだマシだったろう。ピーカンだったら鷹ノ巣あたりであきらめていたはずだ。&lt;/p&gt;
+      <title>日向沢林道</title>
+      <link>http://localhost:1313/oohc/posts/2026-08-02/</link>
+      <pubDate>Sun, 02 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/posts/2026-08-02/</guid>
+      <description>&lt;p&gt;日向沢林道を終点まで歩いたが、踊平のトンネルから終点まで、すでに道の体をなしていない。前週の疲れが残り、「息抜きの山歩き」コースを選んだつもりが。やたらと汗をかき、激しく疲労した。ここ2年のなかではいちばんの疲れ具合で、熱中症にならぬよう、マリアさまに祈りながらフラフラ歩いた。&lt;/p&gt;
 &lt;hr&gt;
 &lt;table&gt;
 	&lt;thead&gt;
@@ -26,11 +25,11 @@
 	&lt;tbody&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;記録日&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;2026年7月19日（日）&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;2026年8月2日（日）&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;天候&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;晴れたり曇ったり2対8、風なし、鷹ノ巣山頂にはトンボがいっぱい&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;雲量多い晴れ→曇り、弱い風あり&lt;/td&gt;
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;パーティ&lt;/strong&gt;&lt;/td&gt;
@@ -38,23 +37,19 @@
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;アクセス&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;JR青梅線で奥多摩駅&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;奥多摩駅、石尾根、三ノ木戸山、六ツ石山、鷹ノ巣山、日陰名栗山、高丸山、七ツ石山、雲取山、鴨沢ルート、鴨沢バス停&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;西東京バスて川乗橋バス停&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;コースタイム&#34;&gt;コースタイム&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;07:40〜奥多摩駅スタート&lt;/li&gt;
-&lt;li&gt;09:35～六ツ石山&lt;/li&gt;
-&lt;li&gt;10:42～鷹ノ巣山～10:51&lt;/li&gt;
-&lt;li&gt;12:16～七ツ石山&lt;/li&gt;
-&lt;li&gt;13:14～雲取山～13:21&lt;/li&gt;
-&lt;li&gt;15:52～鴨沢バス停フィニッシュ&lt;/li&gt;
+&lt;li&gt;08:00～川乗橋バス停スタート&lt;/li&gt;
+&lt;li&gt;08:27～川乗山登山口（細倉橋）&lt;/li&gt;
+&lt;li&gt;09:19～林道分岐（林道川乗線・林道日向沢線）&lt;/li&gt;
+&lt;li&gt;09:29～川乗林道終点付近～09:54&lt;/li&gt;
+&lt;li&gt;記入中&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;コースマップ&#34;&gt;コースマップ&lt;/h3&gt;
@@ -131,16 +126,16 @@
 
 
 &lt;div class=&#34;gpx-container&#34;&gt;
-  &lt;div id=&#34;map-0381d021&#34; class=&#34;gpx-map&#34;&gt;&lt;/div&gt;
-  &lt;div id=&#34;summary-0381d021&#34; class=&#34;gpx-summary&#34;&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;総距離:&lt;strong id=&#34;sum-dist-0381d021&#34;&gt;-&lt;/strong&gt; km&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高上り:&lt;strong id=&#34;sum-up-0381d021&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高下り:&lt;strong id=&#34;sum-down-0381d021&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;最高標高:&lt;strong id=&#34;sum-max-0381d021&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
-    &lt;div class=&#34;gpx-summary-item&#34;&gt;最低標高:&lt;strong id=&#34;sum-min-0381d021&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+  &lt;div id=&#34;map-7a6a14db&#34; class=&#34;gpx-map&#34;&gt;&lt;/div&gt;
+  &lt;div id=&#34;summary-7a6a14db&#34; class=&#34;gpx-summary&#34;&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;総距離:&lt;strong id=&#34;sum-dist-7a6a14db&#34;&gt;-&lt;/strong&gt; km&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高上り:&lt;strong id=&#34;sum-up-7a6a14db&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;累積標高下り:&lt;strong id=&#34;sum-down-7a6a14db&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最高標高:&lt;strong id=&#34;sum-max-7a6a14db&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
+    &lt;div class=&#34;gpx-summary-item&#34;&gt;最低標高:&lt;strong id=&#34;sum-min-7a6a14db&#34;&gt;-&lt;/strong&gt; m&lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&#34;gpx-chart-wrapper&#34;&gt;
-    &lt;canvas id=&#34;chart-0381d021&#34;&gt;&lt;/canvas&gt;
+    &lt;canvas id=&#34;chart-7a6a14db&#34;&gt;&lt;/canvas&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -151,10 +146,10 @@
 
 &lt;script&gt;
 window.addEventListener(&#39;load&#39;, function() {
-  var gpxUrl = &#39;\/oohc\/posts\/2026-07-19\/20260719_20260719.gpx&#39;;
+  var gpxUrl = &#39;\/oohc\/posts\/2026-08-02\/20260802_20260802.gpx&#39;;
 
   
-  var map = L.map(&#39;map-0381d021&#39;).setView([0, 0], 10);
+  var map = L.map(&#39;map-7a6a14db&#39;).setView([0, 0], 10);
   L.tileLayer(&#39;https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png&#39;, {
     attribution: &#39;&lt;a href=&#34;https://maps.gsi.go.jp/development/ichiran.html&#34; target=&#34;_blank&#34;&gt;国土地理院&lt;/a&gt;&#39;,
     maxZoom: 18
@@ -171,7 +166,7 @@ window.addEventListener(&#39;load&#39;, function() {
   var timeLabels = []; 
 
   
-  var ctx = document.getElementById(&#39;chart-0381d021&#39;).getContext(&#39;2d&#39;);
+  var ctx = document.getElementById(&#39;chart-7a6a14db&#39;).getContext(&#39;2d&#39;);
   var chart = new Chart(ctx, {
     type: &#39;line&#39;,
     data: {
@@ -324,11 +319,11 @@ window.addEventListener(&#39;load&#39;, function() {
     var gainEle = Math.round(gpx.get_elevation_gain());
     var lossEle = Math.round(gpx.get_elevation_loss());
 
-    document.getElementById(&#39;sum-dist-0381d021&#39;).innerText = distKmStr;
-    document.getElementById(&#39;sum-up-0381d021&#39;).innerText = gainEle;
-    document.getElementById(&#39;sum-down-0381d021&#39;).innerText = lossEle;
-    document.getElementById(&#39;sum-max-0381d021&#39;).innerText = maxEle;
-    document.getElementById(&#39;sum-min-0381d021&#39;).innerText = minEle;
+    document.getElementById(&#39;sum-dist-7a6a14db&#39;).innerText = distKmStr;
+    document.getElementById(&#39;sum-up-7a6a14db&#39;).innerText = gainEle;
+    document.getElementById(&#39;sum-down-7a6a14db&#39;).innerText = lossEle;
+    document.getElementById(&#39;sum-max-7a6a14db&#39;).innerText = maxEle;
+    document.getElementById(&#39;sum-min-7a6a14db&#39;).innerText = minEle;
 
     
     var eleData = gpx.get_elevation_data();
@@ -416,9 +411,7 @@ window.addEventListener(&#39;load&#39;, function() {
 &lt;/script&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;山行記録&#34;&gt;山行記録&lt;/h3&gt;
-&lt;h4 id=&#34;石尾根から雲取山トレーニングハイク&#34;&gt; 石尾根から雲取山、トレーニングハイク&lt;/h4&gt;
-&lt;p&gt;翌週のジャンダルム周回に備えて2000mまで登っておく。ジャンダルムや奥穂高岳で顔がむくむのは高山病の初期症状ではないかと疑っているが、2000mで効果があるのかどうか。正直心許ない。&lt;br&gt;
-メリノウールシャツを選んだのは失敗だった。&lt;/p&gt;</description>
+&lt;p&gt;記入中です&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
