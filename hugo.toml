@@ -73,3 +73,6 @@ weight = 80
   [markup.goldmark]
     [markup.goldmark.renderer]
       hardLineBreaks = false
+
+[pagination]
+  pagerSize = 20
