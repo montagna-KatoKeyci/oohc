@@ -40,6 +40,10 @@
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;アクセス&lt;/strong&gt;&lt;/td&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;JR青梅線で奥多摩駅&lt;/td&gt;
 			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
@@ -440,6 +444,10 @@ window.addEventListener(&#39;load&#39;, function() {
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;アクセス&lt;/strong&gt;&lt;/td&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;西東京バスて川乗橋バス停&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
