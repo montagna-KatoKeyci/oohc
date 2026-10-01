@@ -154,10 +154,7 @@ window.addEventListener('load', function() {
           display: true,
           title: { display: true, text: '距離 (km)', font: { size: 10 } },
           ticks: {
-            font: { size: 10 },
-            callback: function(value) {
-              return value + ' km';
-            }
+            font: { size: 10 }
           },
           grid: { color: 'rgba(0, 0, 0, 0.05)' }
         },
@@ -246,7 +243,7 @@ window.addEventListener('load', function() {
       console.error("GPX Time Parsing Error:", err);
     });
 
-  // B. 3. GPXの読み込みと各種設定
+  // B. GPXの読み込みと各種設定
   new L.GPX(gpxUrl, {
     async: true,
     polyline_options: { color: '#ff3300', weight: 5, opacity: 0.8 },
@@ -270,7 +267,7 @@ window.addEventListener('load', function() {
     document.getElementById('sum-max-{{ $uniqueId }}').innerText = maxEle;
     document.getElementById('sum-min-{{ $uniqueId }}').innerText = minEle;
 
-    // --- ② 標高グラフデータの流し込み & 総距離に応じたステップ幅自動調整 ---
+    // --- ② 標高グラフデータの流し込み ---
     var eleData = gpx.get_elevation_data();
     var chartDataPoints = [];
 
@@ -310,7 +307,7 @@ window.addEventListener('load', function() {
       });
     });
 
-    // 総距離に応じた dynamicStepSize の自動設定
+    // 総距離に応じたステップ幅の決定
     var dynamicStepSize = 1.0;
     if (distKmNum <= 5) {
       dynamicStepSize = 0.5;   // 5km未満：0.5km刻み
@@ -322,7 +319,34 @@ window.addEventListener('load', function() {
       dynamicStepSize = 10.0;  // 40km超：10.0km刻み
     }
 
-    chart.options.scales.x.ticks.stepSize = dynamicStepSize;
+    // 1. 軸の最大値は実際の総距離でピタッと終わらせる（空白なし！）
+    chart.options.scales.x.max = distKmNum;
+
+    // 2. 表示すべき目盛りリストを作る（※最後の端数はあえて入れず、手前の整数で止める）
+    var allowedTicks = [];
+    for (var v = 0; v < distKmNum; v += dynamicStepSize) {
+      allowedTicks.push(parseFloat(v.toFixed(1)));
+    }
+    // ※ 最後の総距離（31.32や16.79）はあえてリストに入れない！
+
+    // 3. 許可された整数ポイントだけにラベルを出し、それ以外（端数や予期せぬ数字）は一切表示しないガード
+    chart.options.scales.x.ticks.callback = function(value) {
+      for (var i = 0; i < allowedTicks.length; i++) {
+        if (Math.abs(value - allowedTicks[i]) < 0.01) {
+          return value + ' km';
+        }
+      }
+      // リストにない中途半端な位置（最後の端数など）の数字はすべて非表示にする
+      return '';
+    };
+
+    // Chart.js自体の目盛り生成タイミングでもこの「手前で止まる整数リスト」を強制適用
+    chart.options.scales.x.afterBuildTicks = function(axis) {
+      axis.ticks = allowedTicks.map(function(val) {
+        return { value: val };
+      });
+    };
+
     chart.data.datasets[0].data = chartDataPoints;
     chart.update();
 

@@ -8,7 +8,6 @@
 <title>Part 5 : 日原川下流右岸中段道 | 山とカンツォーネ</title>
 <meta name="keywords" content="石尾根北面の廃径, 記録にない廃径, 廃径, 日原川下流右岸中段道">
 <meta name="description" content="亀の歩みの5回目、なんとかコマ尾根まで回り込めた。ただし、赤ナギ窪を横断する前後でかなり標高を違えてしまう。渡った左岸で振り返っても、右岸に道はない。赤ナギ窪そのものが岩盤をさらしている状態なので、「かつて通っていたルート」の解明は非常に困難だろう。
-「山の日」に、朝の奥多摩駅はやけに人が少ない。登山届の受取人から、「台風が接近しているのに何を考えているのか」のクレームが入った。奥多摩の日原川エリアなら、いつなにが起こっても逃げられると思うよ、のエクスキューズは通用しそうにない。湿気がなくて風がゆるゆると吹く、陽は射さないが明るい一日だったのに。
 
 
 	
@@ -220,8 +219,7 @@
 
 
 
-  <div class="post-content"><p>亀の歩みの5回目、なんとかコマ尾根まで回り込めた。ただし、赤ナギ窪を横断する前後でかなり標高を違えてしまう。渡った左岸で振り返っても、右岸に道はない。赤ナギ窪そのものが岩盤をさらしている状態なので、「かつて通っていたルート」の解明は非常に困難だろう。<br>
-「山の日」に、朝の奥多摩駅はやけに人が少ない。登山届の受取人から、「台風が接近しているのに何を考えているのか」のクレームが入った。奥多摩の日原川エリアなら、いつなにが起こっても逃げられると思うよ、のエクスキューズは通用しそうにない。湿気がなくて風がゆるゆると吹く、陽は射さないが明るい一日だったのに。</p>
+  <div class="post-content"><p>亀の歩みの5回目、なんとかコマ尾根まで回り込めた。ただし、赤ナギ窪を横断する前後でかなり標高を違えてしまう。渡った左岸で振り返っても、右岸に道はない。赤ナギ窪そのものが岩盤をさらしている状態なので、「かつて通っていたルート」の解明は非常に困難だろう。</p>
 <hr>
 <table>
 	<thead>
@@ -417,10 +415,7 @@ window.addEventListener('load', function() {
           display: true,
           title: { display: true, text: '距離 (km)', font: { size: 10 } },
           ticks: {
-            font: { size: 10 },
-            callback: function(value) {
-              return value + ' km';
-            }
+            font: { size: 10 }
           },
           grid: { color: 'rgba(0, 0, 0, 0.05)' }
         },
@@ -585,7 +580,34 @@ window.addEventListener('load', function() {
       dynamicStepSize = 10.0;  
     }
 
-    chart.options.scales.x.ticks.stepSize = dynamicStepSize;
+    
+    chart.options.scales.x.max = distKmNum;
+
+    
+    var allowedTicks = [];
+    for (var v = 0; v < distKmNum; v += dynamicStepSize) {
+      allowedTicks.push(parseFloat(v.toFixed(1)));
+    }
+    
+
+    
+    chart.options.scales.x.ticks.callback = function(value) {
+      for (var i = 0; i < allowedTicks.length; i++) {
+        if (Math.abs(value - allowedTicks[i]) < 0.01) {
+          return value + ' km';
+        }
+      }
+      
+      return '';
+    };
+
+    
+    chart.options.scales.x.afterBuildTicks = function(axis) {
+      axis.ticks = allowedTicks.map(function(val) {
+        return { value: val };
+      });
+    };
+
     chart.data.datasets[0].data = chartDataPoints;
     chart.update();
 

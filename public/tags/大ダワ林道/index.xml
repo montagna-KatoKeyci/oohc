@@ -209,10 +209,7 @@ window.addEventListener(&#39;load&#39;, function() {
           display: true,
           title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } },
           ticks: {
-            font: { size: 10 },
-            callback: function(value) {
-              return value + &#39; km&#39;;
-            }
+            font: { size: 10 }
           },
           grid: { color: &#39;rgba(0, 0, 0, 0.05)&#39; }
         },
@@ -377,7 +374,34 @@ window.addEventListener(&#39;load&#39;, function() {
       dynamicStepSize = 10.0;  
     }
 
-    chart.options.scales.x.ticks.stepSize = dynamicStepSize;
+    
+    chart.options.scales.x.max = distKmNum;
+
+    
+    var allowedTicks = [];
+    for (var v = 0; v &lt; distKmNum; v += dynamicStepSize) {
+      allowedTicks.push(parseFloat(v.toFixed(1)));
+    }
+    
+
+    
+    chart.options.scales.x.ticks.callback = function(value) {
+      for (var i = 0; i &lt; allowedTicks.length; i++) {
+        if (Math.abs(value - allowedTicks[i]) &lt; 0.01) {
+          return value + &#39; km&#39;;
+        }
+      }
+      
+      return &#39;&#39;;
+    };
+
+    
+    chart.options.scales.x.afterBuildTicks = function(axis) {
+      axis.ticks = allowedTicks.map(function(val) {
+        return { value: val };
+      });
+    };
+
     chart.data.datasets[0].data = chartDataPoints;
     chart.update();
 
@@ -633,10 +657,7 @@ window.addEventListener(&#39;load&#39;, function() {
           display: true,
           title: { display: true, text: &#39;距離 (km)&#39;, font: { size: 10 } },
           ticks: {
-            font: { size: 10 },
-            callback: function(value) {
-              return value + &#39; km&#39;;
-            }
+            font: { size: 10 }
           },
           grid: { color: &#39;rgba(0, 0, 0, 0.05)&#39; }
         },
@@ -801,7 +822,34 @@ window.addEventListener(&#39;load&#39;, function() {
       dynamicStepSize = 10.0;  
     }
 
-    chart.options.scales.x.ticks.stepSize = dynamicStepSize;
+    
+    chart.options.scales.x.max = distKmNum;
+
+    
+    var allowedTicks = [];
+    for (var v = 0; v &lt; distKmNum; v += dynamicStepSize) {
+      allowedTicks.push(parseFloat(v.toFixed(1)));
+    }
+    
+
+    
+    chart.options.scales.x.ticks.callback = function(value) {
+      for (var i = 0; i &lt; allowedTicks.length; i++) {
+        if (Math.abs(value - allowedTicks[i]) &lt; 0.01) {
+          return value + &#39; km&#39;;
+        }
+      }
+      
+      return &#39;&#39;;
+    };
+
+    
+    chart.options.scales.x.afterBuildTicks = function(axis) {
+      axis.ticks = allowedTicks.map(function(val) {
+        return { value: val };
+      });
+    };
+
     chart.data.datasets[0].data = chartDataPoints;
     chart.update();
 
