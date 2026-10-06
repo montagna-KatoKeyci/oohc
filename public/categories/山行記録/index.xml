@@ -13,7 +13,7 @@
       <link>http://localhost:1313/oohc/posts/2026-10-03/</link>
       <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/posts/2026-10-03/</guid>
-      <description>&lt;p&gt;天候不順の夏は思うように沢筋を歩けなかった。やっと晴れ間がのぞくらしいので小雲取谷にチャレンジしたが、ハイカーにはとても難しい。谷に沿って崖っぷちの道が続くのは知らなかった。&lt;/p&gt;
+      <description>&lt;p&gt;天候不順の夏は思うように沢筋を歩けず、やっと晴れ間がのぞくらしいので小雲取谷にチャレンジしたが終日曇天。「記録的な長雨」のあとで水量多く気温が低く、水線沿いを放棄したので中途半端に難しくなった。谷に沿って崖っぷちの踏み跡が続くのは知らなかった。&lt;/p&gt;
 &lt;hr&gt;
 &lt;table&gt;
 	&lt;thead&gt;
@@ -41,14 +41,22 @@
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;東日原バス停、日原林道、長沢谷下降点、二軒小屋尾根乗越、大ダワ林道、モミソ窪、小雲取谷出合、小雲取谷、ゴンエ尾根、日原林道、東日原バス停&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;コースタイム&#34;&gt;コースタイム&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;記入中&lt;/li&gt;
+&lt;li&gt;08:07～東日原バス停スタート&lt;/li&gt;
+&lt;li&gt;10:02〜二軒小屋尾根乗越〜10:15&lt;/li&gt;
+&lt;li&gt;11:04～モミソ窪周辺（大ダワ林道より上の踏み跡）～11:23&lt;/li&gt;
+&lt;li&gt;11:58〜小雲取谷出合い〜12:15&lt;/li&gt;
+&lt;li&gt;14:05～小雲取大滝？下と右岸高みの平場、co1320から40～15:22&lt;/li&gt;
+&lt;li&gt;15:42～ゴンエ尾根に上がる&lt;/li&gt;
+&lt;li&gt;16:32～二軒小屋尾根乗越&lt;/li&gt;
+&lt;li&gt;16:37～長沢谷（洗濯）～16:50&lt;/li&gt;
+&lt;li&gt;18:34～東日原バス停フィニッシュ&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;コースマップ&#34;&gt;コースマップ&lt;/h3&gt;
@@ -434,7 +442,8 @@ window.addEventListener(&#39;load&#39;, function() {
 &lt;/script&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;山行記録&#34;&gt;山行記録&lt;/h3&gt;
-&lt;p&gt;記入中&lt;/p&gt;</description>
+&lt;p&gt;反省点がふたつ。まず、大ダワ林道の崩落地点を巻いたあとすぐに林道に復帰せず、この夏にたどった大ダワ林道古道？（→関連する筆者の山行記録）の跡を追ってしまう。モミソ窪を渡ったあとの道がわからず時間をかけた。次いで沢筋から離れた左岸の高いところに踏み跡をみつけ、追うのに夢中になる。水量多く気温が低かったので、格好の口実にしてしまった。&lt;br&gt;
+東日原バス停スタートの日帰りで鴨沢に下りた記録を見たので、「もしかしたら」やれるかなと淡い期待をもったがとても無理。テーマを絞って季節を考えないと。&lt;/p&gt;</description>
     </item>
     <item>
       <title>旧青梅街道</title>
