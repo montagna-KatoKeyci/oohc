@@ -57,7 +57,7 @@ draft: false
 
 #### 公開日
 20260621
-k
+
 ---
 
 {{< auto-gallery dir="images" >}}
