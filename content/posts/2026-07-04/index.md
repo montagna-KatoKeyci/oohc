@@ -3,7 +3,7 @@
 title: "Part 2 : 大ダワ林道古道（？）"
 date: 2026-07-04
 categories: ["山行記録"]
-tags: ["廃径", "大ダワ林道"]
+tags: ["廃径", "大ダワ林道", "大雲取谷エリア"]
 draft: false
 
 ---
