@@ -144,6 +144,10 @@
     <lastmod>2026-04-01T10:02:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/oohc/posts/2000-01-01/</loc>
+    <lastmod>2000-01-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/oohc/tags/%E8%A3%85%E5%82%99/</loc>
+    <lastmod>2000-01-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/oohc/archives/</loc>
   </url><url>
