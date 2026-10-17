@@ -143,6 +143,8 @@
     <loc>http://localhost:1313/oohc/posts/musica001/</loc>
     <lastmod>2026-04-01T10:02:00+09:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/oohc/posts/2000-01-01/</loc>
+  </url><url>
     <loc>http://localhost:1313/oohc/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/oohc/search/</loc>
