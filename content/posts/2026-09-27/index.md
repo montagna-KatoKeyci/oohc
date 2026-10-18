@@ -2,7 +2,7 @@
 title: "旧青梅街道"
 date: 2026-09-27
 categories: ["山行記録"]
-tags: ["廃道"]
+tags: ["廃道", "旧青梅街道"]]
 draft: false
 ---
 
