@@ -62,8 +62,10 @@ draft: false
 Part1のタイトルをはじめは「小雲取谷」としたが、今回も繋いで歩いて明瞭な踏み跡が続くのを確認した。したがって「小雲取谷の道」と改題した。 
 
 ####  関連する筆者の山行記録<!-- コピペはここ --> 
-Part 1 : 小雲取谷の道～https://montagna-katokeyci.github.io/oohc/posts/2026-10-03/  
-ゴンエ尾根から小雲取谷出合への道～https://www.yamakei-online.com/cl_record/detail.php?id=332135
+Part 1 : 小雲取谷の道  
+https://montagna-katokeyci.github.io/oohc/posts/2026-10-03/  
+ゴンエ尾根から小雲取谷出合への道  
+https://www.yamakei-online.com/cl_record/detail.php?id=332135
 
 #### 装備
 グリーンシーズンの標準的な装備＋ヤッケ  
