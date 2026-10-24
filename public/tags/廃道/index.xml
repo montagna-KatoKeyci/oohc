@@ -9,7 +9,7 @@
     <lastBuildDate>Sun, 18 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/oohc/tags/%E5%BB%83%E9%81%93/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>旧青梅街道 2 日向から白丸 1</title>
+      <title>旧青梅街道 ＜2＞ 日向から白丸 （1）</title>
       <link>http://localhost:1313/oohc/posts/2026-10-18/</link>
       <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/posts/2026-10-18/</guid>
@@ -45,7 +45,7 @@
 			&lt;/tr&gt;
 			&lt;tr&gt;
 					&lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;行程&lt;/strong&gt;&lt;/td&gt;
-					&lt;td style=&#34;text-align: left&#34;&gt;&lt;/td&gt;
+					&lt;td style=&#34;text-align: left&#34;&gt;奥多摩駅、日向、初縄田、海沢大橋、多摩川、数馬隧道、大天狗神社、数馬の切通し、杣入観音堂（木造十一面観音菩薩立像）、白丸駅&lt;/td&gt;
 			&lt;/tr&gt;
 	&lt;/tbody&gt;
 &lt;/table&gt;
@@ -448,7 +448,7 @@ window.addEventListener(&#39;load&#39;, function() {
 &lt;p&gt;記入中&lt;/p&gt;</description>
     </item>
     <item>
-      <title>旧青梅街道 1 氷川から日向</title>
+      <title>旧青梅街道 ＜1＞ 氷川から日向</title>
       <link>http://localhost:1313/oohc/posts/2026-09-27/</link>
       <pubDate>Sun, 27 Sep 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/posts/2026-09-27/</guid>
