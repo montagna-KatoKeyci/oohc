@@ -10485,16 +10485,16 @@ window.addEventListener(&#39;load&#39;, function() {
     </item>
     <item>
       <title>雑感のテスト記事</title>
-      <link>http://localhost:1313/oohc/posts/zakkan001/</link>
+      <link>http://localhost:1313/oohc/zakkan/2026/2026-04-01/</link>
       <pubDate>Wed, 01 Apr 2026 19:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/oohc/posts/zakkan001/</guid>
+      <guid>http://localhost:1313/oohc/zakkan/2026/2026-04-01/</guid>
       <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
     </item>
     <item>
       <title>カンツォーネのテスト記事</title>
-      <link>http://localhost:1313/oohc/posts/musica001/</link>
+      <link>http://localhost:1313/oohc/canzone/2026/2026-04-01/</link>
       <pubDate>Wed, 01 Apr 2026 10:02:00 +0900</pubDate>
-      <guid>http://localhost:1313/oohc/posts/musica001/</guid>
+      <guid>http://localhost:1313/oohc/canzone/2026/2026-04-01/</guid>
       <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
     </item>
     <item>

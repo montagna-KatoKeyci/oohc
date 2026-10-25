@@ -10,9 +10,9 @@
     <atom:link href="http://localhost:1313/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>カンツォーネのテスト記事</title>
-      <link>http://localhost:1313/oohc/posts/musica001/</link>
+      <link>http://localhost:1313/oohc/canzone/2026/2026-04-01/</link>
       <pubDate>Wed, 01 Apr 2026 10:02:00 +0900</pubDate>
-      <guid>http://localhost:1313/oohc/posts/musica001/</guid>
+      <guid>http://localhost:1313/oohc/canzone/2026/2026-04-01/</guid>
       <description>&lt;p&gt;まだ投稿がありません。&lt;/p&gt;</description>
     </item>
   </channel>

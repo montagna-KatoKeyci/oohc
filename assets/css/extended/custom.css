@@ -562,9 +562,28 @@ hr.gallery-divider {
 
 /* タグのカードと文字を全体的に一段階小さくする */
 .terms-tags li a {
-    font-size: 0.95rem; /* 文字サイズを少し小さく */
-    padding: 2px 7px;   /* 余白を詰める */
+    font-size: 0.95rem; 
+    padding: 2px 7px;   
 }
 .terms-tags li a sup {
-    font-size: 0.75rem;  /* 記事数の数字も小さく */
+    font-size: 0.75rem;  
+}
+
+/* ==========================================
+   トップページ記事カードのカテゴリー別色分け（副作用隔離版）
+   ========================================== */
+
+/* 1. 山行記録（posts）: 深みと瑞々しさのあるグリーン */
+.post-entry:has(a.entry-link[href*="/posts/"]) {
+    border-left: 5px solid #287a53 !important;
+}
+
+/* 2. カンツォーネ（canzone）: 温かみのあるテラコッタ */
+.post-entry:has(a.entry-link[href*="/canzone/"]) {
+    border-left: 5px solid #b85233 !important;
+}
+
+/* 3. 雑感（zakkan）: 明るさと深みのあるインディゴブルー */
+.post-entry:has(a.entry-link[href*="/zakkan/"]) {
+    border-left: 5px solid #1d6fa5 !important;
 }

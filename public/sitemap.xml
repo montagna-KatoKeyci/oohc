@@ -140,16 +140,22 @@
     <loc>http://localhost:1313/oohc/posts/2026-05-05/</loc>
     <lastmod>2026-05-05T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/oohc/zakkan/</loc>
+    <lastmod>2026-04-01T19:00:00+09:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/oohc/categories/%E9%9B%91%E6%84%9F/</loc>
     <lastmod>2026-04-01T19:00:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/oohc/posts/zakkan001/</loc>
+    <loc>http://localhost:1313/oohc/zakkan/2026/2026-04-01/</loc>
     <lastmod>2026-04-01T19:00:00+09:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/oohc/canzone/</loc>
+    <lastmod>2026-04-01T10:02:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/oohc/categories/%E3%82%AB%E3%83%B3%E3%83%84%E3%82%A9%E3%83%BC%E3%83%8D/</loc>
     <lastmod>2026-04-01T10:02:00+09:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/oohc/posts/musica001/</loc>
+    <loc>http://localhost:1313/oohc/canzone/2026/2026-04-01/</loc>
     <lastmod>2026-04-01T10:02:00+09:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/oohc/posts/2000-01-01/</loc>
