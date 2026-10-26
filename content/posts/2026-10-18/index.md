@@ -54,7 +54,8 @@ draft: false
 #### 
 
 ####  関連する筆者の山行記録
-日原古道とセベ岩の尾根～https://www.yamakei-online.com/cl_record/detail.php?id=311195
+日原古道とセベ岩の尾根  
+https://www.yamakei-online.com/cl_record/detail.php?id=311195
 
 #### 装備
 グリーンシーズンの標準的な装備  
