@@ -2,8 +2,8 @@
 
 title: "グリーンシーズンの標準的な装備 "
 date: 2000-01-01
-categories: ["山行記録"]
-tags: ["装備"]
+categories: ["雑感"]
+tags: ["装備", "山の雑記"]
 draft: false
 
 ---
