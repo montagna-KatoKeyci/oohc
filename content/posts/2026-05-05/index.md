@@ -3,7 +3,7 @@
 title: "タワ尾根〜天祖山表参道"
 date: 2026-05-05
 categories: ["山行記録"]
-tags: ["一般登山道"]
+tags: ["一般登山道", "トレーニング山行"]
 draft: false
 
 ---
