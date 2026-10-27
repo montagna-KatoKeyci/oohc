@@ -570,20 +570,23 @@ hr.gallery-divider {
 }
 
 /* ==========================================
-   トップページ記事カードのカテゴリー別色分け（副作用隔離版）
+   トップページ記事カードのカテゴリー別色分け（背景カラー版）
    ========================================== */
 
-/* 1. 山行記録（posts）: 深みと瑞々しさのあるグリーン */
+/* 1. 山行記録（posts）: 薄いミントグリーン */
 .post-entry:has(a.entry-link[href*="/posts/"]) {
     border-left: 5px solid #287a53 !important;
+    background: rgba(40, 122, 83, 0.08) !important;
 }
 
-/* 2. カンツォーネ（canzone）: 温かみのあるテラコッタ */
+/* 2. カンツォーネ（canzone）: 薄いアプリコット/テラコッタ */
 .post-entry:has(a.entry-link[href*="/canzone/"]) {
     border-left: 5px solid #b85233 !important;
+    background: rgba(184, 82, 51, 0.08) !important;
 }
 
-/* 3. 雑感（zakkan）: 明るさと深みのあるインディゴブルー */
+/* 3. 雑感（zakkan）: 落ち着いたアメジストパープル */
 .post-entry:has(a.entry-link[href*="/zakkan/"]) {
-    border-left: 5px solid #1d6fa5 !important;
+    border-left: 5px solid #6b4c9a !important;
+    background: rgba(138, 92, 199, 0.09) !important;
 }
