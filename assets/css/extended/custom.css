@@ -585,8 +585,21 @@ hr.gallery-divider {
     background: rgba(184, 82, 51, 0.08) !important;
 }
 
-/* 3. 雑感（zakkan）: 落ち着いたアメジストパープル */
+/* 3. 雑感（zakkan）: 優しい空色 */
 .post-entry:has(a.entry-link[href*="/zakkan/"]) {
-    border-left: 5px solid #6b4c9a !important;
-    background: rgba(138, 92, 199, 0.09) !important;
+    border-left: 5px solid #4a7bb0 !important;
+    background: rgba(110, 155, 205, 0.12) !important;
+}
+
+/* ==========================================
+   スマホ表示時のみデータ表の文字サイズを小さく調整
+   ========================================== */
+@media screen and (max-width: 768px) {
+    .post-content table {
+        font-size: 0.85rem !important; /* 文字サイズを少し小さく */
+    }
+    .post-content table th,
+    .post-content table td {
+        padding: 6px 8px !important;    /* パディング（余白）も少し詰めてスッキリ */
+    }
 }
