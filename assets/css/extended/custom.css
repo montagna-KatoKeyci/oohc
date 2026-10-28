@@ -592,14 +592,16 @@ hr.gallery-divider {
 }
 
 /* ==========================================
-   スマホ表示時のみデータ表の文字サイズを小さく調整
+   スマホ表示時のみデータ表の調整（コンパクト化）
    ========================================== */
 @media screen and (max-width: 768px) {
     .post-content table {
-        font-size: 0.85rem !important; /* 文字サイズを少し小さく */
+        font-size: 0.85rem !important;
+        margin-bottom: 1rem !important;
     }
     .post-content table th,
     .post-content table td {
-        padding: 6px 8px !important;    /* パディング（余白）も少し詰めてスッキリ */
+        padding: 3px 6px !important;
+        line-height: 1.3 !important;
     }
 }
