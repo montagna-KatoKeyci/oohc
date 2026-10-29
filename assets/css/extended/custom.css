@@ -592,16 +592,28 @@ hr.gallery-divider {
 }
 
 /* ==========================================
-   スマホ表示時のみデータ表の調整（コンパクト化）
+   スマホ表示時のみのデータ表およびリスト（コースタイム等）の調整
    ========================================== */
-@media screen and (max-width: 768px) {
-    .post-content table {
-        font-size: 0.85rem !important;
-        margin-bottom: 1rem !important;
+@media screen and (max-width: 640px) {
+    /* データ表（table）のコンパクト化 */
+    main .post-content table {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
     }
-    .post-content table th,
-    .post-content table td {
-        padding: 3px 6px !important;
-        line-height: 1.6 !important;
+    main .post-content table th,
+    main .post-content table td {
+        padding: 3px 6px;
+        line-height: 1.6;
+    }
+
+    /* コースタイム等のリスト（箇条書き）の調整 */
+    main .post-content ul,
+    main .post-content ol {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    main .post-content ul li,
+    main .post-content ol li {
+        margin-bottom: 0.3em;
     }
 }
