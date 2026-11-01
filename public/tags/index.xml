@@ -6,20 +6,27 @@
     <description>Recent content in Tags on 山とカンツォーネ</description>
     <generator>Hugo</generator>
     <language>ja-jp</language>
-    <lastBuildDate>Sat, 24 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 31 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/oohc/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>トレーニング山行</title>
       <link>http://localhost:1313/oohc/tags/%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%B1%B1%E8%A1%8C/</link>
-      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/tags/%E3%83%88%E3%83%AC%E3%83%BC%E3%83%8B%E3%83%B3%E3%82%B0%E5%B1%B1%E8%A1%8C/</guid>
       <description></description>
     </item>
     <item>
       <title>一般登山道</title>
       <link>http://localhost:1313/oohc/tags/%E4%B8%80%E8%88%AC%E7%99%BB%E5%B1%B1%E9%81%93/</link>
-      <pubDate>Sat, 24 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/tags/%E4%B8%80%E8%88%AC%E7%99%BB%E5%B1%B1%E9%81%93/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>失敗山行</title>
+      <link>http://localhost:1313/oohc/tags/%E5%A4%B1%E6%95%97%E5%B1%B1%E8%A1%8C/</link>
+      <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/oohc/tags/%E5%A4%B1%E6%95%97%E5%B1%B1%E8%A1%8C/</guid>
       <description></description>
     </item>
     <item>
@@ -55,13 +62,6 @@
       <link>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</link>
       <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/oohc/tags/%E5%BB%83%E5%BE%84/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>失敗山行</title>
-      <link>http://localhost:1313/oohc/tags/%E5%A4%B1%E6%95%97%E5%B1%B1%E8%A1%8C/</link>
-      <pubDate>Sat, 03 Oct 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/oohc/tags/%E5%A4%B1%E6%95%97%E5%B1%B1%E8%A1%8C/</guid>
       <description></description>
     </item>
     <item>
