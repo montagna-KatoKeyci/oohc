@@ -4,7 +4,7 @@
   <h1>
     {{ .Title }}
     <span style="font-size: 0.6em; font-weight: normal; margin-left: 12px; vertical-align: middle;">
-      山行記録 {{ len (where (where .Site.RegularPages "Section" "posts") "File.BaseFileName" "index") }} / トータル {{ len (where .Site.RegularPages "Section" "posts") }}
+      山行記録 {{ len (where (where .Site.RegularPages "Section" "posts") "File.BaseFileName" "index") }} / トータル {{ len (where .Site.RegularPages "Type" "not in" (slice "page" "json")) }}
     </span>
     {{- if (.Param "ShowRssButtonInSectionTermList") }}
     {{- $rss := (.OutputFormats.Get "rss") }}
@@ -23,6 +23,12 @@
     {{- end }}
     {{- end }}
   </h1>
+  
+  <!-- ▼ 追加：山行記録のみのアーカイブへの案内リンク -->
+  <div style="margin-top: 8px; font-size: 0.95rem;">
+    山行記録のみのアーカイブは<a href="{{ "archives-posts/" | relURL }}" style="color: #b85233; font-weight: 500; text-decoration: underline;">こちら</a>から
+  </div>
+
   {{- if .Description }}
   <div class="post-description">
     {{ .Description }}
@@ -30,11 +36,8 @@
   {{- end }}
 </header>
 
-{{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
-
-{{- if .Site.Params.ShowAllPagesInArchive }}
-{{- $pages = .Site.RegularPages }}
-{{- end }}
+{{- /* すべての通常の投稿ページ（posts, canzone, zakkan すべて）を対象にする */ -}}
+{{- $pages := where .Site.RegularPages "Type" "not in" (slice "page" "json") -}}
 
 {{- range $pages.GroupByPublishDate "2006" }}
 {{- if ne .Key "0001" }}
@@ -44,7 +47,7 @@
     <a class="archive-header-link" href="#{{ $year }}">
       {{- $year -}}
     </a>
-    <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
+    <sup class="archive-count"> {{ len .Pages }}</sup>
   </h2>
   {{- range .Pages.GroupByDate "January" }}
   <div class="archive-month">
@@ -52,7 +55,7 @@
       <a class="archive-header-link" href="#{{ $year }}-{{ .Key }}">
         {{- .Key -}}
       </a>
-      <sup class="archive-count">&nbsp;{{ len .Pages }}</sup>
+      <sup class="archive-count"> {{ len .Pages }}</sup>
     </h3>
     <div class="archive-posts">
       {{- range .Pages }}
@@ -64,9 +67,10 @@
           <span class="entry-hint" title="Draft">
             <svg xmlns="http://www.w3.org/2000/svg" height="15" viewBox="0 -960 960 960" fill="currentColor">
               <path
-                d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+                d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37Zm580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
             </svg>
           </span>
+          <div></div>
           {{- end }}
         </h3>
         <div class="archive-meta">

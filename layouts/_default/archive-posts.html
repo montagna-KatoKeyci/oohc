@@ -1,0 +1,59 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>
+    {{ .Title }}
+    <span style="font-size: 0.6em; font-weight: normal; margin-left: 12px; vertical-align: middle;">
+      山行記録 {{ len (where (where .Site.RegularPages "Section" "posts") "File.BaseFileName" "index") }}件
+    </span>
+  </h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
+{{- /* 山行記録（posts）のみを対象にする */ -}}
+{{- $pages := where (where .Site.RegularPages "Section" "posts") "File.BaseFileName" "index" -}}
+
+{{- range $pages.GroupByPublishDate "2006" }}
+{{- if ne .Key "0001" }}
+<div class="archive-year">
+  {{- $year := replace .Key "0001" "" }}
+  <h2 class="archive-year-header" id="{{ $year }}">
+    <a class="archive-header-link" href="#{{ $year }}">
+      {{- $year -}}
+    </a>
+    <sup class="archive-count"> {{ len .Pages }}</sup>
+  </h2>
+  {{- range .Pages.GroupByDate "January" }}
+  <div class="archive-month">
+    <h3 class="archive-month-header" id="{{ $year }}-{{ .Key }}">
+      <a class="archive-header-link" href="#{{ $year }}-{{ .Key }}">
+        {{- .Key -}}
+      </a>
+      <sup class="archive-count"> {{ len .Pages }}</sup>
+    </h3>
+    <div class="archive-posts">
+      {{- range .Pages }}
+      {{- if eq .Kind "page" }}
+      <div class="archive-entry">
+        <h3 class="archive-entry-title entry-hint-parent">
+          {{- .Title | markdownify }}
+        </h3>
+        <div class="archive-meta">
+          {{- partial "post_meta.html" . -}}
+        </div>
+        <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+      </div>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
+{{- end }}
+
+{{- end }}{{/* end main */}}

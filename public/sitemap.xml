@@ -184,6 +184,8 @@
   </url><url>
     <loc>http://localhost:1313/oohc/archives/</loc>
   </url><url>
+    <loc>http://localhost:1313/oohc/archives-posts/</loc>
+  </url><url>
     <loc>http://localhost:1313/oohc/search/</loc>
   </url>
 </urlset>
